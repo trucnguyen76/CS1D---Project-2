@@ -14,9 +14,13 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
         mainwindow.cpp \
-    mainPage.cpp
+    mainPage.cpp \
+    stadium.cpp \
+    souvenir.cpp
 
-HEADERS  += mainwindow.h
+HEADERS  += mainwindow.h \
+    stadium.h \
+    souvenir.h
 
 FORMS    += mainwindow.ui
 
