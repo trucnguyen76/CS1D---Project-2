@@ -18,6 +18,8 @@ public:
 private slots:
     void on_quitBtn_clicked();
 
+    void on_planVacationBtn_clicked();
+
 private:
     Ui::MainWindow *ui;
 };
