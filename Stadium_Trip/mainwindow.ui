@@ -10,6 +10,9 @@
     <height>505</height>
    </rect>
   </property>
+  <property name="acceptDrops">
+   <bool>true</bool>
+  </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
@@ -24,7 +27,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>1</number>
+     <number>3</number>
     </property>
     <widget class="QWidget" name="mainPage">
      <widget class="QLabel" name="ballGame_image">
@@ -53,7 +56,7 @@
       <property name="geometry">
        <rect>
         <x>250</x>
-        <y>360</y>
+        <y>390</y>
         <width>150</width>
         <height>41</height>
        </rect>
@@ -92,7 +95,7 @@
       <property name="geometry">
        <rect>
         <x>250</x>
-        <y>310</y>
+        <y>340</y>
         <width>150</width>
         <height>41</height>
        </rect>
@@ -105,7 +108,7 @@
       <property name="geometry">
        <rect>
         <x>250</x>
-        <y>260</y>
+        <y>290</y>
         <width>150</width>
         <height>41</height>
        </rect>
@@ -118,7 +121,7 @@
       <property name="geometry">
        <rect>
         <x>250</x>
-        <y>210</y>
+        <y>240</y>
         <width>150</width>
         <height>41</height>
        </rect>
@@ -128,7 +131,159 @@
       </property>
      </widget>
     </widget>
-    <widget class="QWidget" name="planVacationPage"/>
+    <widget class="QWidget" name="modifySouvenirPage">
+     <widget class="QPushButton" name="modifySouvenirBtn">
+      <property name="geometry">
+       <rect>
+        <x>209</x>
+        <y>220</y>
+        <width>181</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Modify Souvenir</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="addSouvenirBtn">
+      <property name="geometry">
+       <rect>
+        <x>210</x>
+        <y>170</y>
+        <width>181</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="acceptDrops">
+       <bool>false</bool>
+      </property>
+      <property name="text">
+       <string>Add Souvenir</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="deleteSourvenirBtn">
+      <property name="geometry">
+       <rect>
+        <x>210</x>
+        <y>270</y>
+        <width>181</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="acceptDrops">
+       <bool>false</bool>
+      </property>
+      <property name="text">
+       <string>Delete Souvenir</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="adminPage">
+     <widget class="QPushButton" name="modifySouvenirListBtn">
+      <property name="geometry">
+       <rect>
+        <x>219</x>
+        <y>230</y>
+        <width>181</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Modify Souvenir List</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="modifyStadiumListBtn">
+      <property name="geometry">
+       <rect>
+        <x>220</x>
+        <y>180</y>
+        <width>181</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="acceptDrops">
+       <bool>false</bool>
+      </property>
+      <property name="text">
+       <string>Modify Stadium List</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="modifyStadiumPage">
+     <widget class="QPushButton" name="modifyStadiumBtn">
+      <property name="geometry">
+       <rect>
+        <x>220</x>
+        <y>240</y>
+        <width>181</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Modify Stadium</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="addStadiumBtn">
+      <property name="geometry">
+       <rect>
+        <x>221</x>
+        <y>190</y>
+        <width>181</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="acceptDrops">
+       <bool>false</bool>
+      </property>
+      <property name="text">
+       <string>Add Stadium</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="planVacationPage">
+     <widget class="QPushButton" name="shortestAngelBtn">
+      <property name="geometry">
+       <rect>
+        <x>210</x>
+        <y>180</y>
+        <width>181</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="acceptDrops">
+       <bool>false</bool>
+      </property>
+      <property name="text">
+       <string>Shortest Trip from Angel Stadium</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="customizeShortestBtn">
+      <property name="geometry">
+       <rect>
+        <x>209</x>
+        <y>230</y>
+        <width>181</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Customize Shortest Trip</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="MSTBtn">
+      <property name="geometry">
+       <rect>
+        <x>209</x>
+        <y>280</y>
+        <width>181</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Minimum Spanning Tree</string>
+      </property>
+     </widget>
+    </widget>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menuBar">

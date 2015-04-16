@@ -20,6 +20,10 @@ private slots:
 
     void on_planVacationBtn_clicked();
 
+    void on_modifySouvenirListBtn_clicked();
+
+    void on_modifyStadiumListBtn_clicked();
+
 private:
     Ui::MainWindow *ui;
 };
