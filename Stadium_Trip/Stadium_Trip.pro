@@ -17,13 +17,16 @@ SOURCES += main.cpp\
         mainwindow.cpp \
     mainPage.cpp \
     stadium.cpp \
-    souvenir.cpp
+    souvenir.cpp \
+    adminwindow.cpp
 
 HEADERS  += mainwindow.h \
     stadium.h \
-    souvenir.h
+    souvenir.h \
+    adminwindow.h
 
-FORMS    += mainwindow.ui
+FORMS    += mainwindow.ui \
+    adminwindow.ui
 
 RESOURCES += \
     Images.qrc
