@@ -35,3 +35,35 @@ void MainWindow::on_modifyStadiumListBtn_clicked()
     ui->adminPage->hide();
     ui->modifyStadiumPage->show();
 }
+
+void MainWindow::on_logInBtn_clicked()
+{
+//    adminLogIn.show();
+    ui->mainPage->hide();
+    ui->adminPage->show();
+}
+
+
+void MainWindow::on_pushButton_clicked()
+{
+    ui->modifySouvenirListBtn->hide();
+    ui->adminPage->show();
+}
+
+void MainWindow::on_pushButton_2_clicked()
+{
+    ui->adminPage->hide();
+    ui->mainPage->show();
+}
+
+void MainWindow::on_pushButton_3_clicked()
+{
+    ui->modifyStadiumPage->hide();
+    ui->adminPage->show();
+}
+
+void MainWindow::on_pushButton_4_clicked()
+{
+    ui->planVacationPage->hide();
+    ui->mainPage->show();
+}

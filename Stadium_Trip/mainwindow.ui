@@ -21,13 +21,13 @@
     <property name="geometry">
      <rect>
       <x>0</x>
-      <y>0</y>
-      <width>640</width>
-      <height>450</height>
+      <y>-1</y>
+      <width>641</width>
+      <height>451</height>
      </rect>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>1</number>
     </property>
     <widget class="QWidget" name="mainPage">
      <widget class="QLabel" name="ballGame_image">
@@ -131,6 +131,7 @@
       </property>
      </widget>
     </widget>
+    <widget class="QWidget" name="page"/>
     <widget class="QWidget" name="modifySouvenirPage">
      <widget class="QPushButton" name="modifySouvenirBtn">
       <property name="geometry">
@@ -177,6 +178,19 @@
        <string>Delete Souvenir</string>
       </property>
      </widget>
+     <widget class="QPushButton" name="pushButton">
+      <property name="geometry">
+       <rect>
+        <x>490</x>
+        <y>400</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Back</string>
+      </property>
+     </widget>
     </widget>
     <widget class="QWidget" name="adminPage">
      <widget class="QPushButton" name="modifySouvenirListBtn">
@@ -208,6 +222,19 @@
        <string>Modify Stadium List</string>
       </property>
      </widget>
+     <widget class="QPushButton" name="pushButton_2">
+      <property name="geometry">
+       <rect>
+        <x>510</x>
+        <y>420</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Back</string>
+      </property>
+     </widget>
     </widget>
     <widget class="QWidget" name="modifyStadiumPage">
      <widget class="QPushButton" name="modifyStadiumBtn">
@@ -237,6 +264,19 @@
       </property>
       <property name="text">
        <string>Add Stadium</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_3">
+      <property name="geometry">
+       <rect>
+        <x>490</x>
+        <y>410</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Back</string>
       </property>
      </widget>
     </widget>
@@ -281,6 +321,19 @@
       </property>
       <property name="text">
        <string>Minimum Spanning Tree</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_4">
+      <property name="geometry">
+       <rect>
+        <x>490</x>
+        <y>420</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Back</string>
       </property>
      </widget>
     </widget>

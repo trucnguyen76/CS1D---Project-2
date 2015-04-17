@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include "adminwindow.h"
 
 namespace Ui {
 class MainWindow;
@@ -24,8 +25,19 @@ private slots:
 
     void on_modifyStadiumListBtn_clicked();
 
+    void on_logInBtn_clicked();
+
+    void on_pushButton_clicked();
+
+    void on_pushButton_2_clicked();
+
+    void on_pushButton_3_clicked();
+
+    void on_pushButton_4_clicked();
+
 private:
     Ui::MainWindow *ui;
+    AdminWindow adminLogIn;
 };
 
 #endif // MAINWINDOW_H
