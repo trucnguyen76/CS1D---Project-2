@@ -13,8 +13,11 @@
 #include <QtWidgets/QAction>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QButtonGroup>
+#include <QtWidgets/QComboBox>
+#include <QtWidgets/QDateEdit>
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
+#include <QtWidgets/QLineEdit>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
@@ -48,6 +51,21 @@ public:
     QPushButton *modifySouvenirListBtn;
     QPushButton *modifyStadiumListBtn;
     QPushButton *pushButton_2;
+    QWidget *addStadiumPage;
+    QLineEdit *stadiumNameBox;
+    QLabel *NameLabel;
+    QLabel *teamNameLabel;
+    QLineEdit *teamNameBox;
+    QLabel *addressLabel;
+    QLineEdit *addressBox;
+    QLabel *phoneLabel;
+    QLineEdit *phoineBox;
+    QLabel *leagueLabel;
+    QComboBox *leagueComboBox;
+    QLabel *dateLabel;
+    QDateEdit *dateEdit;
+    QLabel *grassLabel;
+    QComboBox *grassComboBox;
     QWidget *modifyStadiumPage;
     QPushButton *modifyStadiumBtn;
     QPushButton *addStadiumBtn;
@@ -135,6 +153,53 @@ public:
         pushButton_2->setObjectName(QStringLiteral("pushButton_2"));
         pushButton_2->setGeometry(QRect(510, 420, 75, 23));
         stackedWidget->addWidget(adminPage);
+        addStadiumPage = new QWidget();
+        addStadiumPage->setObjectName(QStringLiteral("addStadiumPage"));
+        stadiumNameBox = new QLineEdit(addStadiumPage);
+        stadiumNameBox->setObjectName(QStringLiteral("stadiumNameBox"));
+        stadiumNameBox->setGeometry(QRect(327, 85, 113, 20));
+        NameLabel = new QLabel(addStadiumPage);
+        NameLabel->setObjectName(QStringLiteral("NameLabel"));
+        NameLabel->setGeometry(QRect(187, 85, 131, 16));
+        teamNameLabel = new QLabel(addStadiumPage);
+        teamNameLabel->setObjectName(QStringLiteral("teamNameLabel"));
+        teamNameLabel->setGeometry(QRect(206, 118, 111, 16));
+        teamNameBox = new QLineEdit(addStadiumPage);
+        teamNameBox->setObjectName(QStringLiteral("teamNameBox"));
+        teamNameBox->setGeometry(QRect(328, 117, 113, 20));
+        addressLabel = new QLabel(addStadiumPage);
+        addressLabel->setObjectName(QStringLiteral("addressLabel"));
+        addressLabel->setGeometry(QRect(226, 156, 91, 16));
+        addressBox = new QLineEdit(addStadiumPage);
+        addressBox->setObjectName(QStringLiteral("addressBox"));
+        addressBox->setGeometry(QRect(329, 155, 113, 20));
+        phoneLabel = new QLabel(addStadiumPage);
+        phoneLabel->setObjectName(QStringLiteral("phoneLabel"));
+        phoneLabel->setGeometry(QRect(191, 191, 121, 16));
+        phoineBox = new QLineEdit(addStadiumPage);
+        phoineBox->setObjectName(QStringLiteral("phoineBox"));
+        phoineBox->setGeometry(QRect(329, 192, 113, 20));
+        leagueLabel = new QLabel(addStadiumPage);
+        leagueLabel->setObjectName(QStringLiteral("leagueLabel"));
+        leagueLabel->setGeometry(QRect(222, 232, 91, 16));
+        leagueComboBox = new QComboBox(addStadiumPage);
+        leagueComboBox->setObjectName(QStringLiteral("leagueComboBox"));
+        leagueComboBox->setGeometry(QRect(329, 230, 41, 22));
+        dateLabel = new QLabel(addStadiumPage);
+        dateLabel->setObjectName(QStringLiteral("dateLabel"));
+        dateLabel->setGeometry(QRect(203, 306, 111, 16));
+        dateEdit = new QDateEdit(addStadiumPage);
+        dateEdit->setObjectName(QStringLiteral("dateEdit"));
+        dateEdit->setGeometry(QRect(329, 303, 110, 22));
+        dateEdit->setMaximumDateTime(QDateTime(QDate(2015, 5, 17), QTime(23, 59, 59)));
+        dateEdit->setMinimumDateTime(QDateTime(QDate(1800, 1, 1), QTime(0, 0, 0)));
+        grassLabel = new QLabel(addStadiumPage);
+        grassLabel->setObjectName(QStringLiteral("grassLabel"));
+        grassLabel->setGeometry(QRect(258, 272, 61, 16));
+        grassComboBox = new QComboBox(addStadiumPage);
+        grassComboBox->setObjectName(QStringLiteral("grassComboBox"));
+        grassComboBox->setGeometry(QRect(329, 269, 41, 22));
+        stackedWidget->addWidget(addStadiumPage);
         modifyStadiumPage = new QWidget();
         modifyStadiumPage->setObjectName(QStringLiteral("modifyStadiumPage"));
         modifyStadiumBtn = new QPushButton(modifyStadiumPage);
@@ -178,7 +243,7 @@ public:
 
         retranslateUi(MainWindow);
 
-        stackedWidget->setCurrentIndex(1);
+        stackedWidget->setCurrentIndex(0);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -201,6 +266,23 @@ public:
         modifySouvenirListBtn->setText(QApplication::translate("MainWindow", "Modify Souvenir List", 0));
         modifyStadiumListBtn->setText(QApplication::translate("MainWindow", "Modify Stadium List", 0));
         pushButton_2->setText(QApplication::translate("MainWindow", "Back", 0));
+        NameLabel->setText(QApplication::translate("MainWindow", "Enter the Stadiums Name:", 0));
+        teamNameLabel->setText(QApplication::translate("MainWindow", "Enter the team Name:", 0));
+        addressLabel->setText(QApplication::translate("MainWindow", "Enter the Adress:", 0));
+        phoneLabel->setText(QApplication::translate("MainWindow", "Enter the Phone number:", 0));
+        leagueLabel->setText(QApplication::translate("MainWindow", "Select the League:", 0));
+        leagueComboBox->clear();
+        leagueComboBox->insertItems(0, QStringList()
+         << QApplication::translate("MainWindow", "NL", 0)
+         << QApplication::translate("MainWindow", "AL", 0)
+        );
+        dateLabel->setText(QApplication::translate("MainWindow", "set the date it opened:", 0));
+        grassLabel->setText(QApplication::translate("MainWindow", "Grass field:", 0));
+        grassComboBox->clear();
+        grassComboBox->insertItems(0, QStringList()
+         << QApplication::translate("MainWindow", "Yes", 0)
+         << QApplication::translate("MainWindow", "No", 0)
+        );
         modifyStadiumBtn->setText(QApplication::translate("MainWindow", "Modify Stadium", 0));
         addStadiumBtn->setText(QApplication::translate("MainWindow", "Add Stadium", 0));
         pushButton_3->setText(QApplication::translate("MainWindow", "Back", 0));
