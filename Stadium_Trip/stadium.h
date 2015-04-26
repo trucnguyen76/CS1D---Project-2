@@ -3,6 +3,7 @@
 #include <QString>
 #include <QDate>
 #include <QVector>
+#include <QSet>
 #include "souvenir.h"
 
 class Stadium
@@ -25,14 +26,17 @@ class Stadium
             void    setLeague(QChar set);
             void    setGrassField(bool set);
             void    setDateOpened(QDate set);
+            void    setCapacity(QString set);
 
             QString getStadiumName();
             QString getTeamName();
             QString getAddress();
             QString getPhoneNumber();
+            QString getCapacity();
             QChar   getLeague();
             bool    getGrassField();
             QDate   getDateOpened();
+            QString displayStadium();
 
 
     private:
@@ -43,7 +47,8 @@ class Stadium
             QChar             league;
             bool              grassField;
             QDate             dateOpened;
-            QVector<Souvenir> souvenirList;
+            QHash<QString, Souvenir>    souvenirList;
+            QString           capacity;
 };
 
 #endif // STADIUM_H

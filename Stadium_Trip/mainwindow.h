@@ -1,8 +1,12 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
+#include <QHash>
 #include <QMainWindow>
+#include <QFile>
+#include <QTextStream>
 #include "adminwindow.h"
+#include "stadium.h"
 
 namespace Ui {
 class MainWindow;
@@ -35,9 +39,13 @@ private slots:
 
     void on_pushButton_4_clicked();
 
+    void loadData();
+
 private:
     Ui::MainWindow *ui;
     AdminWindow adminLogIn;
+    QHash<QString,Stadium> stadiumMap;
+
 };
 
 #endif // MAINWINDOW_H

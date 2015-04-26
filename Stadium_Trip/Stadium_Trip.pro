@@ -18,7 +18,8 @@ SOURCES += main.cpp\
     mainPage.cpp \
     stadium.cpp \
     souvenir.cpp \
-    adminwindow.cpp
+    adminwindow.cpp \
+    loadData.cpp
 
 HEADERS  += mainwindow.h \
     stadium.h \
@@ -30,3 +31,6 @@ FORMS    += mainwindow.ui \
 
 RESOURCES += \
     Images.qrc
+
+OTHER_FILES += \
+    inputFile.txt

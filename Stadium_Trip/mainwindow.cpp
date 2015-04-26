@@ -11,6 +11,8 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->ballGame_image->setScaledContents(true);
     ui->ballGame_image->setPixmap(QPixmap::fromImage(ballGame));
     ui->mainPage->show();
+    loadData();
+
 }
 
 MainWindow::~MainWindow()
@@ -43,7 +45,6 @@ void MainWindow::on_logInBtn_clicked()
     ui->adminPage->show();
 }
 
-
 void MainWindow::on_pushButton_clicked()
 {
     ui->modifySouvenirListBtn->hide();
@@ -67,3 +68,5 @@ void MainWindow::on_pushButton_4_clicked()
     ui->planVacationPage->hide();
     ui->mainPage->show();
 }
+
+

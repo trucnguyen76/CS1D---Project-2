@@ -1,0 +1,12 @@
+INPUT(
+./release\main.o
+./release\mainwindow.o
+./release\mainPage.o
+./release\stadium.o
+./release\souvenir.o
+./release\adminwindow.o
+./release\loadData.o
+./release\qrc_Images.o
+./release\moc_mainwindow.o
+./release\moc_adminwindow.o
+);

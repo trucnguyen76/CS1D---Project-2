@@ -8,11 +8,11 @@ Stadium::Stadium()
     Souvenir pennant("Team pennant", 12.99);
     Souvenir baseball("Autographed baseball", 19.99);
 
-    souvenirList.reserve(4);
-    souvenirList.push_back(cap);
-    souvenirList.push_back(bat);
-    souvenirList.push_back(pennant);
-    souvenirList.push_back(baseball);
+//    souvenirList.reserve(4);
+    souvenirList.insert(cap.getName(), cap);
+    souvenirList.insert(bat.getName(), bat);
+    souvenirList.insert(pennant.getName(), pennant);
+    souvenirList.insert(baseball.getName(), baseball);
 }
 
 
@@ -24,11 +24,11 @@ Stadium::Stadium(QString setStadiumName, QString setTeamName, QString setAddress
     Souvenir pennant("Team pennant", 12.99);
     Souvenir baseball("Autographed baseball", 19.99);
 
-    souvenirList.reserve(4);
-    souvenirList.push_back(cap);
-    souvenirList.push_back(bat);
-    souvenirList.push_back(pennant);
-    souvenirList.push_back(baseball);
+//    souvenirList.reserve(4);
+    souvenirList.insert(cap.getName(), cap);
+    souvenirList.insert(bat.getName(), bat);
+    souvenirList.insert(pennant.getName(), pennant);
+    souvenirList.insert(baseball.getName(), baseball);
 }
 
 Stadium::~Stadium()
@@ -70,6 +70,11 @@ void Stadium::setDateOpened(QDate set)
     dateOpened = set;
 }
 
+void Stadium::setCapacity(QString set)
+{
+    capacity = set;
+}
+
 QString Stadium::getStadiumName()
 {
     return stadiumName;
@@ -103,4 +108,20 @@ bool Stadium::getGrassField()
 QDate Stadium::getDateOpened()
 {
     return dateOpened;
+}
+
+QString Stadium::getCapacity()
+{
+    return capacity;
+}
+
+QString Stadium::displayStadium()
+{
+    return  "Stadium Name: " + stadiumName           + '\n'  +
+            "Team Name: "    + teamName              + '\n'  +
+            (league == 'A'?"American League": "National League") + '\n' +
+            "Address: "      + address               + '\n'  +
+            "Phone Number: " + phoneNumber           + '\n'  +
+            "Date Opened: "  + dateOpened.toString() + '\n'  +
+            "Capacity: "     + capacity              + '\n';
 }
