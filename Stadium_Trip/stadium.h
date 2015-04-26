@@ -15,6 +15,7 @@ class Stadium
                     QString setAddress,
                     QString setPhoneNumber,
                     QChar   setLeague,
+                    bool    setGrassField,
                     QDate   setDate);
 
             void    setStadiumName(QString set);
@@ -22,6 +23,7 @@ class Stadium
             void    setAddress(QString set);
             void    setPhoneNumber(QString set);
             void    setLeague(QChar set);
+            void    setGrassField(bool set);
             void    setDateOpened(QDate set);
 
             QString getStadiumName();
@@ -29,6 +31,7 @@ class Stadium
             QString getAddress();
             QString getPhoneNumber();
             QChar   getLeague();
+            bool    getGrassField();
             QDate   getDateOpened();
 
 
@@ -38,6 +41,7 @@ class Stadium
             QString           address;
             QString           phoneNumber;
             QChar             league;
+            bool              grassField;
             QDate             dateOpened;
             QVector<Souvenir> souvenirList;
 };

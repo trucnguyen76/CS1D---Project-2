@@ -1,7 +1,7 @@
 #include "stadium.h"
 
 Stadium::Stadium()
-    :stadiumName(""), teamName(""), address(""), phoneNumber(""), league('X'), dateOpened(2015,1,01)
+    :stadiumName(""), teamName(""), address(""), phoneNumber(""), league('X'), grassField(false), dateOpened(2015,1,01)
 {
     Souvenir cap("Baseball cap",25.99);
     Souvenir bat("Baseball bat", 35.35);
@@ -16,8 +16,8 @@ Stadium::Stadium()
 }
 
 
-Stadium::Stadium(QString setStadiumName, QString setTeamName, QString setAddress, QString setPhoneNumber, QChar setLeague, QDate setDate)
-    :stadiumName(setStadiumName), teamName(setTeamName), address(setAddress), phoneNumber(setPhoneNumber), league(setLeague), dateOpened(setDate)
+Stadium::Stadium(QString setStadiumName, QString setTeamName, QString setAddress, QString setPhoneNumber, QChar setLeague, bool setGrassField, QDate setDate)
+    :stadiumName(setStadiumName), teamName(setTeamName), address(setAddress), phoneNumber(setPhoneNumber), league(setLeague), grassField(setGrassField), dateOpened(setDate)
 {
     Souvenir cap("Baseball cap",25.99);
     Souvenir bat("Baseball bat", 35.35);
@@ -60,6 +60,11 @@ void Stadium::setLeague(QChar set)
     league = set;
 }
 
+void Stadium::setGrassField(bool set)
+{
+    grassField = set;
+}
+
 void Stadium::setDateOpened(QDate set)
 {
     dateOpened = set;
@@ -88,6 +93,11 @@ QString Stadium::getPhoneNumber()
 QChar Stadium::getLeague()
 {
     return league;
+}
+
+bool Stadium::getGrassField()
+{
+    return grassField;
 }
 
 QDate Stadium::getDateOpened()
