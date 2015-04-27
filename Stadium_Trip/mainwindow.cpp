@@ -6,13 +6,12 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-
     QImage ballGame(":/ballgame_icon.png");
     ui->ballGame_image->setScaledContents(true);
     ui->ballGame_image->setPixmap(QPixmap::fromImage(ballGame));
     ui->mainPage->show();
     loadData();
-
+    initializeGraph();
 }
 
 MainWindow::~MainWindow()
@@ -69,4 +68,8 @@ void MainWindow::on_pushButton_4_clicked()
     ui->mainPage->show();
 }
 
+void MainWindow::on_quitBtn_clicked()
+{
+    this->close();
+}
 

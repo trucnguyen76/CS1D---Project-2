@@ -79,7 +79,7 @@ Opened - April 2, 1994
 Capacity - 42,404
 
 
-Rogers Centre
+Rogers Center
 Toronto Blue Jays
 1 Blue Jays Way
 Toronto, Ontario, Canada M5V1J3
@@ -88,7 +88,7 @@ Opened - June 3, 1989
 Capacity - 49,282
 
 
-SafeCo Field
+Safeco Field
 Seattle Mariners
 1516 First Avenue South
 Seattle, WA 98134
@@ -196,7 +196,7 @@ Opened - April 10, 1962
 Capacity - 56,000
 
 
-Great America Ball Park
+Great American Ball Park
 Cincinnati Reds
 100 Joe Nuxhall Way
 Cincinnati, OH 45202
@@ -232,7 +232,7 @@ Opened - March 30, 2008
 Capacity - 41,418
 
 
-Petco Park
+PETCO Park
 San Diego Padres
 19 Tony Gwynn Drive
 San Diego, CA 92101

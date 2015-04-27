@@ -7,6 +7,7 @@
 #include <QTextStream>
 #include "adminwindow.h"
 #include "stadium.h"
+#include "graph.h"
 
 namespace Ui {
 class MainWindow;
@@ -41,10 +42,18 @@ private slots:
 
     void loadData();
 
+    void on_shortestAngelBtn_clicked();
+
+    void initializeGraph();
+
+    void on_backBtn_clicked();
+
 private:
     Ui::MainWindow *ui;
     AdminWindow adminLogIn;
     QHash<QString,Stadium> stadiumMap;
+    Graph stadiumGraph;
+
 
 };
 

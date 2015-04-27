@@ -23,6 +23,7 @@
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QStackedWidget>
 #include <QtWidgets/QStatusBar>
+#include <QtWidgets/QTextBrowser>
 #include <QtWidgets/QToolBar>
 #include <QtWidgets/QWidget>
 
@@ -75,6 +76,10 @@ public:
     QPushButton *customizeShortestBtn;
     QPushButton *MSTBtn;
     QPushButton *pushButton_4;
+    QWidget *shortestfromAngelPage;
+    QTextBrowser *textBrowser;
+    QPushButton *backBtn;
+    QLabel *label;
     QMenuBar *menuBar;
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
@@ -229,6 +234,25 @@ public:
         pushButton_4->setObjectName(QStringLiteral("pushButton_4"));
         pushButton_4->setGeometry(QRect(490, 420, 75, 23));
         stackedWidget->addWidget(planVacationPage);
+        shortestfromAngelPage = new QWidget();
+        shortestfromAngelPage->setObjectName(QStringLiteral("shortestfromAngelPage"));
+        textBrowser = new QTextBrowser(shortestfromAngelPage);
+        textBrowser->setObjectName(QStringLiteral("textBrowser"));
+        textBrowser->setGeometry(QRect(10, 50, 621, 361));
+        textBrowser->setSizeAdjustPolicy(QAbstractScrollArea::AdjustToContents);
+        textBrowser->setLineWrapMode(QTextEdit::NoWrap);
+        backBtn = new QPushButton(shortestfromAngelPage);
+        backBtn->setObjectName(QStringLiteral("backBtn"));
+        backBtn->setGeometry(QRect(540, 420, 75, 23));
+        label = new QLabel(shortestfromAngelPage);
+        label->setObjectName(QStringLiteral("label"));
+        label->setGeometry(QRect(20, 20, 291, 21));
+        QFont font;
+        font.setPointSize(12);
+        font.setBold(true);
+        font.setWeight(75);
+        label->setFont(font);
+        stackedWidget->addWidget(shortestfromAngelPage);
         MainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QStringLiteral("menuBar"));
@@ -290,6 +314,8 @@ public:
         customizeShortestBtn->setText(QApplication::translate("MainWindow", "Customize Shortest Trip", 0));
         MSTBtn->setText(QApplication::translate("MainWindow", "Minimum Spanning Tree", 0));
         pushButton_4->setText(QApplication::translate("MainWindow", "Back", 0));
+        backBtn->setText(QApplication::translate("MainWindow", "Back", 0));
+        label->setText(QApplication::translate("MainWindow", "Shortest Path from Angel Stadium:", 0));
     } // retranslateUi
 
 };

@@ -15,16 +15,19 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
         mainwindow.cpp \
-    mainPage.cpp \
     stadium.cpp \
     souvenir.cpp \
     adminwindow.cpp \
-    loadData.cpp
+    loadData.cpp \
+    shortestFromAngel.cpp \
+    initializeGraph.cpp \
+    graph.cpp
 
 HEADERS  += mainwindow.h \
     stadium.h \
     souvenir.h \
-    adminwindow.h
+    adminwindow.h \
+    graph.h
 
 FORMS    += mainwindow.ui \
     adminwindow.ui
