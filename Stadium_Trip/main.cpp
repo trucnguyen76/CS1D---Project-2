@@ -12,14 +12,14 @@ int main(int argc, char *argv[])
     QApplication a(argc, argv);
 
 
-//    QSqlDatabase db = QSqlDatabase::addDatabase("QODBC");
-//    db.setDatabaseName("test");
+    QSqlDatabase db = QSqlDatabase::addDatabase("QODBC");
+    db.setDatabaseName("Stadiums");
 
-//    bool ok = db.open();
+    bool ok = db.open();
 
-//    if(ok)
-//    {
-//        qDebug() << "open";
+    if(ok)
+    {
+        qDebug() << "open";
 //        QSqlQuery qry;
 
 
@@ -34,13 +34,13 @@ int main(int argc, char *argv[])
 //        {
 //            qDebug() << "ERRor = " << db.lastError().text();
 //        }
-//        qDebug() << "closing";
-//        db.close();
-//    }
-//    else
-//    {
-//        qDebug() << "ERRor = " << db.lastError().text();
-//    }
+        qDebug() << "closing";
+        db.close();
+    }
+    else
+    {
+        qDebug() << "ERRor = " << db.lastError().text();
+    }
 
     MainWindow w;
     w.show();
