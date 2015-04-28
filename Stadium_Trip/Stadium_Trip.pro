@@ -21,7 +21,8 @@ SOURCES += main.cpp\
     loadData.cpp \
     shortestFromAngel.cpp \
     initializeGraph.cpp \
-    graph.cpp
+    graph.cpp \
+    customizeShortestTrip.cpp
 
 HEADERS  += mainwindow.h \
     stadium.h \

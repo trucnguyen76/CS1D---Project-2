@@ -5,6 +5,7 @@
 #include <QMainWindow>
 #include <QFile>
 #include <QTextStream>
+#include <QListWidgetItem>
 #include "adminwindow.h"
 #include "stadium.h"
 #include "graph.h"
@@ -47,6 +48,14 @@ private slots:
     void initializeGraph();
 
     void on_backBtn_clicked();
+
+    void on_customizeShortestBtn_clicked();
+
+    void on_pushButton_5_clicked();
+
+    void on_pushButton_6_clicked();
+
+    void on_pushButton_7_clicked();
 
 private:
     Ui::MainWindow *ui;

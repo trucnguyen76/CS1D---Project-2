@@ -73,3 +73,8 @@ void MainWindow::on_quitBtn_clicked()
     this->close();
 }
 
+
+
+
+
+

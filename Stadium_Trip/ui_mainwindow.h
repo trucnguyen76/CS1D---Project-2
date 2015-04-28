@@ -18,6 +18,7 @@
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
+#include <QtWidgets/QListWidget>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
@@ -80,6 +81,15 @@ public:
     QTextBrowser *textBrowser;
     QPushButton *backBtn;
     QLabel *label;
+    QWidget *customizeShortestPage;
+    QPushButton *pushButton_5;
+    QLabel *label_2;
+    QListWidget *customizeTripList;
+    QPushButton *pushButton_6;
+    QWidget *customizeShortestPage2;
+    QTextBrowser *textBrowser_2;
+    QPushButton *pushButton_7;
+    QLabel *shortestTripPage2Label;
     QMenuBar *menuBar;
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
@@ -253,6 +263,36 @@ public:
         font.setWeight(75);
         label->setFont(font);
         stackedWidget->addWidget(shortestfromAngelPage);
+        customizeShortestPage = new QWidget();
+        customizeShortestPage->setObjectName(QStringLiteral("customizeShortestPage"));
+        pushButton_5 = new QPushButton(customizeShortestPage);
+        pushButton_5->setObjectName(QStringLiteral("pushButton_5"));
+        pushButton_5->setGeometry(QRect(420, 420, 75, 23));
+        label_2 = new QLabel(customizeShortestPage);
+        label_2->setObjectName(QStringLiteral("label_2"));
+        label_2->setGeometry(QRect(50, 20, 351, 21));
+        label_2->setFont(font);
+        customizeTripList = new QListWidget(customizeShortestPage);
+        customizeTripList->setObjectName(QStringLiteral("customizeTripList"));
+        customizeTripList->setGeometry(QRect(40, 50, 541, 361));
+        customizeTripList->setEditTriggers(QAbstractItemView::NoEditTriggers);
+        pushButton_6 = new QPushButton(customizeShortestPage);
+        pushButton_6->setObjectName(QStringLiteral("pushButton_6"));
+        pushButton_6->setGeometry(QRect(510, 420, 75, 23));
+        stackedWidget->addWidget(customizeShortestPage);
+        customizeShortestPage2 = new QWidget();
+        customizeShortestPage2->setObjectName(QStringLiteral("customizeShortestPage2"));
+        textBrowser_2 = new QTextBrowser(customizeShortestPage2);
+        textBrowser_2->setObjectName(QStringLiteral("textBrowser_2"));
+        textBrowser_2->setGeometry(QRect(30, 50, 571, 361));
+        pushButton_7 = new QPushButton(customizeShortestPage2);
+        pushButton_7->setObjectName(QStringLiteral("pushButton_7"));
+        pushButton_7->setGeometry(QRect(510, 420, 75, 23));
+        shortestTripPage2Label = new QLabel(customizeShortestPage2);
+        shortestTripPage2Label->setObjectName(QStringLiteral("shortestTripPage2Label"));
+        shortestTripPage2Label->setGeometry(QRect(30, 20, 521, 16));
+        shortestTripPage2Label->setFont(font);
+        stackedWidget->addWidget(customizeShortestPage2);
         MainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QStringLiteral("menuBar"));
@@ -316,6 +356,11 @@ public:
         pushButton_4->setText(QApplication::translate("MainWindow", "Back", 0));
         backBtn->setText(QApplication::translate("MainWindow", "Back", 0));
         label->setText(QApplication::translate("MainWindow", "Shortest Path from Angel Stadium:", 0));
+        pushButton_5->setText(QApplication::translate("MainWindow", "Back", 0));
+        label_2->setText(QApplication::translate("MainWindow", "Please Select a Stadium to Start: ", 0));
+        pushButton_6->setText(QApplication::translate("MainWindow", "Next", 0));
+        pushButton_7->setText(QApplication::translate("MainWindow", "Back", 0));
+        shortestTripPage2Label->setText(QApplication::translate("MainWindow", "TextLabel", 0));
     } // retranslateUi
 
 };
