@@ -6,7 +6,7 @@
 #include <QFile>
 #include <QTextStream>
 #include <QListWidgetItem>
-#include "adminwindow.h"
+#include <QMessageBox>
 #include "stadium.h"
 #include "graph.h"
 
@@ -57,11 +57,16 @@ private slots:
 
     void on_pushButton_7_clicked();
 
+    void on_pushButton_8_clicked();
+
+    void on_pushButton_9_clicked();
+
 private:
     Ui::MainWindow *ui;
-    AdminWindow adminLogIn;
     QHash<QString,Stadium> stadiumMap;
     Graph stadiumGraph;
+    QString username;
+    QString password;
 
 
 };

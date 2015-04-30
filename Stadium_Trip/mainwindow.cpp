@@ -6,12 +6,16 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    setWindowTitle("Stadium Trip");
     QImage ballGame(":/ballgame_icon.png");
     ui->ballGame_image->setScaledContents(true);
     ui->ballGame_image->setPixmap(QPixmap::fromImage(ballGame));
     ui->mainPage->show();
     loadData();
     initializeGraph();
+
+    username = "admin";
+    password = "password";
 }
 
 MainWindow::~MainWindow()
@@ -39,9 +43,11 @@ void MainWindow::on_modifyStadiumListBtn_clicked()
 
 void MainWindow::on_logInBtn_clicked()
 {
-//    adminLogIn.show();
     ui->mainPage->hide();
-    ui->adminPage->show();
+    ui->adminLogInLabel->show();
+
+    ui->usernameInput->clear();
+    ui->passwordInput->clear();
 }
 
 void MainWindow::on_pushButton_clicked()
@@ -72,9 +78,5 @@ void MainWindow::on_quitBtn_clicked()
 {
     this->close();
 }
-
-
-
-
 
 

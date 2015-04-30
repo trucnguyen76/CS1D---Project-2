@@ -17,22 +17,20 @@ SOURCES += main.cpp\
         mainwindow.cpp \
     stadium.cpp \
     souvenir.cpp \
-    adminwindow.cpp \
     loadData.cpp \
     shortestFromAngel.cpp \
     initializeGraph.cpp \
     graph.cpp \
     customizeShortestTrip.cpp \
-    mst.cpp
+    mst.cpp \
+    adminLogIn.cpp
 
 HEADERS  += mainwindow.h \
     stadium.h \
     souvenir.h \
-    adminwindow.h \
     graph.h
 
-FORMS    += mainwindow.ui \
-    adminwindow.ui
+FORMS    += mainwindow.ui
 
 RESOURCES += \
     Images.qrc

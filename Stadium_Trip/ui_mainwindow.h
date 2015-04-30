@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'mainwindow.ui'
 **
-** Created by: Qt User Interface Compiler version 5.3.2
+** Created by: Qt User Interface Compiler version 5.4.0
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -43,7 +43,14 @@ public:
     QPushButton *shoppingCartBtn;
     QPushButton *viewStadiumBtn;
     QPushButton *planVacationBtn;
-    QWidget *page;
+    QWidget *adminLogIn;
+    QPushButton *pushButton_8;
+    QLabel *label_3;
+    QLabel *label_4;
+    QLabel *label_5;
+    QLineEdit *usernameInput;
+    QLineEdit *passwordInput;
+    QPushButton *pushButton_9;
     QWidget *modifySouvenirPage;
     QPushButton *modifySouvenirBtn;
     QPushButton *addSouvenirBtn;
@@ -135,9 +142,38 @@ public:
         planVacationBtn->setObjectName(QStringLiteral("planVacationBtn"));
         planVacationBtn->setGeometry(QRect(250, 240, 150, 41));
         stackedWidget->addWidget(mainPage);
-        page = new QWidget();
-        page->setObjectName(QStringLiteral("page"));
-        stackedWidget->addWidget(page);
+        adminLogIn = new QWidget();
+        adminLogIn->setObjectName(QStringLiteral("adminLogIn"));
+        pushButton_8 = new QPushButton(adminLogIn);
+        pushButton_8->setObjectName(QStringLiteral("pushButton_8"));
+        pushButton_8->setGeometry(QRect(360, 260, 75, 23));
+        label_3 = new QLabel(adminLogIn);
+        label_3->setObjectName(QStringLiteral("label_3"));
+        label_3->setGeometry(QRect(250, 30, 151, 41));
+        QFont font;
+        font.setPointSize(16);
+        font.setBold(true);
+        font.setItalic(false);
+        font.setUnderline(false);
+        font.setWeight(75);
+        label_3->setFont(font);
+        label_4 = new QLabel(adminLogIn);
+        label_4->setObjectName(QStringLiteral("label_4"));
+        label_4->setGeometry(QRect(135, 160, 61, 20));
+        label_5 = new QLabel(adminLogIn);
+        label_5->setObjectName(QStringLiteral("label_5"));
+        label_5->setGeometry(QRect(135, 190, 61, 20));
+        usernameInput = new QLineEdit(adminLogIn);
+        usernameInput->setObjectName(QStringLiteral("usernameInput"));
+        usernameInput->setGeometry(QRect(210, 160, 221, 21));
+        passwordInput = new QLineEdit(adminLogIn);
+        passwordInput->setObjectName(QStringLiteral("passwordInput"));
+        passwordInput->setGeometry(QRect(210, 190, 221, 21));
+        passwordInput->setEchoMode(QLineEdit::Password);
+        pushButton_9 = new QPushButton(adminLogIn);
+        pushButton_9->setObjectName(QStringLiteral("pushButton_9"));
+        pushButton_9->setGeometry(QRect(460, 260, 75, 23));
+        stackedWidget->addWidget(adminLogIn);
         modifySouvenirPage = new QWidget();
         modifySouvenirPage->setObjectName(QStringLiteral("modifySouvenirPage"));
         modifySouvenirBtn = new QPushButton(modifySouvenirPage);
@@ -257,11 +293,11 @@ public:
         label = new QLabel(shortestfromAngelPage);
         label->setObjectName(QStringLiteral("label"));
         label->setGeometry(QRect(20, 20, 291, 21));
-        QFont font;
-        font.setPointSize(12);
-        font.setBold(true);
-        font.setWeight(75);
-        label->setFont(font);
+        QFont font1;
+        font1.setPointSize(12);
+        font1.setBold(true);
+        font1.setWeight(75);
+        label->setFont(font1);
         stackedWidget->addWidget(shortestfromAngelPage);
         customizeShortestPage = new QWidget();
         customizeShortestPage->setObjectName(QStringLiteral("customizeShortestPage"));
@@ -271,7 +307,7 @@ public:
         label_2 = new QLabel(customizeShortestPage);
         label_2->setObjectName(QStringLiteral("label_2"));
         label_2->setGeometry(QRect(50, 20, 351, 21));
-        label_2->setFont(font);
+        label_2->setFont(font1);
         customizeTripList = new QListWidget(customizeShortestPage);
         customizeTripList->setObjectName(QStringLiteral("customizeTripList"));
         customizeTripList->setGeometry(QRect(40, 50, 541, 361));
@@ -285,13 +321,14 @@ public:
         textBrowser_2 = new QTextBrowser(customizeShortestPage2);
         textBrowser_2->setObjectName(QStringLiteral("textBrowser_2"));
         textBrowser_2->setGeometry(QRect(30, 50, 571, 361));
+        textBrowser_2->setLineWrapMode(QTextEdit::NoWrap);
         pushButton_7 = new QPushButton(customizeShortestPage2);
         pushButton_7->setObjectName(QStringLiteral("pushButton_7"));
         pushButton_7->setGeometry(QRect(510, 420, 75, 23));
         shortestTripPage2Label = new QLabel(customizeShortestPage2);
         shortestTripPage2Label->setObjectName(QStringLiteral("shortestTripPage2Label"));
         shortestTripPage2Label->setGeometry(QRect(30, 20, 521, 16));
-        shortestTripPage2Label->setFont(font);
+        shortestTripPage2Label->setFont(font1);
         stackedWidget->addWidget(customizeShortestPage2);
         MainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MainWindow);
@@ -323,6 +360,11 @@ public:
         shoppingCartBtn->setText(QApplication::translate("MainWindow", "Shopping Cart", 0));
         viewStadiumBtn->setText(QApplication::translate("MainWindow", "View Stadiums", 0));
         planVacationBtn->setText(QApplication::translate("MainWindow", "Plan A Vacation", 0));
+        pushButton_8->setText(QApplication::translate("MainWindow", "Back", 0));
+        label_3->setText(QApplication::translate("MainWindow", "Admin Log In", 0));
+        label_4->setText(QApplication::translate("MainWindow", "Username: ", 0));
+        label_5->setText(QApplication::translate("MainWindow", "Password: ", 0));
+        pushButton_9->setText(QApplication::translate("MainWindow", "Log in", 0));
         modifySouvenirBtn->setText(QApplication::translate("MainWindow", "Modify Souvenir", 0));
         addSouvenirBtn->setText(QApplication::translate("MainWindow", "Add Souvenir", 0));
         deleteSourvenirBtn->setText(QApplication::translate("MainWindow", "Delete Souvenir", 0));

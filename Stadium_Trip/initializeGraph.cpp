@@ -2,8 +2,6 @@
 
 void MainWindow::initializeGraph()
 {
-    int index;
-
     //Insert Vertex
     foreach(Stadium stadium, stadiumMap)
     {
