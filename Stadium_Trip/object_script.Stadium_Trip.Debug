@@ -1,0 +1,15 @@
+INPUT(
+./debug\main.o
+./debug\mainwindow.o
+./debug\stadium.o
+./debug\souvenir.o
+./debug\adminwindow.o
+./debug\loadData.o
+./debug\shortestFromAngel.o
+./debug\initializeGraph.o
+./debug\graph.o
+./debug\customizeShortestTrip.o
+./debug\qrc_Images.o
+./debug\moc_mainwindow.o
+./debug\moc_adminwindow.o
+);

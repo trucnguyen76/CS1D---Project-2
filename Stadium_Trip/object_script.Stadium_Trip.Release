@@ -1,0 +1,15 @@
+INPUT(
+./release\main.o
+./release\mainwindow.o
+./release\stadium.o
+./release\souvenir.o
+./release\adminwindow.o
+./release\loadData.o
+./release\shortestFromAngel.o
+./release\initializeGraph.o
+./release\graph.o
+./release\customizeShortestTrip.o
+./release\qrc_Images.o
+./release\moc_mainwindow.o
+./release\moc_adminwindow.o
+);
