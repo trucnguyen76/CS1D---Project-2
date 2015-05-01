@@ -10,6 +10,8 @@
 #include "stadium.h"
 #include "graph.h"
 
+using namespace std;
+
 namespace Ui {
 class MainWindow;
 }
@@ -60,6 +62,10 @@ private slots:
     void on_pushButton_8_clicked();
 
     void on_pushButton_9_clicked();
+
+    void on_addStadiumBtn_clicked();
+
+    void on_pushButton_10_clicked();
 
 private:
     Ui::MainWindow *ui;

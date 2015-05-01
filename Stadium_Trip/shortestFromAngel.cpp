@@ -10,6 +10,8 @@ void MainWindow::on_shortestAngelBtn_clicked()
 
 //    qDebug() << stadiumGraph.Dikstras(angelIndex);
 
+    ui->textBrowser->clear();
+
     ui->textBrowser->setText(stadiumGraph.Dikstras(angelIndex));
     ui->shortestfromAngelPage->show();
 }

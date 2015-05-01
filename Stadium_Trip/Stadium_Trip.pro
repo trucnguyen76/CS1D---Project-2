@@ -22,8 +22,8 @@ SOURCES += main.cpp\
     initializeGraph.cpp \
     graph.cpp \
     customizeShortestTrip.cpp \
-    mst.cpp \
-    adminLogIn.cpp
+    adminLogIn.cpp \
+    mst.cpp
 
 HEADERS  += mainwindow.h \
     stadium.h \

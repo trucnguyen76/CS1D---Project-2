@@ -44,7 +44,7 @@ void MainWindow::on_modifyStadiumListBtn_clicked()
 void MainWindow::on_logInBtn_clicked()
 {
     ui->mainPage->hide();
-    ui->adminLogInLabel->show();
+    ui->adminLogIn->show();
 
     ui->usernameInput->clear();
     ui->passwordInput->clear();
@@ -52,7 +52,7 @@ void MainWindow::on_logInBtn_clicked()
 
 void MainWindow::on_pushButton_clicked()
 {
-    ui->modifySouvenirListBtn->hide();
+    ui->modifySouvenirPage->hide();
     ui->adminPage->show();
 }
 
@@ -80,3 +80,15 @@ void MainWindow::on_quitBtn_clicked()
 }
 
 
+
+void MainWindow::on_addStadiumBtn_clicked()
+{
+    ui->modifyStadiumPage->hide();
+    ui->addStadiumPage->show();
+}
+
+void MainWindow::on_pushButton_10_clicked()
+{
+    ui->addStadiumPage->hide();
+    ui->modifyStadiumPage->show();
+}

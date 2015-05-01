@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'mainwindow.ui'
 **
-** Created by: Qt User Interface Compiler version 5.4.0
+** Created by: Qt User Interface Compiler version 5.3.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -75,6 +75,7 @@ public:
     QDateEdit *dateEdit;
     QLabel *grassLabel;
     QComboBox *grassComboBox;
+    QPushButton *pushButton_10;
     QWidget *modifyStadiumPage;
     QPushButton *modifyStadiumBtn;
     QPushButton *addStadiumBtn;
@@ -149,7 +150,7 @@ public:
         pushButton_8->setGeometry(QRect(360, 260, 75, 23));
         label_3 = new QLabel(adminLogIn);
         label_3->setObjectName(QStringLiteral("label_3"));
-        label_3->setGeometry(QRect(250, 30, 151, 41));
+        label_3->setGeometry(QRect(240, 60, 151, 41));
         QFont font;
         font.setPointSize(16);
         font.setBold(true);
@@ -250,6 +251,9 @@ public:
         grassComboBox = new QComboBox(addStadiumPage);
         grassComboBox->setObjectName(QStringLiteral("grassComboBox"));
         grassComboBox->setGeometry(QRect(329, 269, 41, 22));
+        pushButton_10 = new QPushButton(addStadiumPage);
+        pushButton_10->setObjectName(QStringLiteral("pushButton_10"));
+        pushButton_10->setGeometry(QRect(530, 410, 75, 23));
         stackedWidget->addWidget(addStadiumPage);
         modifyStadiumPage = new QWidget();
         modifyStadiumPage->setObjectName(QStringLiteral("modifyStadiumPage"));
@@ -389,6 +393,7 @@ public:
          << QApplication::translate("MainWindow", "Yes", 0)
          << QApplication::translate("MainWindow", "No", 0)
         );
+        pushButton_10->setText(QApplication::translate("MainWindow", "Back", 0));
         modifyStadiumBtn->setText(QApplication::translate("MainWindow", "Modify Stadium", 0));
         addStadiumBtn->setText(QApplication::translate("MainWindow", "Add Stadium", 0));
         pushButton_3->setText(QApplication::translate("MainWindow", "Back", 0));

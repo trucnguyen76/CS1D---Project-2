@@ -7,6 +7,8 @@ void MainWindow::on_customizeShortestBtn_clicked()
     ui->planVacationPage->hide();
     ui->customizeShortestPage->show();
 
+    ui->customizeTripList->clear();
+
     foreach(Stadium stadium, stadiumMap)
     {
         ui->customizeTripList->addItem(stadium.displayStadium());
@@ -25,19 +27,29 @@ void MainWindow::on_pushButton_6_clicked()
      QString stadiumInfo;
      int     stadiumIndex;
 
-     stadiumInfo = chosenStadium->text();
+     ui->textBrowser_2->clear();
 
-     stadiumInfo.remove(QRegExp("\n.*\n.*\n.*\n.*\n.*\n.*\n"));
-     stadiumInfo.remove(QRegExp("Stadium Name: "));
-     qDebug() << stadiumInfo;
+     if(chosenStadium != NULL)
+     {
+         stadiumInfo = chosenStadium->text();
 
-     ui->customizeShortestPage->hide();
-     ui->customizeShortestPage2->show();
-     ui->shortestTripPage2Label->setText("The Shortest Trip from " + stadiumInfo + " is: ");
+         stadiumInfo.remove(QRegExp("\n.*\n.*\n.*\n.*\n.*\n.*\n"));
+         stadiumInfo.remove(QRegExp("Stadium Name: "));
+    //     qDebug() << stadiumInfo;
 
-     stadiumIndex = stadiumGraph.searchVertex(stadiumInfo);
+         ui->customizeShortestPage->hide();
+         ui->customizeShortestPage2->show();
+         ui->shortestTripPage2Label->setText("The Shortest Trip from " + stadiumInfo + " is: ");
 
-     ui->textBrowser_2->setText(stadiumGraph.Dikstras(stadiumIndex));
+         stadiumIndex = stadiumGraph.searchVertex(stadiumInfo);
+
+         ui->textBrowser_2->setText(stadiumGraph.Dikstras(stadiumIndex));
+     }
+     else
+     {
+         QMessageBox::information(this, "Error", "Plese select a stadium to start");
+     }
+
 }
 
 void MainWindow::on_pushButton_7_clicked()
