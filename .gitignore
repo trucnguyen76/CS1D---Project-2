@@ -26,3 +26,4 @@ Stadium_Trip/debug/shortestFromAngel.o
 Stadium_Trip/debug/souvenir.o
 Stadium_Trip/debug/stadium.o
 Stadium_Trip/Makefile.Debug
+*.user

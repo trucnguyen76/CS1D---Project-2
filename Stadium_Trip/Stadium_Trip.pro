@@ -1,11 +1,10 @@
 #-------------------------------------------------
 #
-# Project created by QtCreator 2015-04-09T22:14:59
+# Project created by QtCreator 2015-04-30T23:01:50
 #
 #-------------------------------------------------
 
-QT       += core gui
-QT       += core sql
+QT       += core gui sql
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -15,20 +14,21 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
         mainwindow.cpp \
-    stadium.cpp \
-    souvenir.cpp \
-    loadData.cpp \
-    shortestFromAngel.cpp \
-    initializeGraph.cpp \
-    graph.cpp \
-    customizeShortestTrip.cpp \
     adminLogIn.cpp \
-    mst.cpp
+    customizeShortestTrip.cpp \
+    graph.cpp \
+    initializeGraph.cpp \
+    loadData.cpp \
+    mainPage.cpp \
+    mst.cpp \
+    shortestFromAngel.cpp \
+    souvenir.cpp \
+    stadium.cpp
 
 HEADERS  += mainwindow.h \
-    stadium.h \
+    graph.h \
     souvenir.h \
-    graph.h
+    stadium.h
 
 FORMS    += mainwindow.ui
 
@@ -36,4 +36,5 @@ RESOURCES += \
     Images.qrc
 
 OTHER_FILES += \
+    ballgame_icon.png \
     inputFile.txt
