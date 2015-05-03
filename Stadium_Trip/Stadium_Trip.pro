@@ -28,7 +28,8 @@ SOURCES += main.cpp\
 HEADERS  += mainwindow.h \
     graph.h \
     souvenir.h \
-    stadium.h
+    stadium.h \
+    mst.h
 
 FORMS    += mainwindow.ui
 
