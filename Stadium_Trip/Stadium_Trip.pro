@@ -23,15 +23,19 @@ SOURCES += main.cpp\
     mst.cpp \
     shortestFromAngel.cpp \
     souvenir.cpp \
-    stadium.cpp
+    stadium.cpp \
+    shoppingCart.cpp
 
 HEADERS  += mainwindow.h \
     graph.h \
     souvenir.h \
     stadium.h \
-    mst.h
+    mst.h \
+    shoppingCart.h \
+    ui_shoppingCart.h
 
-FORMS    += mainwindow.ui
+FORMS    += mainwindow.ui \
+    shoppingCart.ui
 
 RESOURCES += \
     Images.qrc
