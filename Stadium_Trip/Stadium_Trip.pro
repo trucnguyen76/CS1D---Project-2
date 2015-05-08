@@ -24,7 +24,8 @@ SOURCES += main.cpp\
     shortestFromAngel.cpp \
     souvenir.cpp \
     stadium.cpp \
-    shoppingCart.cpp
+    shoppingCart.cpp \
+    viewMajorLeagues.cpp
 
 HEADERS  += mainwindow.h \
     graph.h \

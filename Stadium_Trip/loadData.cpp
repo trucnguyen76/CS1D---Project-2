@@ -26,7 +26,7 @@ void MainWindow::loadData()
         stadiumPtr->setStadiumName(in.readLine());
         stadiumPtr->setTeamName(in.readLine());
         address = in.readLine();
-        stadiumPtr->setAddress(address + '\n' + in.readLine());
+        stadiumPtr->setAddress(address + " \n" + in.readLine());
         stadiumPtr->setPhoneNumber(in.readLine());
         //Read Opened
         in >> line;
@@ -125,10 +125,14 @@ void MainWindow::loadData()
     }
     inFile.close();
 
-//    foreach (Stadium stadium, stadiumMap)
-//    {
-//        qDebug() << stadium.displayStadium();
-//    }
+    foreach (Stadium stadium, stadiumMap)
+    {
+        stadium.setGrassField(true);
+    }
+
+    (*stadiumMap.find("Tropicana Field")).setGrassField(false);
+    (*stadiumMap.find("Rogers Center")).setGrassField(false);
+
 }
 
 

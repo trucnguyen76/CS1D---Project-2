@@ -100,10 +100,12 @@ void MainWindow::on_shoppingCartBtn_clicked()
 void MainWindow::on_viewStadiumBtn_clicked()
 {
     ui->mainPage->hide();
-
+    ui->viewStadiumsPage->show();
 }
 
-void MainWindow::on_viewMajorLeagueBtn_clicked()
-{
 
+void MainWindow::on_pushButton_12_clicked()
+{
+    ui->viewStadiumsPage->hide();
+    ui->mainPage->show();
 }

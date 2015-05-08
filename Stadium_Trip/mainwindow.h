@@ -10,6 +10,9 @@
 #include "stadium.h"
 #include "graph.h"
 #include "shoppingCart.h"
+#include "ui_mainwindow.h"
+#include <QTableView>
+#include <QTableWidgetItem>
 
 using namespace std;
 
@@ -74,6 +77,13 @@ private slots:
 
     void on_viewMajorLeagueBtn_clicked();
 
+//    void clickToSort(int index);
+
+
+    void on_pushButton_11_clicked();
+
+    void on_pushButton_12_clicked();
+
 private:
     Ui::MainWindow *ui;
     QHash<QString,Stadium> stadiumMap;
@@ -81,8 +91,6 @@ private:
     QString username;
     QString password;
     shoppingCart cart;
-
-
 };
 
 #endif // MAINWINDOW_H
