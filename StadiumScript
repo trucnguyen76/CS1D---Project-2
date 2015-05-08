@@ -1,0 +1,114 @@
+USE [Stadiums]
+GO
+/****** Object:  Table [dbo].[Stadiums]    Script Date: 5/8/2015 12:52:25 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Stadiums](
+	[stadiumName] [nvarchar](max) NULL,
+	[teamName] [nvarchar](max) NULL,
+	[phoneNumber] [nvarchar](max) NULL,
+	[League] [nchar](1) NOT NULL,
+	[Grass] [smallint] NULL,
+	[year] [int] NULL,
+	[month] [int] NULL,
+	[day] [int] NULL,
+	[address] [nvarchar](max) NULL
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+
+GO
+INSERT [dbo].[Stadiums] ([stadiumName], [teamName], [phoneNumber], [League], [Grass], [year], [month], [day], [address]) VALUES (N'Angels Stadium of Anaheim', N'Los Angeles Angels of Anaheim', N'(714)940-2000', N'A', 1, 1966, 4, 19, N'2000 E Gene Autry Way,
+Anaheim, CA 92806')
+GO
+INSERT [dbo].[Stadiums] ([stadiumName], [teamName], [phoneNumber], [League], [Grass], [year], [month], [day], [address]) VALUES (N'Comerica Park', N'Detroit Tigers', N'(313) 962-4000', N'A', 1, 2000, 4, 11, N'2100 Woodward Ave,
+Detroit, MI 48201')
+GO
+INSERT [dbo].[Stadiums] ([stadiumName], [teamName], [phoneNumber], [League], [Grass], [year], [month], [day], [address]) VALUES (N'Fenway Park', N'Boston Red Sox', N'(877) 733-7699', N'A', 1, 1912, 4, 20, N'4 Yawkey Way,
+Boston, MA 02215')
+GO
+INSERT [dbo].[Stadiums] ([stadiumName], [teamName], [phoneNumber], [League], [Grass], [year], [month], [day], [address]) VALUES (N'
+Globe Life Park in Arlington', N'Texas Rangers', N'(817) 273-5222', N'A', 0, 1994, 4, 1, N'1000 Ballpark Way,
+Arlington, TX 76011')
+GO
+INSERT [dbo].[Stadiums] ([stadiumName], [teamName], [phoneNumber], [League], [Grass], [year], [month], [day], [address]) VALUES (N'
+Kauffman Stadium', N'Kansas City Royals', N'(816) 921-8000', N'A', 0, 1973, 4, 10, N'1 Royal Way
+Kansas City, MO 64129')
+GO
+INSERT [dbo].[Stadiums] ([stadiumName], [teamName], [phoneNumber], [League], [Grass], [year], [month], [day], [address]) VALUES (N'Minute Maid Park', N'Houston Astros', N'(713) 259-8000', N'A', 1, 2000, 3, 30, N'501 Crawford St,
+Houston, TX 77002')
+GO
+INSERT [dbo].[Stadiums] ([stadiumName], [teamName], [phoneNumber], [League], [Grass], [year], [month], [day], [address]) VALUES (N'O.co Coliseum', N'Oakland Athletics', N'(510) 569-2121', N'A', 1, 1966, 9, 18, N'7000 Coliseum Way
+Oakland, CA 94621')
+GO
+INSERT [dbo].[Stadiums] ([stadiumName], [teamName], [phoneNumber], [League], [Grass], [year], [month], [day], [address]) VALUES (N'Oriole Park at Camden Yards', N'Baltimore Orioles', N'(410) 685-9800', N'A', 1, 1992, 4, 6, N'333 West Camden Street
+Baltimore, MD 21201')
+GO
+INSERT [dbo].[Stadiums] ([stadiumName], [teamName], [phoneNumber], [League], [Grass], [year], [month], [day], [address]) VALUES (N'Progressive Field', N'Cleveland Indians', N'(216) 420-4487', N'A', 1, 1994, 4, 2, N'2401 Ontario Street
+Cleveland, OH 44115')
+GO
+INSERT [dbo].[Stadiums] ([stadiumName], [teamName], [phoneNumber], [League], [Grass], [year], [month], [day], [address]) VALUES (N'Rogers Center', N'Toronto Blue Jays', N'+1 416-341-1000', N'A', 0, 1989, 6, 3, N'1 Blue Jays Way
+Toronto, Ontario, Canada M5V1J3')
+GO
+INSERT [dbo].[Stadiums] ([stadiumName], [teamName], [phoneNumber], [League], [Grass], [year], [month], [day], [address]) VALUES (N'Safeco Field', N'Seattle Mariners', N'(206) 346-4000', N'A', 1, 1999, 7, 15, N'1516 First Avenue South
+Seattle, WA 98134')
+GO
+INSERT [dbo].[Stadiums] ([stadiumName], [teamName], [phoneNumber], [League], [Grass], [year], [month], [day], [address]) VALUES (N'Target Field', N'Minnesota Twins', N'(800) 338-9467', N'A', 1, 2010, 4, 12, N'353 N 5th St
+Minneapolis, MN 55403')
+GO
+INSERT [dbo].[Stadiums] ([stadiumName], [teamName], [phoneNumber], [League], [Grass], [year], [month], [day], [address]) VALUES (N'
+Tropicana Field', N'Tampa Bay Rays', N'(727) 825-3137', N'A', 0, 1990, 3, 3, N'1 Tropicana Dr
+St. Petersburg, FL 33705')
+GO
+INSERT [dbo].[Stadiums] ([stadiumName], [teamName], [phoneNumber], [League], [Grass], [year], [month], [day], [address]) VALUES (N'US Cellular Field', N'Chicago White Sox', N'(312) 674-1000', N'A', 1, 1991, 4, 18, N'333 West 35th Street
+Chicago, IL 60616')
+GO
+INSERT [dbo].[Stadiums] ([stadiumName], [teamName], [phoneNumber], [League], [Grass], [year], [month], [day], [address]) VALUES (N'Yankee Stadium', N'New York Yankees', N'(718) 293-4300', N'A', 1, 2009, 4, 16, N'1 E 161st St
+South Bronx, NY 10451')
+GO
+INSERT [dbo].[Stadiums] ([stadiumName], [teamName], [phoneNumber], [League], [Grass], [year], [month], [day], [address]) VALUES (N'AT&T Park', N'San Francisco Giants', N'(415) 972-2000', N'N', 1, 2000, 4, 11, N'24 Willie Mays Plaza
+San Francisco, CA 94107')
+GO
+INSERT [dbo].[Stadiums] ([stadiumName], [teamName], [phoneNumber], [League], [Grass], [year], [month], [day], [address]) VALUES (N'Busch Stadium', N'St. Louis Cardinals', N'(314) 345-9600', N'N', 1, 2006, 4, 10, N'700 Clark Street
+St. Louis, MO 63102')
+GO
+INSERT [dbo].[Stadiums] ([stadiumName], [teamName], [phoneNumber], [League], [Grass], [year], [month], [day], [address]) VALUES (N'Chase Field', N'Arizona Diamondbacks', N'(602) 462-6500', N'N', 1, 1998, 3, 31, N'401 East Jefferson Street
+Phoenix, AZ 85004')
+GO
+INSERT [dbo].[Stadiums] ([stadiumName], [teamName], [phoneNumber], [League], [Grass], [year], [month], [day], [address]) VALUES (N'Citi Field', N'New York Mets', N'(718) 507-6387', N'N', 1, 2009, 4, 13, N'126th St. & Roosevelt Ave.
+Queens, NY 11368')
+GO
+INSERT [dbo].[Stadiums] ([stadiumName], [teamName], [phoneNumber], [League], [Grass], [year], [month], [day], [address]) VALUES (N'Citizens Bank Park', N'Philadelphia Phillies', N'(215) 463-1000', N'N', 1, 2004, 4, 3, N'1 Citizens Bank Way
+Philadelphia, PA 19148')
+GO
+INSERT [dbo].[Stadiums] ([stadiumName], [teamName], [phoneNumber], [League], [Grass], [year], [month], [day], [address]) VALUES (N'Coors Field', N'Colorado Rockies', N'(303) 292-0200', N'N', 1, 1995, 4, 26, N'2001 Blake St
+Denver, CO 80205')
+GO
+INSERT [dbo].[Stadiums] ([stadiumName], [teamName], [phoneNumber], [League], [Grass], [year], [month], [day], [address]) VALUES (N'Dodger Stadium', N'Los Angeles Dodgers', N'(323) 224-1507', N'N', 1, 1962, 4, 10, N'1000 Elysian Park Avenue
+Los Angeles, CA 90090')
+GO
+INSERT [dbo].[Stadiums] ([stadiumName], [teamName], [phoneNumber], [League], [Grass], [year], [month], [day], [address]) VALUES (N'Great American Ball Park', N'Cincinnati Reds', N'(513) 381-7337', N'N', 1, 2003, 3, 31, N'100 Joe Nuxhall Way
+Cincinnati, OH 45202')
+GO
+INSERT [dbo].[Stadiums] ([stadiumName], [teamName], [phoneNumber], [League], [Grass], [year], [month], [day], [address]) VALUES (N'Marlins Park', N'Miami Marlins', N'(305)480-1300', N'N', 1, 2012, 4, 4, N'501 Marlins Way
+Miami, FL 33125')
+GO
+INSERT [dbo].[Stadiums] ([stadiumName], [teamName], [phoneNumber], [League], [Grass], [year], [month], [day], [address]) VALUES (N'Miller Park', N'Milwaukee Brewers', N'(414) 902-4400', N'N', 1, 2001, 4, 6, N'1 Brewers Way
+Milwaukee, WI 53214')
+GO
+INSERT [dbo].[Stadiums] ([stadiumName], [teamName], [phoneNumber], [League], [Grass], [year], [month], [day], [address]) VALUES (N'Nationals Park', N'Washington Nationals', N'(202) 675-6287', N'N', 1, 2008, 3, 30, N'1500 S Capitol St SE
+Washington, DC 20003')
+GO
+INSERT [dbo].[Stadiums] ([stadiumName], [teamName], [phoneNumber], [League], [Grass], [year], [month], [day], [address]) VALUES (N'
+PETCO Park', N'San Diego Padres', N'(619) 795-5000', N'N', 1, 2004, 4, 8, N'19 Tony Gwynn Drive
+San Diego, CA 92101')
+GO
+INSERT [dbo].[Stadiums] ([stadiumName], [teamName], [phoneNumber], [League], [Grass], [year], [month], [day], [address]) VALUES (N'PNC Park', N'Pittsburgh Pirate', N'(412) 321-2827', N'N', 1, 2001, 3, 31, N'115 Federal St
+Pittsburgh, PA 15212')
+GO
+INSERT [dbo].[Stadiums] ([stadiumName], [teamName], [phoneNumber], [League], [Grass], [year], [month], [day], [address]) VALUES (N'Turner Field', N'Atlanta Braves', N'(404) 522-7630', N'N', 1, 1997, 3, 29, N'755 Hank Aaron Drive
+Atlanta, GA 30315')
+GO
+INSERT [dbo].[Stadiums] ([stadiumName], [teamName], [phoneNumber], [League], [Grass], [year], [month], [day], [address]) VALUES (N'Wrigley Field', N'Chicago Cubs', N'(773) 404-2827', N'N', 1, 1914, 4, 23, N'1060 West Addison Street
+Chicago, IL 60613')
+GO
