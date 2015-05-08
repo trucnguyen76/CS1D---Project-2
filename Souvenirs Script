@@ -1,0 +1,21 @@
+USE [Stadiums]
+GO
+/****** Object:  Table [dbo].[Souvenirs]    Script Date: 5/8/2015 1:04:47 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Souvenirs](
+	[souvenirName] [nvarchar](max) NULL,
+	[price] [decimal](5, 2) NULL
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+
+GO
+INSERT [dbo].[Souvenirs] ([souvenirName], [price]) VALUES (N'Baseball cap', CAST(25.99 AS Decimal(5, 2)))
+GO
+INSERT [dbo].[Souvenirs] ([souvenirName], [price]) VALUES (N'Baseball bat', CAST(35.35 AS Decimal(5, 2)))
+GO
+INSERT [dbo].[Souvenirs] ([souvenirName], [price]) VALUES (N'Team pennant', CAST(12.99 AS Decimal(5, 2)))
+GO
+INSERT [dbo].[Souvenirs] ([souvenirName], [price]) VALUES (N'Autographed baseball', CAST(19.99 AS Decimal(5, 2)))
+GO
