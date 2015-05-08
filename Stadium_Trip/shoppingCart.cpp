@@ -27,17 +27,12 @@ void shoppingCart::fillAllLists()
     int                 xNumberBottle;
     int                 yNumberSouvenir;
     int                 xLabelSouvenir;
-//    int                 index;
     QWidget*            newTabPtr;
     QWidget*            widgetPtr;
-//    QListWidget*        newList;
     QLabel*             label;
-//    QTextBrowser*       totalBottleText;
     QTextBrowser*       totalWineryText;
-//    QScrollArea*        scrollArea;
     QLineEdit*          numberOfBottle;
     QHash<QString, QLineEdit*>* numberSouvenirListEachStadium;
-//    QScrollBar*         scrollBar;
 
 
     ui->stadiumTab->clear();
@@ -75,33 +70,20 @@ void shoppingCart::fillAllLists()
         widgetPtr = new QWidget(newTabPtr);
         widgetPtr->setGeometry(20, 20, 366, 700);
 
-//        scrollArea = new QScrollArea(newTabPtr);
-//        scrollArea->setStyleSheet("background-color:white;");
-//        scrollArea->setGeometry(10, 20, 370, 225);
-
         numberSouvenirListEachStadium = new QHash<QString, QLineEdit*>;
 
-//        label = new QLabel("Total Bottles: ",newTabPtr);
-//        label->move(400, 40);
-
-//        totalBottleText = new QTextBrowser(newTabPtr);
-//        totalBottleText->setGeometry(400, 65, 113, 25);
-//        totalBottleText->setText("0");
-
-
         label = new QLabel("Total: ",newTabPtr);
-        label->move(400, 90);
+        label->move(380, 200);
 
         totalWineryText = new QTextBrowser(newTabPtr);
-        totalWineryText->setGeometry(400, 115, 113, 25);
+        totalWineryText->setGeometry(420, 195, 113, 25);
         totalWineryText->setText("0");
 
-
-        xSouvenirInfo = 5;
-        ySouvenirInfo = 10;
-        xLabelSouvenir = 240;
-        xNumberBottle = 260;
-        yNumberSouvenir = 10;
+        xSouvenirInfo = 10;
+        ySouvenirInfo = 0;
+        xLabelSouvenir = 150;
+        xNumberBottle = 170;
+        yNumberSouvenir = 5;
 
         //Create a list of souvenir for each tab
         foreach(Souvenir souvenir, stadium.getSouvenirList())
@@ -120,18 +102,15 @@ void shoppingCart::fillAllLists()
             numberOfBottle = new QLineEdit(widgetPtr);
             numberOfBottle->setGeometry(xNumberBottle, yNumberSouvenir, 90, 20);
 
-            ySouvenirInfo += 50;
-            yNumberSouvenir += 50;
+            ySouvenirInfo += 40;
+            yNumberSouvenir += 40;
 
             numberSouvenirListEachStadium->insert(souvenir.getName(),numberOfBottle);
         }
-//        scrollArea->setWidget(widgetPtr);
 
-//        scrollArea->show();
         ui->stadiumTab->addTab(newTabPtr, stadium.getStadiumName());
 
         totalEachStadium.insert(stadium.getStadiumName(), totalWineryText);
-//        totalBottleEachWinery.insert(stadium.getStadiumName(), totalBottleText);
         souvenirListsMap.insert(stadium.getStadiumName(), *numberSouvenirListEachStadium);
     }
 }
@@ -139,6 +118,8 @@ void shoppingCart::fillAllLists()
 void shoppingCart::setList(const QHash<QString, Stadium> &list)
 {
     stadiumMap = list;
+
+    fillAllLists();
 }
 
 

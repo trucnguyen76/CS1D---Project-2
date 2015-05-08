@@ -27,7 +27,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>1</number>
     </property>
     <widget class="QWidget" name="mainPage">
      <widget class="QLabel" name="ballGame_image">
@@ -128,6 +128,60 @@
       </property>
       <property name="text">
        <string>Plan A Vacation</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="viewStadiumsPage">
+     <widget class="QPushButton" name="viewMajorLeagueBtn">
+      <property name="geometry">
+       <rect>
+        <x>230</x>
+        <y>150</y>
+        <width>150</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Major League Stadiums</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="viewAmericanLeagueBtn">
+      <property name="geometry">
+       <rect>
+        <x>230</x>
+        <y>200</y>
+        <width>150</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>American League Stadiums</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="viewNationalLeagueBtn">
+      <property name="geometry">
+       <rect>
+        <x>230</x>
+        <y>250</y>
+        <width>150</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>National League Stadiums</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="viewGrassSurfaceBtn">
+      <property name="geometry">
+       <rect>
+        <x>230</x>
+        <y>300</y>
+        <width>150</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Grass Surface Stadiums</string>
       </property>
      </widget>
     </widget>

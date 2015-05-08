@@ -14,7 +14,6 @@ MainWindow::MainWindow(QWidget *parent) :
     loadData();
     initializeGraph();
     cart.setList(stadiumMap);
-    cart.fillAllLists();
 
     username = "admin";
     password = "password";
@@ -81,8 +80,6 @@ void MainWindow::on_quitBtn_clicked()
     this->close();
 }
 
-
-
 void MainWindow::on_addStadiumBtn_clicked()
 {
     ui->modifyStadiumPage->hide();
@@ -98,4 +95,15 @@ void MainWindow::on_pushButton_10_clicked()
 void MainWindow::on_shoppingCartBtn_clicked()
 {
     cart.show();
+}
+
+void MainWindow::on_viewStadiumBtn_clicked()
+{
+    ui->mainPage->hide();
+
+}
+
+void MainWindow::on_viewMajorLeagueBtn_clicked()
+{
+
 }

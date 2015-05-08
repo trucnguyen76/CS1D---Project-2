@@ -70,6 +70,10 @@ private slots:
 
     void on_shoppingCartBtn_clicked();
 
+    void on_viewStadiumBtn_clicked();
+
+    void on_viewMajorLeagueBtn_clicked();
+
 private:
     Ui::MainWindow *ui;
     QHash<QString,Stadium> stadiumMap;
