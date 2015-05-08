@@ -13,6 +13,8 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->mainPage->show();
     loadData();
     initializeGraph();
+    cart.setList(stadiumMap);
+    cart.fillAllLists();
 
     username = "admin";
     password = "password";
@@ -91,4 +93,9 @@ void MainWindow::on_pushButton_10_clicked()
 {
     ui->addStadiumPage->hide();
     ui->modifyStadiumPage->show();
+}
+
+void MainWindow::on_shoppingCartBtn_clicked()
+{
+    cart.show();
 }

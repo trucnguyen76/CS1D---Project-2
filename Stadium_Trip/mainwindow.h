@@ -9,6 +9,7 @@
 #include <QMessageBox>
 #include "stadium.h"
 #include "graph.h"
+#include "shoppingCart.h"
 
 using namespace std;
 
@@ -67,12 +68,15 @@ private slots:
 
     void on_pushButton_10_clicked();
 
+    void on_shoppingCartBtn_clicked();
+
 private:
     Ui::MainWindow *ui;
     QHash<QString,Stadium> stadiumMap;
     Graph stadiumGraph;
     QString username;
     QString password;
+    shoppingCart cart;
 
 
 };

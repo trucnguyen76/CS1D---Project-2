@@ -2,8 +2,7 @@
 #define SHOPPINGCART_H
 
 #include <QWidget>
-#include <vector>
-#include <stadium.h>
+#include "stadium.h"
 #include "souvenir.h"
 #include <QTabWidget>
 #include <QListWidget>
@@ -13,6 +12,8 @@
 #include <QScrollArea>
 #include <QScrollBar>
 #include <QHash>
+#include <QLabel>
+#include <vector>
 
 namespace Ui {
 class shoppingCart;
@@ -25,10 +26,8 @@ class shoppingCart : public QWidget
 public:
     explicit shoppingCart(QWidget *parent = 0);
     ~shoppingCart();
-    shoppingCart(const QHash<String, Stadium> & List);
     void fillAllLists();
-    void setList(const QHash<String, Stadium>& list);
-
+    void setList(const QHash<QString, Stadium>& list);
 
 private slots:
     void on_pushButton_checkout_clicked();
@@ -36,12 +35,18 @@ private slots:
     void on_pushButton_updateCart_clicked();
 
 private:
-    QHash<String, Stadium>               wineryList;
-    QHash<String, QTextBrowser*>         totalBottleEachWinery;
-    QHash<String, QTextBrowser*>         totalEachStadium;
-    Ui::shoppingCart*                    ui;
-    QHash<QHash <QLineEdit*> >           souvenirListsMap;
-    double                               grandTotal;
+    Ui::shoppingCart *ui;
+    //QString key: stadium name - value: stadium
+    QHash<QString, Stadium>                             stadiumMap;
+    //QString key: stadium name
+//    QHash<QString, QTextBrowser*>                       totalBottleEachWinery;
+    //QString key: stadiumName
+    QHash<QString, QTextBrowser*>                       totalEachStadium;
+    //Inner QHash: QString key: Souvenir
+    //Outer QHash: QString key: Stadium
+    QHash<QString, QHash <QString, QLineEdit*> >        souvenirListsMap;
+    double                                              grandTotal;
 };
 
 #endif // SHOPPINGCART_H
+

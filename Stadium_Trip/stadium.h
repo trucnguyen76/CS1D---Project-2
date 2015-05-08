@@ -37,6 +37,8 @@ class Stadium
             bool    getGrassField();
             QDate   getDateOpened();
             QString displayStadium();
+            int     getNumSouvenir();
+            QHash<QString, Souvenir> getSouvenirList();
 
 
     private:

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>wineShoppingCart</class>
- <widget class="QWidget" name="wineShoppingCart">
+ <class>shoppingCart</class>
+ <widget class="QWidget" name="shoppingCart">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -51,7 +51,7 @@
    <widget class="QWidget" name="mainMenu"/>
    <widget class="QWidget" name="page_2"/>
   </widget>
-  <widget class="QTabWidget" name="wineryTab">
+  <widget class="QTabWidget" name="stadiumTab">
    <property name="geometry">
     <rect>
      <x>30</x>

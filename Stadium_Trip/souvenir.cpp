@@ -30,3 +30,18 @@ double Souvenir::getPrice()
 {
     return price;
 }
+
+QString Souvenir::getPriceStr()
+{
+    QString tempPrice;
+
+    return tempPrice.setNum(price,'f',2);}
+
+QString Souvenir::getSouvenirInfo()
+{
+    QString tempPrice;
+
+    return name + '\n' + tempPrice.setNum(price,'f',2);
+
+}
+

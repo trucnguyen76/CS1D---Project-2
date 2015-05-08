@@ -70,6 +70,11 @@ void Stadium::setDateOpened(QDate set)
     dateOpened = set;
 }
 
+int Stadium::getNumSouvenir()
+{
+   return souvenirList.size();
+}
+
 void Stadium::setCapacity(QString set)
 {
     capacity = set;
@@ -125,3 +130,8 @@ QString Stadium::displayStadium()
             "Date Opened: "  + dateOpened.toString() + '\n'  +
             "Capacity: "     + capacity              + '\n';
 }
+QHash<QString, Souvenir> Stadium::getSouvenirList()
+{
+    return souvenirList;
+}
+

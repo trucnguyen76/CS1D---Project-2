@@ -13,6 +13,9 @@ class Souvenir
 
             QString getName();
             double  getPrice();
+            QString getSouvenirInfo();
+            QString getPriceStr();
+
 
 
     private:

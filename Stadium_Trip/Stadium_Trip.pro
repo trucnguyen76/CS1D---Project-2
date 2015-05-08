@@ -31,8 +31,7 @@ HEADERS  += mainwindow.h \
     souvenir.h \
     stadium.h \
     mst.h \
-    shoppingCart.h \
-    ui_shoppingCart.h
+    shoppingCart.h
 
 FORMS    += mainwindow.ui \
     shoppingCart.ui
