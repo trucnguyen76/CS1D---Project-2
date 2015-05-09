@@ -105,6 +105,13 @@ public:
      ***********************************************************************/
     void printMatrix();
 
+    /************************************************************************
+     * calcMST()
+     *  This method will calculate the output the minimum spanning tree
+     *  -> RETURN nothing
+     ***********************************************************************/
+    void    calcMST();
+
 protected:
 
 //    /************************************************************************
@@ -113,6 +120,9 @@ protected:
 //     *  -> RETURN nothing
 //     ***********************************************************************/
 //    void printMatrix(double matrix[][totalVertex]);	//IN - weight Matrix
+
+    int     minKey(vector<int> key, vector<bool> mstSet, int size);
+    void    printMST(vector<int> &parent, int n);
 
 };
 

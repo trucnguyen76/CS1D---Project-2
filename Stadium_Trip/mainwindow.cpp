@@ -14,6 +14,7 @@ MainWindow::MainWindow(QWidget *parent) :
     loadData();
     initializeGraph();
     cart.setList(stadiumMap);
+    stadiumGraph.calcMST();
 
     username = "admin";
     password = "password";

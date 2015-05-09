@@ -60,7 +60,6 @@ void shoppingCart::fillAllLists()
 //    }
 
     totalEachStadium.clear();
-//    totalBottleEachWinery.clear();
 
 
     //Create the tabs
@@ -87,7 +86,6 @@ void shoppingCart::fillAllLists()
 
         //Create a list of souvenir for each tab
         foreach(Souvenir souvenir, stadium.getSouvenirList())
-//        for(souvenirIndex = 0; souvenirIndex < stadiumMap.at(stadiumIndex).getNumProducts().toInt(); souvenirIndex++)
         {
             //Set wine info
             label = new QLabel(widgetPtr);
@@ -131,24 +129,18 @@ void shoppingCart::on_pushButton_checkout_clicked()
 
 void shoppingCart::on_pushButton_updateCart_clicked()
 {
-    int wineryIndex;
-    int wineIndex;
     int numOfBottleEachWine;
     int totalBottle;
     double totalPrice;
     double totalEachWine;
-    QString wineInfo;
-    QString winePrice;
 
     grandTotal  = 0;
-
 
     foreach(Stadium stadium, stadiumMap)
     {
         totalBottle = 0;
         totalPrice  = 0;
         numOfBottleEachWine = 0;
-//        totalEachWine = 0;
 
         foreach(Souvenir souvenir, stadium.getSouvenirList())
         {
@@ -168,7 +160,6 @@ void shoppingCart::on_pushButton_updateCart_clicked()
         }
 
         (*totalEachStadium.find(stadium.getStadiumName()))->setText(QString::number(totalPrice));
-//        (*totalBottleEachWinery.at(wineryIndex))->setText(QString::number(totalBottle));
     }
 
     ui->currentTotal->setText(QString::number(grandTotal));

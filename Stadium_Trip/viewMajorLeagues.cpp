@@ -25,18 +25,11 @@ void MainWindow::on_viewMajorLeagueBtn_clicked()
         verticalHeaderList.append("");
     }
 
+    //Set the # of rows and columns for the table
     ui->viewMajorLeagueTable->setColumnCount(7);
     ui->viewMajorLeagueTable->setRowCount(stadiumMap.size());
     ui->viewMajorLeagueTable->setHorizontalHeaderLabels(horizontalHeaderList);
     ui->viewMajorLeagueTable->setVerticalHeaderLabels(verticalHeaderList);
-
-//    longestHeader = "American or National League";
-
-//    //For loop - Set column width
-//    for(column = 0; column < 7; column++)
-//    {
-//        ui->viewMajorLeagueTable->setColumnWidth(column, longestHeader.size() * 6.5);
-//    }
 
     //Set column width for columns
     ui->viewMajorLeagueTable->setColumnWidth(0, 180);
@@ -47,7 +40,6 @@ void MainWindow::on_viewMajorLeagueBtn_clicked()
     ui->viewMajorLeagueTable->setColumnWidth(5, 120);
     ui->viewMajorLeagueTable->setColumnWidth(6, 250);
 
-    //Set the # of rows for the table
     row = 0;
     foreach(Stadium stadium, stadiumMap)
     {
@@ -81,7 +73,7 @@ void MainWindow::on_viewMajorLeagueBtn_clicked()
 
         //Show DateOpened
         tableItem = new QTableWidgetItem();
-        tableItem->setText(stadium.getDateOpened().toString());
+        tableItem->setText(stadium.getDateOpened().toString("yyyy / MM / dd"));
         ui->viewMajorLeagueTable->setItem(row, 5, tableItem);
 
         //Show Seating Capacity
@@ -91,6 +83,8 @@ void MainWindow::on_viewMajorLeagueBtn_clicked()
 
         row++;
     }
+    //When the table first shown, sort it by the order in column 0
+    ui->viewMajorLeagueTable->sortByColumn(0, Qt::AscendingOrder);
 
     ui->viewMajorLeaguePage->show();
     ui->viewStadiumsPage->hide();
