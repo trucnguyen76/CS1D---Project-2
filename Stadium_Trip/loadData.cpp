@@ -125,14 +125,27 @@ void MainWindow::loadData()
     }
     inFile.close();
 
-    foreach (Stadium stadium, stadiumMap)
+    QHash<QString, Stadium>::iterator it;
+    for(it = stadiumMap.begin(); it != stadiumMap.end(); it++)
     {
-        stadium.setGrassField(true);
+
+        if(it.value().getStadiumName() == "Tropicana Field" ||
+          it.value().getStadiumName() == "Rogers Center")
+        {
+           it.value().setGrassField(false);
+        }
+        else
+        {
+           it.value().setGrassField(true);
+        }
     }
 
-    (*stadiumMap.find("Tropicana Field")).setGrassField(false);
-    (*stadiumMap.find("Rogers Center")).setGrassField(false);
 
+//    (*stadiumMap.find("Tropicana Field")).setGrassField(false);
+//    (*stadiumMap.find("Rogers Center")).setGrassField(false);
+
+//    foreach (Stadium stadium, stadiumMap)
+//    {
+//        qDebug() << stadium.getGrassField();
+//    }
 }
-
-

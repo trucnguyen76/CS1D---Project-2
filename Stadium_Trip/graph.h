@@ -27,7 +27,7 @@ struct Vertex
 
 class Graph
 {
-    static const int INFINITY = 10000;
+   // static const int INFINITY = 10000;
 
 private:
     vector <Vertex>          vertexList;			//The Vertex list
@@ -57,8 +57,8 @@ public:
      *   If difrected -> add to 1 spot
      ***********************************************************************/
     void insertEdge(int originNumber, 		//IN - The number of origin vertex
-    				int destinationNumber, 	//IN - The number of dest vertex
-    				double weight);			//IN - The weight of the edge
+                    int destinationNumber, 	//IN - The number of dest vertex
+                    double weight);			//IN - The weight of the edge
 
     /************************************************************************
      * insertEdge()
