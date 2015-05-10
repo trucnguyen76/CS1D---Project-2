@@ -77,26 +77,12 @@ private slots:
 
     void on_viewMajorLeagueBtn_clicked();
 
-    void on_viewAmericanLeagueBtn_clicked();
-
-    void on_viewNationalLeagueBtn_clicked();
-
-    void on_viewGrassSurfaceBtn_clicked();
-
-
 //    void clickToSort(int index);
 
 
     void on_pushButton_11_clicked();
 
     void on_pushButton_12_clicked();
-
-    void on_pushButton_15_clicked();
-
-    void on_pushButton_14_clicked();
-
-    void on_pushButton_13_clicked();
-
 
 private:
     Ui::MainWindow *ui;
