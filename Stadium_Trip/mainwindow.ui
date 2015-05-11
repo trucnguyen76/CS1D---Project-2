@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>646</width>
-    <height>530</height>
+    <width>643</width>
+    <height>505</height>
    </rect>
   </property>
   <property name="acceptDrops">
@@ -17,1166 +17,999 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <layout class="QVBoxLayout" name="verticalLayout">
-    <item>
-     <widget class="QStackedWidget" name="stackedWidget">
-      <property name="currentIndex">
-       <number>0</number>
+   <widget class="QStackedWidget" name="stackedWidget">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>-1</y>
+      <width>641</width>
+      <height>451</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="mainPage">
+     <widget class="QLabel" name="ballGame_image">
+      <property name="geometry">
+       <rect>
+        <x>220</x>
+        <y>20</y>
+        <width>200</width>
+        <height>200</height>
+       </rect>
       </property>
-      <widget class="QWidget" name="mainPage">
-       <widget class="QLabel" name="ballGame_image">
-        <property name="geometry">
-         <rect>
-          <x>220</x>
-          <y>20</y>
-          <width>200</width>
-          <height>200</height>
-         </rect>
-        </property>
-        <property name="sizePolicy">
-         <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
-          <horstretch>0</horstretch>
-          <verstretch>0</verstretch>
-         </sizepolicy>
-        </property>
-        <property name="text">
-         <string>TextLabel</string>
-        </property>
-        <property name="alignment">
-         <set>Qt::AlignCenter</set>
-        </property>
-       </widget>
-       <widget class="QPushButton" name="quitBtn">
-        <property name="geometry">
-         <rect>
-          <x>250</x>
-          <y>390</y>
-          <width>150</width>
-          <height>41</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Quit</string>
-        </property>
-       </widget>
-       <widget class="QPushButton" name="logInBtn">
-        <property name="geometry">
-         <rect>
-          <x>520</x>
-          <y>370</y>
-          <width>75</width>
-          <height>23</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Log in</string>
-        </property>
-       </widget>
-       <widget class="QLabel" name="adminLogInLabel">
-        <property name="geometry">
-         <rect>
-          <x>520</x>
-          <y>350</y>
-          <width>101</width>
-          <height>16</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Administrator Log In</string>
-        </property>
-       </widget>
-       <widget class="QPushButton" name="shoppingCartBtn">
-        <property name="geometry">
-         <rect>
-          <x>250</x>
-          <y>340</y>
-          <width>150</width>
-          <height>41</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Shopping Cart</string>
-        </property>
-       </widget>
-       <widget class="QPushButton" name="viewStadiumBtn">
-        <property name="geometry">
-         <rect>
-          <x>250</x>
-          <y>290</y>
-          <width>150</width>
-          <height>41</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>View Stadiums</string>
-        </property>
-       </widget>
-       <widget class="QPushButton" name="planVacationBtn">
-        <property name="geometry">
-         <rect>
-          <x>250</x>
-          <y>240</y>
-          <width>150</width>
-          <height>41</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Plan A Vacation</string>
-        </property>
-       </widget>
-      </widget>
-      <widget class="QWidget" name="viewStadiumsPage">
-       <widget class="QPushButton" name="viewMajorLeagueBtn">
-        <property name="geometry">
-         <rect>
-          <x>230</x>
-          <y>150</y>
-          <width>150</width>
-          <height>41</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Major League Stadiums</string>
-        </property>
-       </widget>
-       <widget class="QPushButton" name="viewAmericanLeagueBtn">
-        <property name="geometry">
-         <rect>
-          <x>230</x>
-          <y>200</y>
-          <width>150</width>
-          <height>41</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>American League Stadiums</string>
-        </property>
-       </widget>
-       <widget class="QPushButton" name="viewNationalLeagueBtn">
-        <property name="geometry">
-         <rect>
-          <x>230</x>
-          <y>250</y>
-          <width>150</width>
-          <height>41</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>National League Stadiums</string>
-        </property>
-       </widget>
-       <widget class="QPushButton" name="viewGrassSurfaceBtn">
-        <property name="geometry">
-         <rect>
-          <x>230</x>
-          <y>300</y>
-          <width>150</width>
-          <height>41</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Grass Surface Stadiums</string>
-        </property>
-       </widget>
-       <widget class="QPushButton" name="pushButton_12">
-        <property name="geometry">
-         <rect>
-          <x>270</x>
-          <y>360</y>
-          <width>75</width>
-          <height>23</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Back</string>
-        </property>
-       </widget>
-      </widget>
-      <widget class="QWidget" name="viewMajorLeaguePage">
-       <widget class="QPushButton" name="pushButton_11">
-        <property name="geometry">
-         <rect>
-          <x>540</x>
-          <y>420</y>
-          <width>75</width>
-          <height>23</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Back</string>
-        </property>
-       </widget>
-       <widget class="QTableWidget" name="viewMajorLeagueTable">
-        <property name="geometry">
-         <rect>
-          <x>10</x>
-          <y>40</y>
-          <width>611</width>
-          <height>371</height>
-         </rect>
-        </property>
-        <property name="editTriggers">
-         <set>QAbstractItemView::NoEditTriggers</set>
-        </property>
-        <property name="sortingEnabled">
-         <bool>true</bool>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_10">
-        <property name="geometry">
-         <rect>
-          <x>20</x>
-          <y>-10</y>
-          <width>291</width>
-          <height>41</height>
-         </rect>
-        </property>
-        <property name="font">
-         <font>
-          <pointsize>14</pointsize>
-          <weight>75</weight>
-          <bold>true</bold>
-         </font>
-        </property>
-        <property name="text">
-         <string>All MLB Stadiums</string>
-        </property>
-       </widget>
-      </widget>
-      <widget class="QWidget" name="viewAMLeaguePage">
-       <widget class="QTableWidget" name="viewAmericanLeagueTable">
-        <property name="geometry">
-         <rect>
-          <x>10</x>
-          <y>40</y>
-          <width>611</width>
-          <height>381</height>
-         </rect>
-        </property>
-        <property name="editTriggers">
-         <set>QAbstractItemView::NoEditTriggers</set>
-        </property>
-        <property name="sortingEnabled">
-         <bool>true</bool>
-        </property>
-       </widget>
-       <widget class="QPushButton" name="pushButton_13">
-        <property name="geometry">
-         <rect>
-          <x>550</x>
-          <y>430</y>
-          <width>75</width>
-          <height>23</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Back</string>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_9">
-        <property name="geometry">
-         <rect>
-          <x>30</x>
-          <y>-10</y>
-          <width>291</width>
-          <height>41</height>
-         </rect>
-        </property>
-        <property name="font">
-         <font>
-          <pointsize>14</pointsize>
-          <weight>75</weight>
-          <bold>true</bold>
-         </font>
-        </property>
-        <property name="text">
-         <string>American League Stadiums</string>
-        </property>
-       </widget>
-      </widget>
-      <widget class="QWidget" name="viewNATLeaguePage">
-       <widget class="QTableWidget" name="viewNationalLeagueTable">
-        <property name="geometry">
-         <rect>
-          <x>10</x>
-          <y>40</y>
-          <width>611</width>
-          <height>381</height>
-         </rect>
-        </property>
-        <property name="editTriggers">
-         <set>QAbstractItemView::NoEditTriggers</set>
-        </property>
-        <property name="sortingEnabled">
-         <bool>true</bool>
-        </property>
-       </widget>
-       <widget class="QPushButton" name="pushButton_14">
-        <property name="geometry">
-         <rect>
-          <x>550</x>
-          <y>430</y>
-          <width>75</width>
-          <height>23</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Back</string>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_8">
-        <property name="geometry">
-         <rect>
-          <x>10</x>
-          <y>0</y>
-          <width>291</width>
-          <height>41</height>
-         </rect>
-        </property>
-        <property name="font">
-         <font>
-          <pointsize>14</pointsize>
-          <weight>75</weight>
-          <bold>true</bold>
-         </font>
-        </property>
-        <property name="text">
-         <string>National League Stadiums</string>
-        </property>
-       </widget>
-      </widget>
-      <widget class="QWidget" name="viewGrassPage">
-       <widget class="QTableWidget" name="viewGrassStadiumsTable">
-        <property name="geometry">
-         <rect>
-          <x>20</x>
-          <y>40</y>
-          <width>611</width>
-          <height>361</height>
-         </rect>
-        </property>
-        <property name="editTriggers">
-         <set>QAbstractItemView::NoEditTriggers</set>
-        </property>
-        <property name="sortingEnabled">
-         <bool>true</bool>
-        </property>
-       </widget>
-       <widget class="QPushButton" name="pushButton_15">
-        <property name="geometry">
-         <rect>
-          <x>550</x>
-          <y>410</y>
-          <width>75</width>
-          <height>23</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Back</string>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_12">
-        <property name="geometry">
-         <rect>
-          <x>20</x>
-          <y>0</y>
-          <width>341</width>
-          <height>41</height>
-         </rect>
-        </property>
-        <property name="font">
-         <font>
-          <pointsize>14</pointsize>
-          <weight>75</weight>
-          <bold>true</bold>
-         </font>
-        </property>
-        <property name="text">
-         <string>MLB Stadiums with Grass Surface</string>
-        </property>
-       </widget>
-      </widget>
-      <widget class="QWidget" name="adminLogIn">
-       <widget class="QPushButton" name="pushButton_8">
-        <property name="geometry">
-         <rect>
-          <x>360</x>
-          <y>260</y>
-          <width>75</width>
-          <height>23</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Back</string>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_3">
-        <property name="geometry">
-         <rect>
-          <x>240</x>
-          <y>60</y>
-          <width>151</width>
-          <height>41</height>
-         </rect>
-        </property>
-        <property name="font">
-         <font>
-          <pointsize>16</pointsize>
-          <weight>75</weight>
-          <italic>false</italic>
-          <bold>true</bold>
-          <underline>false</underline>
-         </font>
-        </property>
-        <property name="text">
-         <string>Admin Log In</string>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_4">
-        <property name="geometry">
-         <rect>
-          <x>135</x>
-          <y>160</y>
-          <width>61</width>
-          <height>20</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Username: </string>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_5">
-        <property name="geometry">
-         <rect>
-          <x>135</x>
-          <y>190</y>
-          <width>61</width>
-          <height>20</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Password: </string>
-        </property>
-       </widget>
-       <widget class="QLineEdit" name="usernameInput">
-        <property name="geometry">
-         <rect>
-          <x>210</x>
-          <y>160</y>
-          <width>221</width>
-          <height>21</height>
-         </rect>
-        </property>
-       </widget>
-       <widget class="QLineEdit" name="passwordInput">
-        <property name="geometry">
-         <rect>
-          <x>210</x>
-          <y>190</y>
-          <width>221</width>
-          <height>21</height>
-         </rect>
-        </property>
-        <property name="echoMode">
-         <enum>QLineEdit::Password</enum>
-        </property>
-       </widget>
-       <widget class="QPushButton" name="pushButton_9">
-        <property name="geometry">
-         <rect>
-          <x>460</x>
-          <y>260</y>
-          <width>75</width>
-          <height>23</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Log in</string>
-        </property>
-       </widget>
-      </widget>
-      <widget class="QWidget" name="modifySouvenirPage">
-       <widget class="QPushButton" name="modifySouvenirBtn">
-        <property name="geometry">
-         <rect>
-          <x>209</x>
-          <y>220</y>
-          <width>181</width>
-          <height>41</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Modify Souvenir</string>
-        </property>
-       </widget>
-       <widget class="QPushButton" name="addSouvenirBtn">
-        <property name="geometry">
-         <rect>
-          <x>210</x>
-          <y>170</y>
-          <width>181</width>
-          <height>41</height>
-         </rect>
-        </property>
-        <property name="acceptDrops">
-         <bool>false</bool>
-        </property>
-        <property name="text">
-         <string>Add Souvenir</string>
-        </property>
-       </widget>
-       <widget class="QPushButton" name="deleteSourvenirBtn">
-        <property name="geometry">
-         <rect>
-          <x>210</x>
-          <y>270</y>
-          <width>181</width>
-          <height>41</height>
-         </rect>
-        </property>
-        <property name="acceptDrops">
-         <bool>false</bool>
-        </property>
-        <property name="text">
-         <string>Delete Souvenir</string>
-        </property>
-       </widget>
-       <widget class="QPushButton" name="pushButton">
-        <property name="geometry">
-         <rect>
-          <x>270</x>
-          <y>330</y>
-          <width>75</width>
-          <height>23</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Back</string>
-        </property>
-       </widget>
-      </widget>
-      <widget class="QWidget" name="adminPage">
-       <widget class="QPushButton" name="modifySouvenirListBtn">
-        <property name="geometry">
-         <rect>
-          <x>219</x>
-          <y>230</y>
-          <width>181</width>
-          <height>41</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Modify Souvenir List</string>
-        </property>
-       </widget>
-       <widget class="QPushButton" name="modifyStadiumListBtn">
-        <property name="geometry">
-         <rect>
-          <x>220</x>
-          <y>180</y>
-          <width>181</width>
-          <height>41</height>
-         </rect>
-        </property>
-        <property name="acceptDrops">
-         <bool>false</bool>
-        </property>
-        <property name="text">
-         <string>Modify Stadium List</string>
-        </property>
-       </widget>
-       <widget class="QPushButton" name="pushButton_2">
-        <property name="geometry">
-         <rect>
-          <x>280</x>
-          <y>290</y>
-          <width>75</width>
-          <height>23</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Back</string>
-        </property>
-       </widget>
-      </widget>
-      <widget class="QWidget" name="addStadiumPage">
-       <widget class="QLineEdit" name="stadiumNameBox">
-        <property name="geometry">
-         <rect>
-          <x>327</x>
-          <y>85</y>
-          <width>113</width>
-          <height>20</height>
-         </rect>
-        </property>
-       </widget>
-       <widget class="QLabel" name="NameLabel">
-        <property name="geometry">
-         <rect>
-          <x>187</x>
-          <y>85</y>
-          <width>131</width>
-          <height>16</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Enter the Stadiums Name:</string>
-        </property>
-       </widget>
-       <widget class="QLabel" name="teamNameLabel">
-        <property name="geometry">
-         <rect>
-          <x>206</x>
-          <y>118</y>
-          <width>111</width>
-          <height>16</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Enter the team Name:</string>
-        </property>
-       </widget>
-       <widget class="QLineEdit" name="teamNameBox">
-        <property name="geometry">
-         <rect>
-          <x>328</x>
-          <y>117</y>
-          <width>113</width>
-          <height>20</height>
-         </rect>
-        </property>
-       </widget>
-       <widget class="QLabel" name="addressLabel">
-        <property name="geometry">
-         <rect>
-          <x>226</x>
-          <y>156</y>
-          <width>91</width>
-          <height>16</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Enter the Adress:</string>
-        </property>
-       </widget>
-       <widget class="QLineEdit" name="addressBox">
-        <property name="geometry">
-         <rect>
-          <x>329</x>
-          <y>155</y>
-          <width>113</width>
-          <height>20</height>
-         </rect>
-        </property>
-       </widget>
-       <widget class="QLabel" name="phoneLabel">
-        <property name="geometry">
-         <rect>
-          <x>191</x>
-          <y>191</y>
-          <width>121</width>
-          <height>16</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Enter the Phone number:</string>
-        </property>
-       </widget>
-       <widget class="QLineEdit" name="phoineBox">
-        <property name="geometry">
-         <rect>
-          <x>329</x>
-          <y>192</y>
-          <width>113</width>
-          <height>20</height>
-         </rect>
-        </property>
-       </widget>
-       <widget class="QLabel" name="leagueLabel">
-        <property name="geometry">
-         <rect>
-          <x>222</x>
-          <y>232</y>
-          <width>91</width>
-          <height>16</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Select the League:</string>
-        </property>
-       </widget>
-       <widget class="QComboBox" name="leagueComboBox">
-        <property name="geometry">
-         <rect>
-          <x>329</x>
-          <y>230</y>
-          <width>41</width>
-          <height>22</height>
-         </rect>
-        </property>
-        <item>
-         <property name="text">
-          <string>NL</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>AL</string>
-         </property>
-        </item>
-       </widget>
-       <widget class="QLabel" name="dateLabel">
-        <property name="geometry">
-         <rect>
-          <x>203</x>
-          <y>306</y>
-          <width>111</width>
-          <height>16</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>set the date it opened:</string>
-        </property>
-       </widget>
-       <widget class="QDateEdit" name="dateEdit">
-        <property name="geometry">
-         <rect>
-          <x>329</x>
-          <y>303</y>
-          <width>110</width>
-          <height>22</height>
-         </rect>
-        </property>
-        <property name="maximumDateTime">
-         <datetime>
-          <hour>23</hour>
-          <minute>59</minute>
-          <second>59</second>
-          <year>2015</year>
-          <month>5</month>
-          <day>17</day>
-         </datetime>
-        </property>
-        <property name="minimumDateTime">
-         <datetime>
-          <hour>0</hour>
-          <minute>0</minute>
-          <second>0</second>
-          <year>1800</year>
-          <month>1</month>
-          <day>1</day>
-         </datetime>
-        </property>
-       </widget>
-       <widget class="QLabel" name="grassLabel">
-        <property name="geometry">
-         <rect>
-          <x>258</x>
-          <y>272</y>
-          <width>61</width>
-          <height>16</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Grass field:</string>
-        </property>
-       </widget>
-       <widget class="QComboBox" name="grassComboBox">
-        <property name="geometry">
-         <rect>
-          <x>329</x>
-          <y>269</y>
-          <width>41</width>
-          <height>22</height>
-         </rect>
-        </property>
-        <item>
-         <property name="text">
-          <string>Yes</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>No</string>
-         </property>
-        </item>
-       </widget>
-       <widget class="QPushButton" name="pushButton_10">
-        <property name="geometry">
-         <rect>
-          <x>530</x>
-          <y>410</y>
-          <width>75</width>
-          <height>23</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Back</string>
-        </property>
-       </widget>
-      </widget>
-      <widget class="QWidget" name="modifyStadiumPage">
-       <widget class="QPushButton" name="modifyStadiumBtn">
-        <property name="geometry">
-         <rect>
-          <x>220</x>
-          <y>240</y>
-          <width>181</width>
-          <height>41</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Modify Stadium</string>
-        </property>
-       </widget>
-       <widget class="QPushButton" name="addStadiumBtn">
-        <property name="geometry">
-         <rect>
-          <x>221</x>
-          <y>190</y>
-          <width>181</width>
-          <height>41</height>
-         </rect>
-        </property>
-        <property name="acceptDrops">
-         <bool>false</bool>
-        </property>
-        <property name="text">
-         <string>Add Stadium</string>
-        </property>
-       </widget>
-       <widget class="QPushButton" name="pushButton_3">
-        <property name="geometry">
-         <rect>
-          <x>280</x>
-          <y>300</y>
-          <width>75</width>
-          <height>23</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Back</string>
-        </property>
-       </widget>
-      </widget>
-      <widget class="QWidget" name="planVacationPage">
-       <widget class="QPushButton" name="shortestAngelBtn">
-        <property name="geometry">
-         <rect>
-          <x>210</x>
-          <y>180</y>
-          <width>181</width>
-          <height>41</height>
-         </rect>
-        </property>
-        <property name="acceptDrops">
-         <bool>false</bool>
-        </property>
-        <property name="text">
-         <string>Shortest Trip from Angel Stadium</string>
-        </property>
-       </widget>
-       <widget class="QPushButton" name="customizeShortestBtn">
-        <property name="geometry">
-         <rect>
-          <x>209</x>
-          <y>230</y>
-          <width>181</width>
-          <height>41</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Customize Shortest Trip</string>
-        </property>
-       </widget>
-       <widget class="QPushButton" name="MSTBtn">
-        <property name="geometry">
-         <rect>
-          <x>209</x>
-          <y>280</y>
-          <width>181</width>
-          <height>41</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Minimum Spanning Tree</string>
-        </property>
-       </widget>
-       <widget class="QPushButton" name="pushButton_4">
-        <property name="geometry">
-         <rect>
-          <x>270</x>
-          <y>340</y>
-          <width>75</width>
-          <height>23</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Back</string>
-        </property>
-       </widget>
-      </widget>
-      <widget class="QWidget" name="MSTPage">
-       <widget class="QTableWidget" name="mstTable">
-        <property name="geometry">
-         <rect>
-          <x>10</x>
-          <y>40</y>
-          <width>601</width>
-          <height>371</height>
-         </rect>
-        </property>
-        <property name="editTriggers">
-         <set>QAbstractItemView::NoEditTriggers</set>
-        </property>
-        <property name="sortingEnabled">
-         <bool>true</bool>
-        </property>
-       </widget>
-       <widget class="QPushButton" name="pushButton_16">
-        <property name="geometry">
-         <rect>
-          <x>540</x>
-          <y>420</y>
-          <width>75</width>
-          <height>23</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Back</string>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_6">
-        <property name="geometry">
-         <rect>
-          <x>10</x>
-          <y>410</y>
-          <width>141</width>
-          <height>51</height>
-         </rect>
-        </property>
-        <property name="font">
-         <font>
-          <pointsize>12</pointsize>
-          <weight>75</weight>
-          <bold>true</bold>
-         </font>
-        </property>
-        <property name="text">
-         <string>Total Distance:</string>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_7">
-        <property name="geometry">
-         <rect>
-          <x>150</x>
-          <y>410</y>
-          <width>101</width>
-          <height>51</height>
-         </rect>
-        </property>
-        <property name="font">
-         <font>
-          <pointsize>12</pointsize>
-          <weight>75</weight>
-          <bold>true</bold>
-         </font>
-        </property>
-        <property name="text">
-         <string>TextLabel</string>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_11">
-        <property name="geometry">
-         <rect>
-          <x>10</x>
-          <y>0</y>
-          <width>291</width>
-          <height>41</height>
-         </rect>
-        </property>
-        <property name="font">
-         <font>
-          <pointsize>14</pointsize>
-          <weight>75</weight>
-          <bold>true</bold>
-         </font>
-        </property>
-        <property name="text">
-         <string>Minimum Spanning Tree</string>
-        </property>
-       </widget>
-      </widget>
-      <widget class="QWidget" name="shortestfromAngelPage">
-       <widget class="QTextBrowser" name="textBrowser">
-        <property name="geometry">
-         <rect>
-          <x>10</x>
-          <y>50</y>
-          <width>621</width>
-          <height>361</height>
-         </rect>
-        </property>
-        <property name="sizeAdjustPolicy">
-         <enum>QAbstractScrollArea::AdjustToContents</enum>
-        </property>
-        <property name="lineWrapMode">
-         <enum>QTextEdit::NoWrap</enum>
-        </property>
-       </widget>
-       <widget class="QPushButton" name="backBtn">
-        <property name="geometry">
-         <rect>
-          <x>540</x>
-          <y>420</y>
-          <width>75</width>
-          <height>23</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Back</string>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label">
-        <property name="geometry">
-         <rect>
-          <x>20</x>
-          <y>10</y>
-          <width>291</width>
-          <height>31</height>
-         </rect>
-        </property>
-        <property name="font">
-         <font>
-          <pointsize>12</pointsize>
-          <weight>75</weight>
-          <bold>true</bold>
-         </font>
-        </property>
-        <property name="text">
-         <string>Shortest Path from Angel Stadium:</string>
-        </property>
-       </widget>
-      </widget>
-      <widget class="QWidget" name="customizeShortestPage">
-       <widget class="QPushButton" name="pushButton_5">
-        <property name="geometry">
-         <rect>
-          <x>420</x>
-          <y>420</y>
-          <width>75</width>
-          <height>23</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Back</string>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_2">
-        <property name="geometry">
-         <rect>
-          <x>50</x>
-          <y>20</y>
-          <width>351</width>
-          <height>21</height>
-         </rect>
-        </property>
-        <property name="font">
-         <font>
-          <pointsize>12</pointsize>
-          <weight>75</weight>
-          <bold>true</bold>
-         </font>
-        </property>
-        <property name="text">
-         <string>Please Select a Stadium to Start: </string>
-        </property>
-       </widget>
-       <widget class="QListWidget" name="customizeTripList">
-        <property name="geometry">
-         <rect>
-          <x>40</x>
-          <y>50</y>
-          <width>541</width>
-          <height>361</height>
-         </rect>
-        </property>
-        <property name="editTriggers">
-         <set>QAbstractItemView::NoEditTriggers</set>
-        </property>
-       </widget>
-       <widget class="QPushButton" name="pushButton_6">
-        <property name="geometry">
-         <rect>
-          <x>510</x>
-          <y>420</y>
-          <width>75</width>
-          <height>23</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Next</string>
-        </property>
-       </widget>
-      </widget>
-      <widget class="QWidget" name="customizeShortestPage2">
-       <widget class="QTextBrowser" name="textBrowser_2">
-        <property name="geometry">
-         <rect>
-          <x>30</x>
-          <y>50</y>
-          <width>571</width>
-          <height>361</height>
-         </rect>
-        </property>
-        <property name="lineWrapMode">
-         <enum>QTextEdit::NoWrap</enum>
-        </property>
-       </widget>
-       <widget class="QPushButton" name="pushButton_7">
-        <property name="geometry">
-         <rect>
-          <x>510</x>
-          <y>420</y>
-          <width>75</width>
-          <height>23</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Back</string>
-        </property>
-       </widget>
-       <widget class="QLabel" name="shortestTripPage2Label">
-        <property name="geometry">
-         <rect>
-          <x>30</x>
-          <y>20</y>
-          <width>521</width>
-          <height>16</height>
-         </rect>
-        </property>
-        <property name="font">
-         <font>
-          <pointsize>12</pointsize>
-          <weight>75</weight>
-          <bold>true</bold>
-         </font>
-        </property>
-        <property name="text">
-         <string>TextLabel</string>
-        </property>
-       </widget>
-      </widget>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="text">
+       <string>TextLabel</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
      </widget>
-    </item>
-   </layout>
+     <widget class="QPushButton" name="quitBtn">
+      <property name="geometry">
+       <rect>
+        <x>250</x>
+        <y>390</y>
+        <width>150</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Quit</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="logInBtn">
+      <property name="geometry">
+       <rect>
+        <x>520</x>
+        <y>370</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Log in</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="adminLogInLabel">
+      <property name="geometry">
+       <rect>
+        <x>520</x>
+        <y>350</y>
+        <width>101</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Administrator Log In</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="shoppingCartBtn">
+      <property name="geometry">
+       <rect>
+        <x>250</x>
+        <y>340</y>
+        <width>150</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Shopping Cart</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="viewStadiumBtn">
+      <property name="geometry">
+       <rect>
+        <x>250</x>
+        <y>290</y>
+        <width>150</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>View Stadiums</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="planVacationBtn">
+      <property name="geometry">
+       <rect>
+        <x>250</x>
+        <y>240</y>
+        <width>150</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Plan A Vacation</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="viewStadiumsPage">
+     <widget class="QPushButton" name="viewMajorLeagueBtn">
+      <property name="geometry">
+       <rect>
+        <x>230</x>
+        <y>150</y>
+        <width>150</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Major League Stadiums</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="viewAmericanLeagueBtn">
+      <property name="geometry">
+       <rect>
+        <x>230</x>
+        <y>200</y>
+        <width>150</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>American League Stadiums</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="viewNationalLeagueBtn">
+      <property name="geometry">
+       <rect>
+        <x>230</x>
+        <y>250</y>
+        <width>150</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>National League Stadiums</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="viewGrassSurfaceBtn">
+      <property name="geometry">
+       <rect>
+        <x>230</x>
+        <y>300</y>
+        <width>150</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Grass Surface Stadiums</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_12">
+      <property name="geometry">
+       <rect>
+        <x>270</x>
+        <y>360</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Back</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="viewMajorLeaguePage">
+     <widget class="QPushButton" name="pushButton_11">
+      <property name="geometry">
+       <rect>
+        <x>540</x>
+        <y>420</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Back</string>
+      </property>
+     </widget>
+     <widget class="QTableWidget" name="viewMajorLeagueTable">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>20</y>
+        <width>611</width>
+        <height>391</height>
+       </rect>
+      </property>
+      <property name="editTriggers">
+       <set>QAbstractItemView::NoEditTriggers</set>
+      </property>
+      <property name="sortingEnabled">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="viewAMLeaguePage">
+     <widget class="QTableWidget" name="viewAmericanLeagueTable">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>10</y>
+        <width>611</width>
+        <height>391</height>
+       </rect>
+      </property>
+      <property name="editTriggers">
+       <set>QAbstractItemView::NoEditTriggers</set>
+      </property>
+      <property name="sortingEnabled">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_13">
+      <property name="geometry">
+       <rect>
+        <x>550</x>
+        <y>420</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Back</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="viewNATLeaguePage">
+     <widget class="QTableWidget" name="viewNationalLeagueTable">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>10</y>
+        <width>611</width>
+        <height>391</height>
+       </rect>
+      </property>
+      <property name="editTriggers">
+       <set>QAbstractItemView::NoEditTriggers</set>
+      </property>
+      <property name="sortingEnabled">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_14">
+      <property name="geometry">
+       <rect>
+        <x>550</x>
+        <y>420</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Back</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="viewGrassPage">
+     <widget class="QTableWidget" name="viewGrassStadiumsTable">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>10</y>
+        <width>611</width>
+        <height>391</height>
+       </rect>
+      </property>
+      <property name="editTriggers">
+       <set>QAbstractItemView::NoEditTriggers</set>
+      </property>
+      <property name="sortingEnabled">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_15">
+      <property name="geometry">
+       <rect>
+        <x>550</x>
+        <y>410</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Back</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="adminLogIn">
+     <widget class="QPushButton" name="pushButton_8">
+      <property name="geometry">
+       <rect>
+        <x>360</x>
+        <y>260</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Back</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_3">
+      <property name="geometry">
+       <rect>
+        <x>240</x>
+        <y>60</y>
+        <width>151</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>16</pointsize>
+        <weight>75</weight>
+        <italic>false</italic>
+        <bold>true</bold>
+        <underline>false</underline>
+       </font>
+      </property>
+      <property name="text">
+       <string>Admin Log In</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_4">
+      <property name="geometry">
+       <rect>
+        <x>135</x>
+        <y>160</y>
+        <width>61</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Username: </string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_5">
+      <property name="geometry">
+       <rect>
+        <x>135</x>
+        <y>190</y>
+        <width>61</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Password: </string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="usernameInput">
+      <property name="geometry">
+       <rect>
+        <x>210</x>
+        <y>160</y>
+        <width>221</width>
+        <height>21</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="passwordInput">
+      <property name="geometry">
+       <rect>
+        <x>210</x>
+        <y>190</y>
+        <width>221</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="echoMode">
+       <enum>QLineEdit::Password</enum>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_9">
+      <property name="geometry">
+       <rect>
+        <x>460</x>
+        <y>260</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Log in</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="modifySouvenirPage">
+     <widget class="QPushButton" name="modifySouvenirBtn">
+      <property name="geometry">
+       <rect>
+        <x>209</x>
+        <y>220</y>
+        <width>181</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Modify Souvenir</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="addSouvenirBtn">
+      <property name="geometry">
+       <rect>
+        <x>210</x>
+        <y>170</y>
+        <width>181</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="acceptDrops">
+       <bool>false</bool>
+      </property>
+      <property name="text">
+       <string>Add Souvenir</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="deleteSourvenirBtn">
+      <property name="geometry">
+       <rect>
+        <x>210</x>
+        <y>270</y>
+        <width>181</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="acceptDrops">
+       <bool>false</bool>
+      </property>
+      <property name="text">
+       <string>Delete Souvenir</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton">
+      <property name="geometry">
+       <rect>
+        <x>270</x>
+        <y>330</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Back</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="adminPage">
+     <widget class="QPushButton" name="modifySouvenirListBtn">
+      <property name="geometry">
+       <rect>
+        <x>219</x>
+        <y>230</y>
+        <width>181</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Modify Souvenir List</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="modifyStadiumListBtn">
+      <property name="geometry">
+       <rect>
+        <x>220</x>
+        <y>180</y>
+        <width>181</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="acceptDrops">
+       <bool>false</bool>
+      </property>
+      <property name="text">
+       <string>Modify Stadium List</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_2">
+      <property name="geometry">
+       <rect>
+        <x>280</x>
+        <y>290</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Back</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="addStadiumPage">
+     <widget class="QLineEdit" name="stadiumNameBox">
+      <property name="geometry">
+       <rect>
+        <x>327</x>
+        <y>85</y>
+        <width>113</width>
+        <height>20</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="NameLabel">
+      <property name="geometry">
+       <rect>
+        <x>187</x>
+        <y>85</y>
+        <width>131</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Enter the Stadiums Name:</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="teamNameLabel">
+      <property name="geometry">
+       <rect>
+        <x>206</x>
+        <y>118</y>
+        <width>111</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Enter the team Name:</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="teamNameBox">
+      <property name="geometry">
+       <rect>
+        <x>328</x>
+        <y>117</y>
+        <width>113</width>
+        <height>20</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="addressLabel">
+      <property name="geometry">
+       <rect>
+        <x>226</x>
+        <y>156</y>
+        <width>91</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Enter the Adress:</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="addressBox">
+      <property name="geometry">
+       <rect>
+        <x>329</x>
+        <y>155</y>
+        <width>113</width>
+        <height>20</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="phoneLabel">
+      <property name="geometry">
+       <rect>
+        <x>191</x>
+        <y>191</y>
+        <width>121</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Enter the Phone number:</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="phoineBox">
+      <property name="geometry">
+       <rect>
+        <x>329</x>
+        <y>192</y>
+        <width>113</width>
+        <height>20</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="leagueLabel">
+      <property name="geometry">
+       <rect>
+        <x>222</x>
+        <y>232</y>
+        <width>91</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Select the League:</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="leagueComboBox">
+      <property name="geometry">
+       <rect>
+        <x>329</x>
+        <y>230</y>
+        <width>41</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>NL</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>AL</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QLabel" name="dateLabel">
+      <property name="geometry">
+       <rect>
+        <x>203</x>
+        <y>306</y>
+        <width>111</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>set the date it opened:</string>
+      </property>
+     </widget>
+     <widget class="QDateEdit" name="dateEdit">
+      <property name="geometry">
+       <rect>
+        <x>329</x>
+        <y>303</y>
+        <width>110</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="maximumDateTime">
+       <datetime>
+        <hour>23</hour>
+        <minute>59</minute>
+        <second>59</second>
+        <year>2015</year>
+        <month>5</month>
+        <day>17</day>
+       </datetime>
+      </property>
+      <property name="minimumDateTime">
+       <datetime>
+        <hour>0</hour>
+        <minute>0</minute>
+        <second>0</second>
+        <year>1800</year>
+        <month>1</month>
+        <day>1</day>
+       </datetime>
+      </property>
+     </widget>
+     <widget class="QLabel" name="grassLabel">
+      <property name="geometry">
+       <rect>
+        <x>258</x>
+        <y>272</y>
+        <width>61</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Grass field:</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="grassComboBox">
+      <property name="geometry">
+       <rect>
+        <x>329</x>
+        <y>269</y>
+        <width>41</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>Yes</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>No</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QPushButton" name="pushButton_10">
+      <property name="geometry">
+       <rect>
+        <x>530</x>
+        <y>410</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Back</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="modifyStadiumPage">
+     <widget class="QPushButton" name="modifyStadiumBtn">
+      <property name="geometry">
+       <rect>
+        <x>220</x>
+        <y>240</y>
+        <width>181</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Modify Stadium</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="addStadiumBtn">
+      <property name="geometry">
+       <rect>
+        <x>221</x>
+        <y>190</y>
+        <width>181</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="acceptDrops">
+       <bool>false</bool>
+      </property>
+      <property name="text">
+       <string>Add Stadium</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_3">
+      <property name="geometry">
+       <rect>
+        <x>280</x>
+        <y>300</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Back</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="planVacationPage">
+     <widget class="QPushButton" name="shortestAngelBtn">
+      <property name="geometry">
+       <rect>
+        <x>210</x>
+        <y>180</y>
+        <width>181</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="acceptDrops">
+       <bool>false</bool>
+      </property>
+      <property name="text">
+       <string>Shortest Trip from Angel Stadium</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="customizeShortestBtn">
+      <property name="geometry">
+       <rect>
+        <x>209</x>
+        <y>230</y>
+        <width>181</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Customize Shortest Trip</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="MSTBtn">
+      <property name="geometry">
+       <rect>
+        <x>209</x>
+        <y>280</y>
+        <width>181</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Minimum Spanning Tree</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_4">
+      <property name="geometry">
+       <rect>
+        <x>270</x>
+        <y>340</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Back</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="shortestfromAngelPage">
+     <widget class="QTextBrowser" name="textBrowser">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>50</y>
+        <width>621</width>
+        <height>361</height>
+       </rect>
+      </property>
+      <property name="sizeAdjustPolicy">
+       <enum>QAbstractScrollArea::AdjustToContents</enum>
+      </property>
+      <property name="lineWrapMode">
+       <enum>QTextEdit::NoWrap</enum>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="backBtn">
+      <property name="geometry">
+       <rect>
+        <x>540</x>
+        <y>420</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Back</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>10</y>
+        <width>291</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>Shortest Path from Angel Stadium:</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="customizeShortestPage">
+     <widget class="QPushButton" name="pushButton_5">
+      <property name="geometry">
+       <rect>
+        <x>420</x>
+        <y>420</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Back</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_2">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>20</y>
+        <width>351</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>Please Select a Stadium to Start: </string>
+      </property>
+     </widget>
+     <widget class="QListWidget" name="customizeTripList">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>50</y>
+        <width>541</width>
+        <height>361</height>
+       </rect>
+      </property>
+      <property name="editTriggers">
+       <set>QAbstractItemView::NoEditTriggers</set>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_6">
+      <property name="geometry">
+       <rect>
+        <x>510</x>
+        <y>420</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Next</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="customizeShortestPage2">
+     <widget class="QTextBrowser" name="textBrowser_2">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>50</y>
+        <width>571</width>
+        <height>361</height>
+       </rect>
+      </property>
+      <property name="lineWrapMode">
+       <enum>QTextEdit::NoWrap</enum>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_7">
+      <property name="geometry">
+       <rect>
+        <x>510</x>
+        <y>420</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Back</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="shortestTripPage2Label">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>20</y>
+        <width>521</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>TextLabel</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>646</width>
+     <width>643</width>
      <height>21</height>
     </rect>
    </property>

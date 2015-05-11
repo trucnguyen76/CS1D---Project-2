@@ -6,7 +6,12 @@
 
 using namespace std;
 
-
+//QString str[25] = {"PETCO Park", "Dodger/Angel Stadium", "AT&T Park/Coliseum", "Safeco Field",
+// "Chase Field", "Coors Field", "Minute Maid Park", "Rangers Ballpark",
+// "Kauffman Stadium", "Busch Stadium", "Target Field", "Us Cellular Field/Wrigley Field",
+// "Miller Park", "Marlins Park", "Tropicana Field", "Turner Field", "Great American Ballpark",
+// "Progressive Field", "Comerica Park", "PNC Park", "Rogers Center", "Nationals Park/Camden Yards",
+// "Citizens Bank Park", "Citi Field/Yankee Stadium", "Fenway Park"};
 
 class MST
 {

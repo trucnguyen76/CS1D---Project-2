@@ -26,8 +26,6 @@ class MainWindow : public QMainWindow
 
 public:
     explicit MainWindow(QWidget *parent = 0);
-    void setPvec(int set);
-    void setSvec(QString set);
     ~MainWindow();
 
 private slots:
@@ -100,24 +98,12 @@ private slots:
     void on_pushButton_13_clicked();
 
 
-//    void on_pushButton_16_clicked();
-
-//    void on_MSTBtn_clicked();
-
-    void on_MSTBtn_clicked();
-
-    void on_pushButton_16_clicked();
-
-
 private:
     Ui::MainWindow *ui;
     QHash<QString,Stadium> stadiumMap;
     Graph stadiumGraph;
     QString username;
     QString password;
-    int parentSize;
-    vector<QString> sVec;
-    vector<int> pVec;
     shoppingCart cart;
 };
 

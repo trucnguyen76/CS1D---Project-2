@@ -13,9 +13,8 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->mainPage->show();
     loadData();
     initializeGraph();
-    stadiumGraph.calcMST();
     cart.setList(stadiumMap);
-
+    stadiumGraph.calcMST();
 
     username = "admin";
     password = "password";
@@ -110,14 +109,4 @@ void MainWindow::on_pushButton_12_clicked()
 {
     ui->viewStadiumsPage->hide();
     ui->mainPage->show();
-}
-
-void MainWindow::setPvec(int set)
-{
-    pVec.push_back(set);
-}
-
-void MainWindow::setSvec(QString set)
-{
-    sVec.push_back(set);
 }
