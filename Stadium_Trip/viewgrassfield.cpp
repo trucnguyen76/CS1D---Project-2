@@ -15,6 +15,7 @@ void MainWindow::on_viewGrassSurfaceBtn_clicked()
     //Set the headers for each column
     horizontalHeaderList.append("Stadium Name");
     horizontalHeaderList.append("Team Name");
+    horizontalHeaderList.append("American or National League");
     horizontalHeaderList.append("Address");
     horizontalHeaderList.append("Phone Number");
     horizontalHeaderList.append("Date Opened");
@@ -34,7 +35,7 @@ void MainWindow::on_viewGrassSurfaceBtn_clicked()
         verticalHeaderList.append("");
     }
 
-    ui->viewGrassStadiumsTable->setColumnCount(6);
+    ui->viewGrassStadiumsTable->setColumnCount(7);
     ui->viewGrassStadiumsTable->setRowCount(size);
     ui->viewGrassStadiumsTable->setHorizontalHeaderLabels(horizontalHeaderList);
     ui->viewGrassStadiumsTable->setVerticalHeaderLabels(verticalHeaderList);
@@ -50,10 +51,12 @@ void MainWindow::on_viewGrassSurfaceBtn_clicked()
     //Set column width for columns
     ui->viewGrassStadiumsTable->setColumnWidth(0, 180);
     ui->viewGrassStadiumsTable->setColumnWidth(1, 200);
-    ui->viewGrassStadiumsTable->setColumnWidth(2, 280);
-    ui->viewGrassStadiumsTable->setColumnWidth(3, 120);
+    ui->viewGrassStadiumsTable->setColumnWidth(2, 180);
+    ui->viewGrassStadiumsTable->setColumnWidth(3, 280);
     ui->viewGrassStadiumsTable->setColumnWidth(4, 120);
-    ui->viewGrassStadiumsTable->setColumnWidth(5, 250);
+    ui->viewGrassStadiumsTable->setColumnWidth(5, 120);
+    ui->viewGrassStadiumsTable->setColumnWidth(6, 250);
+
 
     //Set the # of rows for the table
     row = 0;
@@ -75,25 +78,30 @@ void MainWindow::on_viewGrassSurfaceBtn_clicked()
             tableItem->setText(it.value().getTeamName());
             ui->viewGrassStadiumsTable->setItem(row, 1, tableItem);
 
+            //Show National/American League
+            tableItem = new QTableWidgetItem();
+            tableItem->setText(it.value().getLeague() == 'A'? "American League": "National League");
+            ui->viewGrassStadiumsTable->setItem(row, 2, tableItem);
+
             //Show Street Address
             tableItem = new QTableWidgetItem();
             tableItem->setText(it.value().getAddress());
-            ui->viewGrassStadiumsTable->setItem(row, 2, tableItem);
+            ui->viewGrassStadiumsTable->setItem(row, 3, tableItem);
 
             //Show Phone Number
             tableItem = new QTableWidgetItem();
             tableItem->setText(it.value().getPhoneNumber());
-            ui->viewGrassStadiumsTable->setItem(row, 3, tableItem);
+            ui->viewGrassStadiumsTable->setItem(row, 4, tableItem);
 
             //Show DateOpened
             tableItem = new QTableWidgetItem();
-            tableItem->setText(it.value().getDateOpened().toString());
-            ui->viewGrassStadiumsTable->setItem(row, 4, tableItem);
+            tableItem->setText(it.value().getDateOpened().toString("yyyy / MM / dd"));
+            ui->viewGrassStadiumsTable->setItem(row, 5, tableItem);
 
             //Show Seating Capacity
             tableItem = new QTableWidgetItem();
             tableItem->setText(it.value().getCapacity());
-            ui->viewGrassStadiumsTable->setItem(row, 5, tableItem);
+            ui->viewGrassStadiumsTable->setItem(row, 6, tableItem);
 
             row++;
 

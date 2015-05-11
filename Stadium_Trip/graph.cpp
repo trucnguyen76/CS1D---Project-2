@@ -15,6 +15,7 @@ void Graph::insertEdge(int originNumber, int destinationNumber, double weight)
 
 void Graph::insertEdge(QString originName, QString destinationName, double weight)
 {
+
     int index = 0;
     int originNumber;
     int destinationNumber;
@@ -123,136 +124,136 @@ void Graph::printMatrix()
 
 QString Graph::Dikstras(int startVertex)
 {
-//    //Costs, parents and found Vertices will be parallel vectors
-//    vector<double>  costs(totalVertex, INFINITY);
-//    vector<int>		parents(totalVertex, INFINITY);
-//    vector<bool>    foundVertices(totalVertex, false);
-//    vector<int>     path;
-//    int             parentOfLowestCost;
-//    int             index;
-//    int             row;
-//    int             col;
-//    int             lowestCostIndex;
-//    int             totalFoundVertices;
-//    int             vertexIndex;
-//    int             lowestWeightIndex;
-//    int             originVertex;
-//    double          lowestCost;
-//    double          lowestWeight;
-//    double matrix[totalVertex][totalVertex];
+    //Costs, parents and found Vertices will be parallel vectors
+    vector<double>  costs(totalVertex, INFINITY);
+    vector<int>		parents(totalVertex, INFINITY);
+    vector<bool>    foundVertices(totalVertex, false);
+    vector<int>     path;
+    int             parentOfLowestCost;
+    int             index;
+    int             row;
+    int             col;
+    int             lowestCostIndex;
+    int             totalFoundVertices;
+    int             vertexIndex;
+    int             lowestWeightIndex;
+    int             originVertex;
+    double          lowestCost;
+    double          lowestWeight;
+    double matrix[totalVertex][totalVertex];
     QString output= "";
 
-//    totalFoundVertices = 0;
+    totalFoundVertices = 0;
 
-//    //Copy the adjacency matrix
-//    for(row = 0; row < totalVertex; row++)
-//    {
-//        for(col = 0; col < totalVertex; col++)
-//        {
-//            matrix[row][col] = adjacencyMatrix[row][col];
-//        }
-//    }
+    //Copy the adjacency matrix
+    for(row = 0; row < totalVertex; row++)
+    {
+        for(col = 0; col < totalVertex; col++)
+        {
+            matrix[row][col] = adjacencyMatrix[row][col];
+        }
+    }
 
-//    //The parent of startVertex will be itself -> mark as -1
-//    parents[startVertex] = -1;
+    //The parent of startVertex will be itself -> mark as -1
+    parents[startVertex] = -1;
 
-//    //The costs from startVertex to itself is 0;
-//    costs[startVertex] = 0;
+    //The costs from startVertex to itself is 0;
+    costs[startVertex] = 0;
 
-//    foundVertices[startVertex] = true;
+    foundVertices[startVertex] = true;
 
-//    totalFoundVertices++;
+    totalFoundVertices++;
 
-//    lowestWeight  = INFINITY;
-//    for(index = 0; index < totalVertex; index++)
-//    {
-//        matrix[index][startVertex] = INFINITY;
-//    }
+    lowestWeight  = INFINITY;
+    for(index = 0; index < totalVertex; index++)
+    {
+        matrix[index][startVertex] = INFINITY;
+    }
 
-//    while(totalFoundVertices < totalVertex)
-//    {
-//        lowestCost   = INFINITY;
+    while(totalFoundVertices < totalVertex)
+    {
+        lowestCost   = INFINITY;
 
-//        for(originVertex = 0; originVertex < totalVertex; originVertex++)
-//        {
-//            if(foundVertices[originVertex])
-//            {
-//                lowestWeight = INFINITY;
+        for(originVertex = 0; originVertex < totalVertex; originVertex++)
+        {
+            if(foundVertices[originVertex])
+            {
+                lowestWeight = INFINITY;
 
-//                //For loop - find the lowest Weight from that found vertex
-//                for(index = 0; index < totalVertex; index++)
-//                {
-//                    if(matrix[originVertex][index] < lowestWeight)// &&
-////                       matrix[originVertex][index] != 0 )
-//                    {
-//                        lowestWeightIndex = index;
-//                        lowestWeight = matrix[originVertex][index];
-//                    }
-//                }
+                //For loop - find the lowest Weight from that found vertex
+                for(index = 0; index < totalVertex; index++)
+                {
+                    if(matrix[originVertex][index] < lowestWeight)// &&
+//                       matrix[originVertex][index] != 0 )
+                    {
+                        lowestWeightIndex = index;
+                        lowestWeight = matrix[originVertex][index];
+                    }
+                }
 
-//                if(costs[originVertex] + lowestWeight < lowestCost)
-//                {
-//                    lowestCost = costs[originVertex] + lowestWeight;
-//                    lowestCostIndex = lowestWeightIndex;
-//                    parentOfLowestCost = originVertex;
-//                }
-//            }
-//        }
+                if(costs[originVertex] + lowestWeight < lowestCost)
+                {
+                    lowestCost = costs[originVertex] + lowestWeight;
+                    lowestCostIndex = lowestWeightIndex;
+                    parentOfLowestCost = originVertex;
+                }
+            }
+        }
 
-//        matrix[parentOfLowestCost][lowestCostIndex] = INFINITY;
-//        for(index = 0; index < totalVertex; index++)
-//        {
-//            matrix[index][lowestCostIndex] = INFINITY;
-//        }
+        matrix[parentOfLowestCost][lowestCostIndex] = INFINITY;
+        for(index = 0; index < totalVertex; index++)
+        {
+            matrix[index][lowestCostIndex] = INFINITY;
+        }
 
-//        foundVertices[lowestCostIndex] = true;
-//        parents[lowestCostIndex] = parentOfLowestCost;
+        foundVertices[lowestCostIndex] = true;
+        parents[lowestCostIndex] = parentOfLowestCost;
 
-//        costs[lowestCostIndex] = lowestCost;
+        costs[lowestCostIndex] = lowestCost;
 
-//        totalFoundVertices++;
-//    }
+        totalFoundVertices++;
+    }
 
-////    output.append( "Shortest Path from ");
-////    output.append(vertexList[startVertex].name);
-////    output.append("\n\n\n");
+//    output.append( "Shortest Path from ");
+//    output.append(vertexList[startVertex].name);
+//    output.append("\n\n\n");
 
-////    qDebug() << "Before for\n";
-////    cin.ignore(1000, '\n');
-//    for(index = 0; index < totalVertex; index++)
-//    {
-//        if(parents[index] != -1)
-//        {
-//            output.append("Cost to ");
-//            output.append(vertexList[index].name);
-//            output.append(" is: ");
-//            output.append(QString::number(costs[index]));
-//            output.append('\n');
+//    qDebug() << "Before for\n";
+//    cin.ignore(1000, '\n');
+    for(index = 0; index < totalVertex; index++)
+    {
+        if(parents[index] != -1)
+        {
+            output.append("Cost to ");
+            output.append(vertexList[index].name);
+            output.append(" is: ");
+            output.append(QString::number(costs[index]));
+            output.append('\n');
 
-//            vertexIndex = parents[index];
+            vertexIndex = parents[index];
 
-//            path.clear();
+            path.clear();
 
-//            path.push_back(index);
+            path.push_back(index);
 
-//            while(vertexIndex != -1)
-//            {
-//                path.insert(path.begin(), 1, vertexIndex);
+            while(vertexIndex != -1)
+            {
+                path.insert(path.begin(), 1, vertexIndex);
 
-//                vertexIndex = parents[path[0]];
-//            }
+                vertexIndex = parents[path[0]];
+            }
 
-//            output.append( "Path is: ");
+            output.append( "Path is: ");
 
-//            for(int i = 0; i < path.size(); i++)
-//            {
-//                output.append( vertexList[path[i]].name);
-//                output.append('\t');
-//            }
+            for(int i = 0; i < path.size(); i++)
+            {
+                output.append( vertexList[path[i]].name);
+                output.append('\t');
+            }
 
-//            output.append("\n\n");
-//        }
-//    }
+            output.append("\n\n");
+        }
+    }
     return output;
 }
 
@@ -304,6 +305,7 @@ int Graph::minKey(vector<int> key, vector<bool> mstSet, int size)
 // A utility function to print the constructed MST stored in parent[]
 void Graph:: printMST(vector<int> &parent, int n)
 {
+
     qDebug() <<"//////////////////////////////////////////////////////////////////\n"
             "                  MINIMUM SPANNING TREE						  \n"
             "/////////////////////////////////////////////////////////////////\n\n";
@@ -311,8 +313,8 @@ void Graph:: printMST(vector<int> &parent, int n)
     int total = 0;
    for ( int i = 1; i < n; i++)
    {
-      qDebug() << vertexList.at(parent[i]).name;
-      qDebug() <<  " --> " << vertexList[i].name;
+      qDebug() << stadiumNames.at(parent[i]);
+      qDebug() <<  " --> " << stadiumNames.at(i);
       qDebug() <<"\nWEIGHT: " << adjacencyMatrix[i].at(parent[i]);
       qDebug() << endl;
       qDebug() << "----------------------------------------------------------------\n\n";
@@ -327,27 +329,27 @@ void Graph:: printMST(vector<int> &parent, int n)
 // matrix representation
 void Graph:: calcMST()
 {
-     int V = adjacencyMatrix.size();    // Number of vertices
-     vector<int> parent;                // Array to store constructed MST
-     vector<int> key;                   // Key values used to pick minimum weight edge in cut
-     vector<bool> mstSet;               // To represent set of vertices not yet included in MST
+    initializeMatrix();
+
+     int V = stadiumNames.size();    // Number of vertices
+    vector<int> key;
+    vector<bool> mstSet;
 
      // Reserve space in vectors
      parent.reserve(V);
      key.reserve(V);
      mstSet.reserve(V);
 
-     // Initialize all keys as INFINITE/Flase
+     // Initialize all keys as INFINITE/False
      for (int i = 0; i < V; i++)
      {
          key.push_back(INT_MAX);
          mstSet.push_back(false);
+         parent.push_back(0);
      }
 
-
      key[0] = 0;      // Make key 0 so that this vertex is picked as first vertex
-     parent[0] = -1;  // First node is always root of MST
-
+     parent[0] = -1;
      // The MST will have V vertices
      for (int count = 0; count < V-1; count++)
      {
@@ -375,5 +377,8 @@ void Graph:: calcMST()
      }
 
      // print the constructed MST
-     printMST(parent, V);
+   //printMST(parent, V);
+
+
+
 }
