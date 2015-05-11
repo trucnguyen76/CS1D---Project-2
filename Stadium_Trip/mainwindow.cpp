@@ -37,11 +37,6 @@ void MainWindow::on_modifySouvenirListBtn_clicked()
     ui->modifySouvenirPage->show();
 }
 
-void MainWindow::on_modifyStadiumListBtn_clicked()
-{
-    ui->adminPage->hide();
-    ui->modifyStadiumPage->show();
-}
 
 void MainWindow::on_logInBtn_clicked()
 {

@@ -28,7 +28,8 @@ SOURCES += main.cpp\
     viewMajorLeagues.cpp \
     viewnationalleague.cpp \
     viewgrassfield.cpp \
-    viewamericanleague.cpp
+    viewamericanleague.cpp \
+    addStadium.cpp
 
 HEADERS  += mainwindow.h \
     graph.h \
