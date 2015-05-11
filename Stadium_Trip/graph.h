@@ -27,12 +27,14 @@ struct Vertex
 
 class Graph
 {
-    static const int INFINITY = 10000;
+    //static const int INFINITY = 10000;
 
 private:
     vector <Vertex>          vertexList;			//The Vertex list
     vector<vector<double> >	adjacencyMatrix;
+    vector<QString> stadiumNames;
     int totalVertex;								//Total num of vertices
+    vector<int> parent;								//Total num of vertices
 
 public:
     /************************************************************************
@@ -111,6 +113,19 @@ public:
      *  -> RETURN nothing
      ***********************************************************************/
     void    calcMST();
+    void initializeMatrix();
+    vector<int> getParent()
+    {
+        return parent;
+    }
+    vector<QString> getStadiumNames()
+    {
+        return stadiumNames;
+    }
+    vector<vector<double> > getMatrix()
+    {
+        return adjacencyMatrix;
+    }
 
 protected:
 

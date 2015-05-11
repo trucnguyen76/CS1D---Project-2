@@ -216,9 +216,9 @@
       <property name="geometry">
        <rect>
         <x>10</x>
-        <y>20</y>
+        <y>50</y>
         <width>611</width>
-        <height>391</height>
+        <height>361</height>
        </rect>
       </property>
       <property name="editTriggers">
@@ -228,15 +228,35 @@
        <bool>true</bool>
       </property>
      </widget>
+     <widget class="QLabel" name="label_8">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>5</y>
+        <width>191</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>All MLB Stadiums</string>
+      </property>
+     </widget>
     </widget>
     <widget class="QWidget" name="viewAMLeaguePage">
      <widget class="QTableWidget" name="viewAmericanLeagueTable">
       <property name="geometry">
        <rect>
         <x>20</x>
-        <y>10</y>
+        <y>50</y>
         <width>611</width>
-        <height>391</height>
+        <height>351</height>
        </rect>
       </property>
       <property name="editTriggers">
@@ -259,15 +279,35 @@
        <string>Back</string>
       </property>
      </widget>
+     <widget class="QLabel" name="label_9">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>0</y>
+        <width>291</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>American League Stadiums</string>
+      </property>
+     </widget>
     </widget>
     <widget class="QWidget" name="viewNATLeaguePage">
      <widget class="QTableWidget" name="viewNationalLeagueTable">
       <property name="geometry">
        <rect>
         <x>20</x>
-        <y>10</y>
+        <y>50</y>
         <width>611</width>
-        <height>391</height>
+        <height>351</height>
        </rect>
       </property>
       <property name="editTriggers">
@@ -290,15 +330,35 @@
        <string>Back</string>
       </property>
      </widget>
+     <widget class="QLabel" name="label_10">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>0</y>
+        <width>291</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>National  League Stadiums</string>
+      </property>
+     </widget>
     </widget>
     <widget class="QWidget" name="viewGrassPage">
      <widget class="QTableWidget" name="viewGrassStadiumsTable">
       <property name="geometry">
        <rect>
         <x>20</x>
-        <y>10</y>
+        <y>50</y>
         <width>611</width>
-        <height>391</height>
+        <height>351</height>
        </rect>
       </property>
       <property name="editTriggers">
@@ -319,6 +379,26 @@
       </property>
       <property name="text">
        <string>Back</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_11">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>0</y>
+        <width>291</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>Grass Surface Stadiums</string>
       </property>
      </widget>
     </widget>
@@ -839,6 +919,97 @@
       </property>
       <property name="text">
        <string>Back</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="MSTPage">
+     <widget class="QTableWidget" name="mstTable">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>50</y>
+        <width>611</width>
+        <height>351</height>
+       </rect>
+      </property>
+      <property name="editTriggers">
+       <set>QAbstractItemView::NoEditTriggers</set>
+      </property>
+      <property name="sortingEnabled">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_16">
+      <property name="geometry">
+       <rect>
+        <x>540</x>
+        <y>410</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Back</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_6">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>410</y>
+        <width>161</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>Total Distance:</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_7">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>410</y>
+        <width>111</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>TextLabel</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_12">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>411</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>MLB Stadiums Minimum Spanning Tree</string>
       </property>
      </widget>
     </widget>
