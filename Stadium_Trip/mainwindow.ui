@@ -27,7 +27,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>16</number>
+     <number>0</number>
     </property>
     <widget class="QWidget" name="mainPage">
      <widget class="QLabel" name="ballGame_image">
@@ -626,7 +626,7 @@
        </rect>
       </property>
       <property name="text">
-       <string>Enter the Stadiums Name:</string>
+       <string>Enter the Stadium Name:</string>
       </property>
      </widget>
      <widget class="QLabel" name="teamNameLabel">
@@ -662,7 +662,7 @@
        </rect>
       </property>
       <property name="text">
-       <string>Enter the Adress:</string>
+       <string>Enter the Address:</string>
       </property>
      </widget>
      <widget class="QLineEdit" name="addressBox">
@@ -841,6 +841,29 @@
       </property>
       <property name="text">
        <string>Add Stadiuim</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="CapacityLabel">
+      <property name="geometry">
+       <rect>
+        <x>106</x>
+        <y>310</y>
+        <width>51</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Capacity:</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="capacityBox">
+      <property name="geometry">
+       <rect>
+        <x>166</x>
+        <y>310</y>
+        <width>113</width>
+        <height>20</height>
+       </rect>
       </property>
      </widget>
     </widget>
