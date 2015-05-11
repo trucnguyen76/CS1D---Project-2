@@ -6,11 +6,9 @@ void MainWindow::on_viewNationalLeagueBtn_clicked()
     int index;
     int row;
     int size = 0;
-//    int column;
     QTableWidgetItem*   tableItem;
     QStringList         horizontalHeaderList;
     QStringList         verticalHeaderList;
-//    QString             longestHeader;
 
     //Set the headers for each column
     horizontalHeaderList.append("Stadium Name");
@@ -36,14 +34,6 @@ void MainWindow::on_viewNationalLeagueBtn_clicked()
     ui->viewNationalLeagueTable->setRowCount(size);
     ui->viewNationalLeagueTable->setHorizontalHeaderLabels(horizontalHeaderList);
     ui->viewNationalLeagueTable->setVerticalHeaderLabels(verticalHeaderList);
-
-//    longestHeader = "American or National League";
-
-//    //For loop - Set column width
-//    for(column = 0; column < 7; column++)
-//    {
-//        ui->viewMajorLeagueTable->setColumnWidth(column, longestHeader.size() * 6.5);
-//    }
 
     //Set column width for columns
     ui->viewNationalLeagueTable->setColumnWidth(0, 180);
@@ -96,6 +86,8 @@ void MainWindow::on_viewNationalLeagueBtn_clicked()
 
         }
     }
+
+    ui->viewNationalLeagueTable->sortByColumn(1, Qt::AscendingOrder);
 
     ui->viewNATLeaguePage->show();
     ui->viewStadiumsPage->hide();

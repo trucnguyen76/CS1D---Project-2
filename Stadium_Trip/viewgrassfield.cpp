@@ -5,12 +5,10 @@ void MainWindow::on_viewGrassSurfaceBtn_clicked()
     int index;
     int row;
     int size = 0;
-//    int column;
     QTableWidgetItem*   tableItem;
     QStringList         horizontalHeaderList;
     QStringList         verticalHeaderList;
     QHash<QString, Stadium>::iterator it;
-//    QString             longestHeader;
 
     //Set the headers for each column
     horizontalHeaderList.append("Stadium Name");
@@ -38,14 +36,6 @@ void MainWindow::on_viewGrassSurfaceBtn_clicked()
     ui->viewGrassStadiumsTable->setRowCount(size);
     ui->viewGrassStadiumsTable->setHorizontalHeaderLabels(horizontalHeaderList);
     ui->viewGrassStadiumsTable->setVerticalHeaderLabels(verticalHeaderList);
-
-//    longestHeader = "American or National League";
-
-//    //For loop - Set column width
-//    for(column = 0; column < 7; column++)
-//    {
-//        ui->viewMajorLeagueTable->setColumnWidth(column, longestHeader.size() * 6.5);
-//    }
 
     //Set column width for columns
     ui->viewGrassStadiumsTable->setColumnWidth(0, 180);
@@ -99,6 +89,8 @@ void MainWindow::on_viewGrassSurfaceBtn_clicked()
 
         }
     }
+
+    ui->viewGrassStadiumsTable->sortByColumn(1, Qt::AscendingOrder);
 
     ui->viewGrassPage->show();
     ui->viewStadiumsPage->hide();
