@@ -25,7 +25,10 @@ SOURCES += main.cpp\
     souvenir.cpp \
     stadium.cpp \
     shoppingCart.cpp \
-    viewMajorLeagues.cpp
+    viewMajorLeagues.cpp \
+    viewnationalleague.cpp \
+    viewgrassfield.cpp \
+    viewamericanleague.cpp
 
 HEADERS  += mainwindow.h \
     graph.h \

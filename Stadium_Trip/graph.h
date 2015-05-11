@@ -27,7 +27,7 @@ struct Vertex
 
 class Graph
 {
-   // static const int INFINITY = 10000;
+    static const int INFINITY = 10000;
 
 private:
     vector <Vertex>          vertexList;			//The Vertex list
