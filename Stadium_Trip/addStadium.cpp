@@ -23,7 +23,7 @@ void MainWindow::on_modifyStadiumListBtn_clicked()
         ui->distanceTable->setCellWidget(i, 0, spinBox);
        // qDebug() << stadium.getStadiumName();
         ui->distanceTable->setItem(i, 1, new QTableWidgetItem((stadium.getStadiumName())));
-
+        ui->phoineBox->setValidator(new QIntValidator(0,9999999999,this));
 
         i++;
     }
@@ -38,39 +38,50 @@ void MainWindow::on_addStadiumButton_clicked()
 
 
 
-   temp->setStadiumName(ui->stadiumNameBox->text());
-   temp->setTeamName(ui->teamNameBox->text());
-   temp->setAddress(ui->addressBox->text());
-   if(ui->grassComboBox->currentText() == "Yes")
-   {
-       temp->setGrassField(true);
-   }
-   else
-   {
-       temp->setGrassField(false);
 
-   }
-   temp->setPhoneNumber(ui->phoineBox->text());
-   if(ui->leagueComboBox->currentText() == "AL")
-   {
-       temp->setLeague('A');
-   }
-   else
-   {
-       temp->setLeague('N');
-   }
 
-   temp->setCapacity(ui->capacityBox->text());
+    if(ui->stadiumNameBox->text() == "")
+    {
+        ui->errorLabel->setText("All areas are required");
+        ui->errorLabel->setStyleSheet("background:#ccc;color:#ff0000;padding:5px");
+    }
+    else
+    {
+        temp->setStadiumName(ui->stadiumNameBox->text());
+        temp->setTeamName(ui->teamNameBox->text());
+        temp->setAddress(ui->addressBox->text());
+        if(ui->grassComboBox->currentText() == "Yes")
+        {
+            temp->setGrassField(true);
+        }
+        else
+        {
+           temp->setGrassField(false);
 
-   stadiumMap.insert(temp->getStadiumName(), *temp);
+        }
+        temp->setPhoneNumber(ui->phoineBox->text());
+        if(ui->leagueComboBox->currentText() == "AL")
+        {
+           temp->setLeague('A');
+        }
+        else
+        {
+           temp->setLeague('N');
+        }
 
-    ui->addStadiumPage->hide();
-    ui->modifyStadiumPage->show();
+        temp->setCapacity(ui->capacityBox->text());
 
-        ui->stadiumNameBox->clear();
-        ui->addressBox->clear();
-        ui->teamNameBox->clear();
-        ui->phoineBox->clear();
-        ui->capacityBox->clear();
+        stadiumMap.insert(temp->getStadiumName(), *temp);
+
+        ui->addStadiumPage->hide();
+        ui->modifyStadiumPage->show();
+
+        ui->stadiumNameBox->setText("");
+        ui->addressBox->setText("");
+        ui->teamNameBox->setText("");
+        ui->phoineBox->setText("");
+        ui->capacityBox->setText("");
+    }
+
 
 }
