@@ -27,7 +27,11 @@ void MainWindow::on_modifyStadiumListBtn_clicked()
 
         i++;
     }
-
+            ui->stadiumNameBox->setText("");
+            ui->addressBox->setText("");
+            ui->teamNameBox->setText("");
+            ui->phoineBox->setText("");
+            ui->capacityBox->setText("");
 }
 
 
@@ -38,7 +42,6 @@ void MainWindow::on_addStadiumButton_clicked()
     QSpinBox *sp;
     QString stad;
     double distance;
-
 
 
 
@@ -74,6 +77,8 @@ void MainWindow::on_addStadiumButton_clicked()
 
         temp->setCapacity(ui->capacityBox->text());
 
+        temp->setDateOpened( ui->dateEdit->date());
+
         stadiumMap.insert(temp->getStadiumName(), *temp);
 
 
@@ -95,11 +100,7 @@ void MainWindow::on_addStadiumButton_clicked()
         ui->addStadiumPage->hide();
         ui->modifyStadiumPage->show();
 
-        ui->stadiumNameBox->setText("");
-        ui->addressBox->setText("");
-        ui->teamNameBox->setText("");
-        ui->phoineBox->setText("");
-        ui->capacityBox->setText("");
+
     }
 
 

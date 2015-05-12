@@ -106,6 +106,10 @@ private slots:
 
     void on_addStadiumButton_clicked();
 
+    void on_modifyStadiumBtn_clicked();
+
+    void on_modifyButtton_clicked();
+
 private:
         Ui::MainWindow *ui;
         QHash<QString,Stadium> stadiumMap;

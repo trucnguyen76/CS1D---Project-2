@@ -116,3 +116,7 @@ void MainWindow::setSvec(QString set)
     sVec.push_back(set);
 }
 
+
+
+
+
