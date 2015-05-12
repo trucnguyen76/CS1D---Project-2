@@ -20,14 +20,14 @@
    <widget class="QStackedWidget" name="stackedWidget">
     <property name="geometry">
      <rect>
-      <x>0</x>
-      <y>-1</y>
+      <x>10</x>
+      <y>10</y>
       <width>641</width>
       <height>451</height>
      </rect>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>14</number>
     </property>
     <widget class="QWidget" name="mainPage">
      <widget class="QLabel" name="ballGame_image">
@@ -505,10 +505,10 @@
      <widget class="QPushButton" name="modifySouvenirBtn">
       <property name="geometry">
        <rect>
-        <x>209</x>
-        <y>220</y>
-        <width>181</width>
-        <height>41</height>
+        <x>300</x>
+        <y>320</y>
+        <width>91</width>
+        <height>31</height>
        </rect>
       </property>
       <property name="text">
@@ -518,10 +518,10 @@
      <widget class="QPushButton" name="addSouvenirBtn">
       <property name="geometry">
        <rect>
-        <x>210</x>
-        <y>170</y>
-        <width>181</width>
-        <height>41</height>
+        <x>300</x>
+        <y>360</y>
+        <width>91</width>
+        <height>31</height>
        </rect>
       </property>
       <property name="acceptDrops">
@@ -534,10 +534,10 @@
      <widget class="QPushButton" name="deleteSourvenirBtn">
       <property name="geometry">
        <rect>
-        <x>210</x>
-        <y>270</y>
-        <width>181</width>
-        <height>41</height>
+        <x>450</x>
+        <y>160</y>
+        <width>91</width>
+        <height>31</height>
        </rect>
       </property>
       <property name="acceptDrops">
@@ -547,17 +547,98 @@
        <string>Delete Souvenir</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="pushButton">
+     <widget class="QPushButton" name="backButton">
       <property name="geometry">
        <rect>
-        <x>270</x>
-        <y>330</y>
+        <x>420</x>
+        <y>310</y>
         <width>75</width>
         <height>23</height>
        </rect>
       </property>
       <property name="text">
        <string>Back</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="souvenir_name_label">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>330</y>
+        <width>101</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>New souvenir name:</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="souvenir_price_text_box">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>360</y>
+        <width>113</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="souvenir_name_text_box">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>330</y>
+        <width>113</width>
+        <height>20</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="souvenir_price_label">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>360</y>
+        <width>101</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>New souvenir name:</string>
+      </property>
+     </widget>
+     <widget class="QListWidget" name="souvenir_list">
+      <property name="geometry">
+       <rect>
+        <x>160</x>
+        <y>80</y>
+        <width>256</width>
+        <height>192</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="title_single_souvenir">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>30</y>
+        <width>201</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>16</pointsize>
+        <weight>75</weight>
+        <italic>false</italic>
+        <bold>true</bold>
+        <underline>false</underline>
+       </font>
+      </property>
+      <property name="text">
+       <string>Current Souvenirs</string>
       </property>
      </widget>
     </widget>
@@ -1454,259 +1535,9 @@
       </property>
      </widget>
     </widget>
-    <widget class="QWidget" name="add_souvenir_page">
-     <widget class="QLineEdit" name="souvenir_name_text_box">
-      <property name="geometry">
-       <rect>
-        <x>150</x>
-        <y>370</y>
-        <width>113</width>
-        <height>20</height>
-       </rect>
-      </property>
-     </widget>
-     <widget class="QLabel" name="shortestTripPage2Label_2">
-      <property name="geometry">
-       <rect>
-        <x>90</x>
-        <y>30</y>
-        <width>521</width>
-        <height>16</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <pointsize>12</pointsize>
-        <weight>75</weight>
-        <bold>true</bold>
-       </font>
-      </property>
-      <property name="text">
-       <string>Current Souvenirs</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="back_suvenir_button">
-      <property name="geometry">
-       <rect>
-        <x>380</x>
-        <y>390</y>
-        <width>75</width>
-        <height>23</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Back</string>
-      </property>
-     </widget>
-     <widget class="QTextBrowser" name="current_souveniers_box">
-      <property name="geometry">
-       <rect>
-        <x>90</x>
-        <y>50</y>
-        <width>361</width>
-        <height>271</height>
-       </rect>
-      </property>
-      <property name="lineWrapMode">
-       <enum>QTextEdit::NoWrap</enum>
-      </property>
-     </widget>
-     <widget class="QLabel" name="souvenir_price_label">
-      <property name="geometry">
-       <rect>
-        <x>40</x>
-        <y>400</y>
-        <width>101</width>
-        <height>16</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>New souvenir name:</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="addToList_souvenir_button">
-      <property name="geometry">
-       <rect>
-        <x>470</x>
-        <y>390</y>
-        <width>75</width>
-        <height>23</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Add</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="souvenir_name_label">
-      <property name="geometry">
-       <rect>
-        <x>40</x>
-        <y>370</y>
-        <width>101</width>
-        <height>16</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>New souvenir name:</string>
-      </property>
-     </widget>
-     <widget class="QLineEdit" name="souvenir_price_text_box">
-      <property name="geometry">
-       <rect>
-        <x>150</x>
-        <y>400</y>
-        <width>113</width>
-        <height>20</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string/>
-      </property>
-     </widget>
-    </widget>
-    <widget class="QWidget" name="deleteSouvenir">
-     <widget class="QPushButton" name="delete_suvenir_button_1">
-      <property name="geometry">
-       <rect>
-        <x>260</x>
-        <y>320</y>
-        <width>75</width>
-        <height>23</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Delete</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="title_single_souvenir_2">
-      <property name="geometry">
-       <rect>
-        <x>190</x>
-        <y>40</y>
-        <width>201</width>
-        <height>41</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <pointsize>16</pointsize>
-        <weight>75</weight>
-        <italic>false</italic>
-        <bold>true</bold>
-        <underline>false</underline>
-       </font>
-      </property>
-      <property name="text">
-       <string>Current Souvenirs</string>
-      </property>
-     </widget>
-     <widget class="QListWidget" name="souvenir_list_2">
-      <property name="geometry">
-       <rect>
-        <x>180</x>
-        <y>90</y>
-        <width>256</width>
-        <height>192</height>
-       </rect>
-      </property>
-     </widget>
-    </widget>
-    <widget class="QWidget" name="modifySingleSouvenir">
-     <widget class="QLineEdit" name="souvenir_name_text_box_SS">
-      <property name="geometry">
-       <rect>
-        <x>190</x>
-        <y>340</y>
-        <width>113</width>
-        <height>20</height>
-       </rect>
-      </property>
-     </widget>
-     <widget class="QLabel" name="title_single_souvenir">
-      <property name="geometry">
-       <rect>
-        <x>210</x>
-        <y>40</y>
-        <width>201</width>
-        <height>41</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <pointsize>16</pointsize>
-        <weight>75</weight>
-        <italic>false</italic>
-        <bold>true</bold>
-        <underline>false</underline>
-       </font>
-      </property>
-      <property name="text">
-       <string>Current Souvenirs</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="Save_suvenir_button_">
-      <property name="geometry">
-       <rect>
-        <x>420</x>
-        <y>360</y>
-        <width>75</width>
-        <height>23</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Save</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="souvenir_price_label_SS">
-      <property name="geometry">
-       <rect>
-        <x>80</x>
-        <y>370</y>
-        <width>101</width>
-        <height>16</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>New souvenir name:</string>
-      </property>
-     </widget>
-     <widget class="QLineEdit" name="souvenir_price_text_box_SS">
-      <property name="geometry">
-       <rect>
-        <x>190</x>
-        <y>370</y>
-        <width>113</width>
-        <height>20</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string/>
-      </property>
-     </widget>
-     <widget class="QLabel" name="souvenir_name_label_SS">
-      <property name="geometry">
-       <rect>
-        <x>80</x>
-        <y>340</y>
-        <width>101</width>
-        <height>16</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>New souvenir name:</string>
-      </property>
-     </widget>
-     <widget class="QListWidget" name="souvenir_list">
-      <property name="geometry">
-       <rect>
-        <x>200</x>
-        <y>90</y>
-        <width>256</width>
-        <height>192</height>
-       </rect>
-      </property>
-     </widget>
-    </widget>
+    <widget class="QWidget" name="add_souvenir_page"/>
+    <widget class="QWidget" name="deleteSouvenir"/>
+    <widget class="QWidget" name="modifySingleSouvenir"/>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menuBar">

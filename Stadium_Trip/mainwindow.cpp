@@ -15,9 +15,11 @@ MainWindow::MainWindow(QWidget *parent) :
     initializeGraph();
     stadiumGraph.calcMST();
     cart.setList(stadiumMap);
-
-    username = "admin";
-    password = "password";
+      ui->modifySouvenirPage->hide();
+//    username = "admin";
+//    password = "password";
+    username = "a";
+    password = "p";
 }
 
 MainWindow::~MainWindow()
@@ -33,8 +35,24 @@ void MainWindow::on_planVacationBtn_clicked()
 
 void MainWindow::on_modifySouvenirListBtn_clicked()
 {
+    QHash<QString, Souvenir>::iterator it;
+    Stadium myS;
     ui->adminPage->hide();
     ui->modifySouvenirPage->show();
+//    it = myS.getSouvenirList().begin();
+    for(it = myS.getSouvenirList().begin(); it != myS.getSouvenirList().end(); ++it )
+    {
+        qDebug() << it.value().getName();
+//    qDebug() << myS.getSouvenirList().size();
+//            QString str = it.value().getName();
+//            ui->souvenir_list->addItem(str);
+//           ++it;
+//        str = it.value().getName();
+//                ui->souvenir_list->addItem(str);
+
+//      ui->souvenir_list->addItem(it.key());
+    }
+
 }
 
 
