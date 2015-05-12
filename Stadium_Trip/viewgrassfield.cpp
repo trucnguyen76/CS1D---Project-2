@@ -10,10 +10,12 @@ void MainWindow::on_viewGrassSurfaceBtn_clicked()
     QStringList         verticalHeaderList;
     QHash<QString, Stadium>::iterator it;
 
+    ui->viewGrassStadiumsTable->clearContents();
+
     //Set the headers for each column
     horizontalHeaderList.append("Stadium Name");
     horizontalHeaderList.append("Team Name");
-        horizontalHeaderList.append("American or National League");
+    horizontalHeaderList.append("American or National League");
     horizontalHeaderList.append("Address");
     horizontalHeaderList.append("Phone Number");
     horizontalHeaderList.append("Date Opened");
@@ -96,8 +98,6 @@ void MainWindow::on_viewGrassSurfaceBtn_clicked()
 
         }
     }
-
-    ui->viewGrassStadiumsTable->sortByColumn(1, Qt::AscendingOrder);
 
     ui->viewGrassPage->show();
     ui->viewStadiumsPage->hide();

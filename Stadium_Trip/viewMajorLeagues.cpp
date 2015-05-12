@@ -8,7 +8,8 @@ void MainWindow::on_viewMajorLeagueBtn_clicked()
     QTableWidgetItem*   tableItem;
     QStringList         horizontalHeaderList;
     QStringList         verticalHeaderList;
-//    QString             longestHeader;
+
+    ui->viewMajorLeagueTable->clearContents();
 
     //Set the headers for each column
     horizontalHeaderList.append("Stadium Name");
@@ -40,6 +41,7 @@ void MainWindow::on_viewMajorLeagueBtn_clicked()
     ui->viewMajorLeagueTable->setColumnWidth(5, 120);
     ui->viewMajorLeagueTable->setColumnWidth(6, 250);
 
+
     row = 0;
     foreach(Stadium stadium, stadiumMap)
     {
@@ -51,40 +53,62 @@ void MainWindow::on_viewMajorLeagueBtn_clicked()
         //Place the tableItem in the desired location in the table
         ui->viewMajorLeagueTable->setItem(row, 0, tableItem);
 
+//qDebug() << "Stadium's name: " << stadium.getStadiumName();
+//qDebug() << "Table item is: " << tableItem->text();
+
         //Show team name
         tableItem = new QTableWidgetItem();
         tableItem->setText(stadium.getTeamName());
         ui->viewMajorLeagueTable->setItem(row, 1, tableItem);
+//qDebug() << "team's name: " << stadium.getTeamName();
+//qDebug() << "Table item is: " << tableItem->text();
 
         //Show National/American League
         tableItem = new QTableWidgetItem();
         tableItem->setText(stadium.getLeague() == 'A'? "American League": "National League");
         ui->viewMajorLeagueTable->setItem(row, 2, tableItem);
 
+//qDebug() << "NL AL: " << stadium.getLeague();
+//qDebug() << "Table item is: " << tableItem->text();
+
+
         //Show Street Address
         tableItem = new QTableWidgetItem();
         tableItem->setText(stadium.getAddress());
         ui->viewMajorLeagueTable->setItem(row, 3, tableItem);
+
+//qDebug() << "ADdress: " << stadium.getAddress();
+//qDebug() << "Table item is: " << tableItem->text();
+
 
         //Show Phone Number
         tableItem = new QTableWidgetItem();
         tableItem->setText(stadium.getPhoneNumber());
         ui->viewMajorLeagueTable->setItem(row, 4, tableItem);
 
+//qDebug() << "Phone: " << stadium.getPhoneNumber();
+//qDebug() << "Table item is: " << tableItem->text();
+
+
         //Show DateOpened
         tableItem = new QTableWidgetItem();
         tableItem->setText(stadium.getDateOpened().toString("yyyy / MM / dd"));
         ui->viewMajorLeagueTable->setItem(row, 5, tableItem);
+
+//qDebug() << "Date: " << stadium.getDateOpened().toString();
+//qDebug() << "Table item is: " << tableItem->text();
+
 
         //Show Seating Capacity
         tableItem = new QTableWidgetItem();
         tableItem->setText(stadium.getCapacity());
         ui->viewMajorLeagueTable->setItem(row, 6, tableItem);
 
+//qDebug() << "capacity: " << stadium.getCapacity();
+//qDebug() << "Table item is: " << tableItem->text();
+
         row++;
     }
-    //When the table first shown, sort it by the order in column 0
-    ui->viewMajorLeagueTable->sortByColumn(0, Qt::AscendingOrder);
 
     ui->viewMajorLeaguePage->show();
     ui->viewStadiumsPage->hide();

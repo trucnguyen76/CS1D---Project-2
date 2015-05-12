@@ -10,6 +10,8 @@ void MainWindow::on_viewNationalLeagueBtn_clicked()
     QStringList         horizontalHeaderList;
     QStringList         verticalHeaderList;
 
+    ui->viewNationalLeagueTable->clearContents();
+
     //Set the headers for each column
     horizontalHeaderList.append("Stadium Name");
     horizontalHeaderList.append("Team Name");
@@ -86,8 +88,6 @@ void MainWindow::on_viewNationalLeagueBtn_clicked()
 
         }
     }
-
-    ui->viewNationalLeagueTable->sortByColumn(1, Qt::AscendingOrder);
 
     ui->viewNATLeaguePage->show();
     ui->viewStadiumsPage->hide();

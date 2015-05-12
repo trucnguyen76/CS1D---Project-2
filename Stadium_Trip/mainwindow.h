@@ -112,6 +112,18 @@ private slots:
 
     void on_backButton_clicked();
 
+    void on_StadiumComboBox_currentIndexChanged(const QString &arg1);
+
+    void on_pushButton_18_clicked();
+
+    void on_pushButton_17_clicked();
+
+    void on_pushButton_19_clicked();
+
+    void on_pushButton_20_clicked();
+
+    void on_backBtn_2_clicked();
+
 private:
         Ui::MainWindow *ui;
         QHash<QString,Stadium> stadiumMap;

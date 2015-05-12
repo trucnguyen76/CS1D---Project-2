@@ -30,14 +30,14 @@ void MainWindow::on_addStadiumBtn_clicked()
         ui->distanceTable->setCellWidget(i, 0, spinBox);
        // qDebug() << stadium.getStadiumName();
         ui->distanceTable->setItem(i, 1, new QTableWidgetItem((stadium.getStadiumName())));
-        ui->phoineBox->setValidator(new QIntValidator(0,9999999999,this));
+        ui->phoneBox->setValidator(new QIntValidator(0,9999999999,this));
 
         i++;
     }
             ui->stadiumNameBox->setText("");
             ui->addressBox->setText("");
             ui->teamNameBox->setText("");
-            ui->phoineBox->setText("");
+            ui->phoneBox->setText("");
             ui->capacityBox->setText("");
 }
 
@@ -71,7 +71,7 @@ void MainWindow::on_addStadiumButton_clicked()
            temp->setGrassField(false);
 
         }
-        temp->setPhoneNumber(ui->phoineBox->text());
+        temp->setPhoneNumber(ui->phoneBox->text());
         if(ui->leagueComboBox->currentText() == "AL")
         {
            temp->setLeague('A');
@@ -103,11 +103,9 @@ void MainWindow::on_addStadiumButton_clicked()
         }
 
         qDebug() << "test";
+        cart.setList(stadiumMap);
         ui->addStadiumPage->hide();
         ui->modifyStadiumPage->show();
-
-
     }
-
-
 }
+

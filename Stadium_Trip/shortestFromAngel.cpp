@@ -14,10 +14,17 @@ void MainWindow::on_shortestAngelBtn_clicked()
 
     ui->textBrowser->setText(stadiumGraph.Dikstras(angelIndex));
     ui->shortestfromAngelPage->show();
+
+    cart.setList(stadiumMap);
 }
 
 void MainWindow::on_backBtn_clicked()
 {
     ui->shortestfromAngelPage->hide();
     ui->planVacationPage->show();
+}
+
+void MainWindow::on_backBtn_2_clicked()
+{
+    cart.show();
 }

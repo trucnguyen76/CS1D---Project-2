@@ -9,6 +9,8 @@ void MainWindow::on_viewAmericanLeagueBtn_clicked()
     QStringList         horizontalHeaderList;
     QStringList         verticalHeaderList;
 
+    ui->viewAmericanLeagueTable->clearContents();
+
     //Set the headers for each column
     horizontalHeaderList.append("Stadium Name");
     horizontalHeaderList.append("Team Name");

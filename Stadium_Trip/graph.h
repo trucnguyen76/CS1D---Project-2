@@ -114,6 +114,9 @@ public:
      ***********************************************************************/
     void    calcMST();
     void initializeMatrix();
+
+    QString customizeDikstras(int startVertex, vector<int> verticesList);
+
     vector<int> getParent()
     {
         return parent;

@@ -82,94 +82,94 @@ QString str[25] = {"PETCO Park", "Dodger/Angel Stadium", "AT&T Park/Coliseum", "
  "Miller Park", "Marlins Park", "Tropicana Field", "Turner Field", "Great American Ballpark",
  "Progressive Field", "Comerica Park", "PNC Park", "Rogers Center", "Nationals Park/Camden Yards",
  "Citizens Bank Park", "Citi Field/Yankee Stadium", "Fenway Park"};
-void Graph::initializeMatrix()
-{
+//void Graph::initializeMatrix()
+//{
 
-    adjacencyMatrix.reserve(25);
-    stadiumNames.reserve(25);
-    for(int i = 0; i < 25; i ++)
-    {
-        for(int j = 0; j < 25; j ++)
-        {
-            adjacencyMatrix[i][j] = 0;
-
-
-        }
-        stadiumNames.push_back(str[i]);
-    }
+//    adjacencyMatrix.reserve(25);
+//    stadiumNames.reserve(25);
+//    for(int i = 0; i < 25; i ++)
+//    {
+//        for(int j = 0; j < 25; j ++)
+//        {
+//            adjacencyMatrix[i][j] = 0;
 
 
-   insertEdge(0, 4, 300);
-   insertEdge(0, 5, 830);
-
-   insertEdge(1, 0, 110);
-   insertEdge(1, 1, 0);
-
-   insertEdge(2, 1, 340);
-   insertEdge(2, 4, 650);
-   insertEdge(2, 2, 0);
-
-   insertEdge(3, 2, 680);
-   insertEdge(3, 20, 2070);
-   insertEdge(3,10, 1390);
-
-   insertEdge(4, 6, 1115);
-   insertEdge(4, 5, 580);
-   insertEdge(4, 7, 870);
-
-   insertEdge(5, 8, 560);
-   insertEdge(5, 7, 650);
-
-   insertEdge(6, 13, 965);
-   insertEdge(6, 14, 790);
-   insertEdge(6, 9, 680);
-
-   insertEdge(7, 6, 230);
-   insertEdge(7, 8, 460);
-   insertEdge(7, 15, 740);
-
-   insertEdge(8, 9, 235);
-   insertEdge(8, 11, 415);
-
-   insertEdge(9, 16, 310);
-
-   insertEdge(10, 12, 300);
-   insertEdge(10, 9, 465);
-
-   insertEdge(11, 12, 80);
-   insertEdge(11, 18, 240);
-   insertEdge(11, 16, 250);
-   insertEdge(11, 11, 0);
-
-   insertEdge(12, 20, 430);
+//        }
+//        stadiumNames.push_back(str[i]);
+//    }
 
 
-   insertEdge(13, 14, 210);
-   insertEdge(13, 15, 600);
+//   insertEdge(0, 4, 300);
+//   insertEdge(0, 5, 830);
 
-   insertEdge(16, 15, 375);
-   insertEdge(16, 14, 790);
-   insertEdge(16, 17, 225);
-   insertEdge(16, 19, 260);
+//   insertEdge(1, 0, 110);
+//   insertEdge(1, 1, 0);
 
-   insertEdge(17, 19, 115);
+//   insertEdge(2, 1, 340);
+//   insertEdge(2, 4, 650);
+//   insertEdge(2, 2, 0);
 
-   insertEdge(18, 17, 90);
-   insertEdge(18, 20, 210);
+//   insertEdge(3, 2, 680);
+//   insertEdge(3, 20, 2070);
+//   insertEdge(3,10, 1390);
 
-   insertEdge(20, 19, 225);
-   insertEdge(20, 24, 430);
+//   insertEdge(4, 6, 1115);
+//   insertEdge(4, 5, 580);
+//   insertEdge(4, 7, 870);
 
-   insertEdge(21, 19, 195);
-   insertEdge(21, 22, 90);
-   insertEdge(21, 21, 0);
+//   insertEdge(5, 8, 560);
+//   insertEdge(5, 7, 650);
 
-   insertEdge(23, 19, 315);
-   insertEdge(23, 22, 80);
-   insertEdge(23, 23, 0);
+//   insertEdge(6, 13, 965);
+//   insertEdge(6, 14, 790);
+//   insertEdge(6, 9, 680);
 
-   insertEdge(24, 23, 195);
-   insertEdge(24, 13, 1255);
+//   insertEdge(7, 6, 230);
+//   insertEdge(7, 8, 460);
+//   insertEdge(7, 15, 740);
+
+//   insertEdge(8, 9, 235);
+//   insertEdge(8, 11, 415);
+
+//   insertEdge(9, 16, 310);
+
+//   insertEdge(10, 12, 300);
+//   insertEdge(10, 9, 465);
+
+//   insertEdge(11, 12, 80);
+//   insertEdge(11, 18, 240);
+//   insertEdge(11, 16, 250);
+//   insertEdge(11, 11, 0);
+
+//   insertEdge(12, 20, 430);
+
+
+//   insertEdge(13, 14, 210);
+//   insertEdge(13, 15, 600);
+
+//   insertEdge(16, 15, 375);
+//   insertEdge(16, 14, 790);
+//   insertEdge(16, 17, 225);
+//   insertEdge(16, 19, 260);
+
+//   insertEdge(17, 19, 115);
+
+//   insertEdge(18, 17, 90);
+//   insertEdge(18, 20, 210);
+
+//   insertEdge(20, 19, 225);
+//   insertEdge(20, 24, 430);
+
+//   insertEdge(21, 19, 195);
+//   insertEdge(21, 22, 90);
+//   insertEdge(21, 21, 0);
+
+//   insertEdge(23, 19, 315);
+//   insertEdge(23, 22, 80);
+//   insertEdge(23, 23, 0);
+
+//   insertEdge(24, 23, 195);
+//   insertEdge(24, 13, 1255);
 
 
 //   for(int i = 0; i < 25; i ++)
@@ -199,7 +199,7 @@ void Graph::initializeMatrix()
 //    int total = 0;
 //   for ( int i = 1; i < n; i++)
 //   {
-}
+//}
 
 //      qDebug()  << stadiums.at(parent[i]);
 //      qDebug() <<  " --> " << stadiums[i];

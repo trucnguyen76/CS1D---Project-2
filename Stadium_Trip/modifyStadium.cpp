@@ -10,12 +10,13 @@ void MainWindow::on_modifyStadiumBtn_clicked()
     foreach(Stadium stadium, stadiumMap)
     {
         ui->StadiumComboBox->addItem(stadium.getStadiumName());
-        ui->phoineBox_2->setValidator(new QIntValidator(0,9999999999,this));
-        ui->stadiumNameBox_2->setText("");
-        ui->teamNameBox_2->setText("");
-        ui->addressBox_2->setText("");
-        ui->phoineBox_2->setText("");
     }
+
+    ui->phoneBox_2->setValidator(new QIntValidator(0,9999999999,this));
+    ui->stadiumNameBox_2->setText("");
+    ui->teamNameBox_2->setText("");
+    ui->addressBox_2->setText("");
+    ui->phoneBox_2->setText("");
 }
 
 void MainWindow::on_backButton_clicked()
@@ -46,9 +47,9 @@ void MainWindow::on_modifyButtton_clicked()
         hi.setAddress(ui->addressBox_2->text());
     }
 
-    if(ui->phoineBox_2->text() != "")
+    if(ui->phoneBox_2->text() != "")
     {
-        hi.setPhoneNumber(ui->phoineBox_2->text());
+        hi.setPhoneNumber(ui->phoneBox_2->text());
     }
     if(ui->grassComboBox_2->currentText() == "Yes")
     {
@@ -74,4 +75,16 @@ void MainWindow::on_modifyButtton_clicked()
     ui->changeStadiumPage->hide();
     ui->modifyStadiumPage->show();
     ui->StadiumComboBox->clear();
+}
+
+void MainWindow::on_StadiumComboBox_currentIndexChanged(const QString &arg1)
+{
+    Stadium stadium;
+    stadium = stadiumMap.find(arg1).value();
+
+    ui->stadiumNameBox_2->setText(stadium.getStadiumName());
+    ui->teamNameBox_2->setText(stadium.getTeamName());
+    ui->addressBox_2->setText(stadium.getAddress());
+    ui->phoneBox_2->setText(stadium.getPhoneNumber());
+
 }
