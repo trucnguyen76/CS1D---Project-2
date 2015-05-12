@@ -76,11 +76,7 @@ void MainWindow::on_quitBtn_clicked()
     this->close();
 }
 
-void MainWindow::on_addStadiumBtn_clicked()
-{
-    ui->modifyStadiumPage->hide();
-    ui->addStadiumPage->show();
-}
+
 
 void MainWindow::on_pushButton_10_clicked()
 {
@@ -115,6 +111,8 @@ void MainWindow::setSvec(QString set)
 {
     sVec.push_back(set);
 }
+
+
 
 
 

@@ -898,7 +898,7 @@
       <property name="geometry">
        <rect>
         <x>178</x>
-        <y>85</y>
+        <y>54</y>
         <width>80</width>
         <height>16</height>
        </rect>
@@ -911,7 +911,7 @@
       <property name="geometry">
        <rect>
         <x>268</x>
-        <y>80</y>
+        <y>49</y>
         <width>151</width>
         <height>22</height>
        </rect>
@@ -1076,6 +1076,29 @@
       </property>
       <property name="text">
        <string>Back</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="NameLabel_2">
+      <property name="geometry">
+       <rect>
+        <x>130</x>
+        <y>83</y>
+        <width>131</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Enter the Stadium Name:</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="stadiumNameBox_2">
+      <property name="geometry">
+       <rect>
+        <x>270</x>
+        <y>83</y>
+        <width>113</width>
+        <height>20</height>
+       </rect>
       </property>
      </widget>
     </widget>

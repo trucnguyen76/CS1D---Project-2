@@ -10,10 +10,68 @@ void MainWindow::on_modifyStadiumBtn_clicked()
     foreach(Stadium stadium, stadiumMap)
     {
         ui->StadiumComboBox->addItem(stadium.getStadiumName());
+        ui->phoineBox_2->setValidator(new QIntValidator(0,9999999999,this));
+        ui->stadiumNameBox_2->setText("");
+        ui->teamNameBox_2->setText("");
+        ui->addressBox_2->setText("");
+        ui->phoineBox_2->setText("");
     }
+}
+
+void MainWindow::on_backButton_clicked()
+{
+    ui->changeStadiumPage->hide();
+    ui->modifyStadiumPage->show();
+    ui->StadiumComboBox->clear();
 }
 
 void MainWindow::on_modifyButtton_clicked()
 {
+    Stadium hi = stadiumMap.value(ui->StadiumComboBox->currentText());
 
+    QHash<QString, Stadium>::iterator it = stadiumMap.find(ui->StadiumComboBox->currentText());
+    stadiumMap.erase(it);
+    qDebug() << hi.displayStadium();
+    if(ui->stadiumNameBox_2->text() != "")
+    {
+        hi.setStadiumName(ui->stadiumNameBox_2->text());
+    }
+    if(ui->teamNameBox_2->text() != "")
+    {
+        hi.setTeamName(ui->teamNameBox_2->text());
+    }
+
+    if(ui->addressBox_2->text() != "")
+    {
+        hi.setAddress(ui->addressBox_2->text());
+    }
+
+    if(ui->phoineBox_2->text() != "")
+    {
+        hi.setPhoneNumber(ui->phoineBox_2->text());
+    }
+    if(ui->grassComboBox_2->currentText() == "Yes")
+    {
+        hi.setGrassField(true);
+    }
+    else
+    {
+       hi.setGrassField(false);
+
+    }
+
+    if(ui->leagueComboBox_2->currentText() == "AL")
+    {
+       hi.setLeague('A');
+    }
+    else
+    {
+       hi.setLeague('N');
+    }
+
+    stadiumMap.insert(hi.getStadiumName(), hi);
+
+    ui->changeStadiumPage->hide();
+    ui->modifyStadiumPage->show();
+    ui->StadiumComboBox->clear();
 }

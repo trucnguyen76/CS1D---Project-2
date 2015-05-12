@@ -8,6 +8,13 @@ void MainWindow::on_modifyStadiumListBtn_clicked()
 {
     ui->adminPage->hide();
     ui->modifyStadiumPage->show();
+
+}
+
+void MainWindow::on_addStadiumBtn_clicked()
+{
+    ui->modifyStadiumPage->hide();
+    ui->addStadiumPage->show();
     ui->distanceTable->setColumnCount(2);
     ui->distanceTable->setHorizontalHeaderItem(0, new QTableWidgetItem("Distance"));
     ui->distanceTable->setHorizontalHeaderItem(1, new QTableWidgetItem("Stadium Name"));
@@ -33,7 +40,6 @@ void MainWindow::on_modifyStadiumListBtn_clicked()
             ui->phoineBox->setText("");
             ui->capacityBox->setText("");
 }
-
 
 void MainWindow::on_addStadiumButton_clicked()
 {
@@ -80,7 +86,7 @@ void MainWindow::on_addStadiumButton_clicked()
         temp->setDateOpened( ui->dateEdit->date());
 
         stadiumMap.insert(temp->getStadiumName(), *temp);
-
+        stadiumGraph.insertVertex(ui->stadiumNameBox->text());
 
         for(int i = 0; i < stadiumMap.size()-1; i++ )
         {
@@ -90,7 +96,7 @@ void MainWindow::on_addStadiumButton_clicked()
             if(distance!= 0)
             {
             stad = ui->distanceTable->item(i,1)->text();
-            stadiumGraph.insertVertex(ui->stadiumNameBox->text());
+            qDebug() << stad;
             stadiumGraph.insertEdge(ui->stadiumNameBox->text(), stad, distance);
             }
             qDebug() <<i;
