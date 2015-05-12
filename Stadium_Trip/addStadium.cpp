@@ -35,6 +35,9 @@ void MainWindow::on_addStadiumButton_clicked()
 {
     Stadium *temp;
     temp = new Stadium;
+    QSpinBox *sp;
+    QString stad;
+    double distance;
 
 
 
@@ -73,6 +76,22 @@ void MainWindow::on_addStadiumButton_clicked()
 
         stadiumMap.insert(temp->getStadiumName(), *temp);
 
+
+        for(int i = 0; i < stadiumMap.size()-1; i++ )
+        {
+            sp =(QSpinBox*)ui->distanceTable->cellWidget(i,0);
+            distance = sp->value();
+            qDebug() << distance;
+            if(distance!= 0)
+            {
+            stad = ui->distanceTable->item(i,1)->text();
+            stadiumGraph.insertVertex(ui->stadiumNameBox->text());
+            stadiumGraph.insertEdge(ui->stadiumNameBox->text(), stad, distance);
+            }
+            qDebug() <<i;
+        }
+
+        qDebug() << "test";
         ui->addStadiumPage->hide();
         ui->modifyStadiumPage->show();
 
