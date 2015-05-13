@@ -1538,62 +1538,33 @@
      </widget>
     </widget>
     <widget class="QWidget" name="modifySouvenirPage">
-     <widget class="QPushButton" name="addSouvenirBtn_2">
+     <widget class="QLineEdit" name="souvenir_name_text_box">
       <property name="geometry">
        <rect>
-        <x>340</x>
-        <y>370</y>
+        <x>150</x>
+        <y>340</y>
+        <width>113</width>
+        <height>20</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="modifySouvenirBtn">
+      <property name="geometry">
+       <rect>
+        <x>300</x>
+        <y>330</y>
         <width>91</width>
         <height>31</height>
        </rect>
       </property>
-      <property name="acceptDrops">
-       <bool>false</bool>
-      </property>
       <property name="text">
-       <string>Add Souvenir</string>
+       <string>Modify Souvenir</string>
       </property>
      </widget>
-     <widget class="QLabel" name="souvenir_price_label">
+     <widget class="QPushButton" name="backButton2">
       <property name="geometry">
        <rect>
-        <x>80</x>
-        <y>370</y>
-        <width>101</width>
-        <height>16</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>New souvenir price:</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="souvenir_name_label">
-      <property name="geometry">
-       <rect>
-        <x>80</x>
-        <y>340</y>
-        <width>101</width>
-        <height>16</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>New souvenir name:</string>
-      </property>
-     </widget>
-     <widget class="QListWidget" name="souvenir_list">
-      <property name="geometry">
-       <rect>
-        <x>200</x>
-        <y>90</y>
-        <width>256</width>
-        <height>192</height>
-       </rect>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="backButton_2">
-      <property name="geometry">
-       <rect>
-        <x>460</x>
+        <x>420</x>
         <y>320</y>
         <width>75</width>
         <height>23</height>
@@ -1606,8 +1577,8 @@
      <widget class="QLabel" name="title_single_souvenir">
       <property name="geometry">
        <rect>
-        <x>210</x>
-        <y>40</y>
+        <x>190</x>
+        <y>30</y>
         <width>201</width>
         <height>41</height>
        </rect>
@@ -1625,47 +1596,34 @@
        <string>Current Souvenirs</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="souvenir_name_text_box">
+     <widget class="QListWidget" name="stadium_list_2">
       <property name="geometry">
        <rect>
-        <x>190</x>
+        <x>40</x>
+        <y>80</y>
+        <width>256</width>
+        <height>192</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="souvenir_name_label">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
         <y>340</y>
-        <width>113</width>
-        <height>20</height>
-       </rect>
-      </property>
-     </widget>
-     <widget class="QLineEdit" name="souvenir_price_text_box">
-      <property name="geometry">
-       <rect>
-        <x>190</x>
-        <y>370</y>
-        <width>113</width>
-        <height>20</height>
+        <width>101</width>
+        <height>16</height>
        </rect>
       </property>
       <property name="text">
-       <string/>
+       <string>New souvenir name:</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="modifySouvenirBtn_2">
+     <widget class="QPushButton" name="deleteSourvenirBtn">
       <property name="geometry">
        <rect>
-        <x>340</x>
-        <y>330</y>
-        <width>91</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Modify Souvenir</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="deleteSourvenirBtn_2">
-      <property name="geometry">
-       <rect>
-        <x>490</x>
-        <y>170</y>
+        <x>520</x>
+        <y>300</y>
         <width>91</width>
         <height>31</height>
        </rect>
@@ -1675,6 +1633,87 @@
       </property>
       <property name="text">
        <string>Delete Souvenir</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="souvenir_price_label">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>370</y>
+        <width>101</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>New souvenir price:</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="souvenir_price_text_box">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>370</y>
+        <width>113</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="SaveSouveniBnt">
+      <property name="geometry">
+       <rect>
+        <x>184</x>
+        <y>400</y>
+        <width>71</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Save</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="addSouvenirBtn">
+      <property name="geometry">
+       <rect>
+        <x>300</x>
+        <y>370</y>
+        <width>91</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="acceptDrops">
+       <bool>false</bool>
+      </property>
+      <property name="text">
+       <string>Add Souvenir</string>
+      </property>
+     </widget>
+     <widget class="QListWidget" name="souvenir_list">
+      <property name="geometry">
+       <rect>
+        <x>350</x>
+        <y>80</y>
+        <width>256</width>
+        <height>192</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="select_Stadium">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>280</y>
+        <width>91</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="acceptDrops">
+       <bool>false</bool>
+      </property>
+      <property name="text">
+       <string>Select Stadium</string>
       </property>
      </widget>
     </widget>

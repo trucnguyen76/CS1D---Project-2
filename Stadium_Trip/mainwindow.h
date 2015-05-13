@@ -112,8 +112,6 @@ private slots:
 
     void on_backButton_clicked();
 
-    void on_StadiumComboBox_currentIndexChanged(const QString &arg1);
-
     void on_pushButton_18_clicked();
 
     void on_pushButton_17_clicked();
@@ -123,6 +121,18 @@ private slots:
     void on_pushButton_20_clicked();
 
     void on_backBtn_2_clicked();
+
+    void on_select_Stadium_clicked();
+
+    void on_deleteSourvenirBtn_clicked();
+
+    void on_backButton2_clicked();
+
+    void on_modifySouvenirBtn_clicked();
+
+    void on_addSouvenirBtn_clicked();
+
+    void on_SaveSouveniBnt_clicked();
 
 private:
         Ui::MainWindow *ui;

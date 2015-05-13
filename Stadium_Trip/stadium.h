@@ -38,7 +38,7 @@ class Stadium
             QDate   getDateOpened();
             QString displayStadium();
             int     getNumSouvenir();
-            QHash<QString, Souvenir> getSouvenirList();
+            QHash<QString, Souvenir>&getSouvenirList();
 
 
     private:

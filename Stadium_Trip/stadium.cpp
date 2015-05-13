@@ -130,7 +130,7 @@ QString Stadium::displayStadium()
             "Date Opened: "  + dateOpened.toString() + '\n'  +
             "Capacity: "     + capacity              + '\n';
 }
-QHash<QString, Souvenir> Stadium::getSouvenirList()
+QHash<QString, Souvenir>& Stadium::getSouvenirList()
 {
     return souvenirList;
 }

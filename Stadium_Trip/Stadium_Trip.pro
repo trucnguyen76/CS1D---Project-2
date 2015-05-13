@@ -19,7 +19,6 @@ SOURCES += main.cpp\
     graph.cpp \
     initializeGraph.cpp \
     loadData.cpp \
-    mainPage.cpp \
     mst.cpp \
     shortestFromAngel.cpp \
     souvenir.cpp \
@@ -30,7 +29,8 @@ SOURCES += main.cpp\
     viewgrassfield.cpp \
     viewamericanleague.cpp \
     addStadium.cpp \
-    modifyStadium.cpp
+    modifyStadium.cpp \
+    modifySouvenir.cpp
 
 HEADERS  += mainwindow.h \
     graph.h \

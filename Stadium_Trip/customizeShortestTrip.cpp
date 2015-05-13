@@ -143,5 +143,6 @@ void MainWindow::on_pushButton_19_clicked()
 
 void MainWindow::on_pushButton_20_clicked()
 {
+    cart.setList(stadiumMap);
     cart.show();
 }
