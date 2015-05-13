@@ -13,6 +13,12 @@ void Graph::insertEdge(int originNumber, int destinationNumber, double weight)
     adjacencyMatrix[destinationNumber][originNumber] = weight;
 }
 
+void Graph::insertMSTEdge(int originNumber, int destinationNumber, int weight)
+{
+    mstMatrix[originNumber][destinationNumber] = weight;
+    mstMatrix[destinationNumber][originNumber] = weight;
+}
+
 void Graph::insertEdge(QString originName, QString destinationName, double weight)
 {
     int index = 0;
@@ -313,10 +319,10 @@ void Graph:: printMST(vector<int> &parent, int n)
    {
       qDebug() << vertexList.at(parent[i]).name;
       qDebug() <<  " --> " << vertexList[i].name;
-      qDebug() <<"\nWEIGHT: " << adjacencyMatrix[i].at(parent[i]);
+      qDebug() <<"\nWEIGHT: " << mstMatrix[i].at(parent[i]);
       qDebug() << endl;
       qDebug() << "----------------------------------------------------------------\n\n";
-      total += adjacencyMatrix[i].at(parent[i]);
+      total += mstMatrix[i].at(parent[i]);
    }
 
    qDebug() << "--------------------------------------\n";
@@ -327,8 +333,11 @@ void Graph:: printMST(vector<int> &parent, int n)
 // matrix representation
 void Graph:: calcMST()
 {
-     int V = adjacencyMatrix.size();    // Number of vertices
-     vector<int> parent;                // Array to store constructed MST
+     parent.clear();
+     initializeMatrix();
+//     qDebug() << "after initialize";
+     int V = 25;    // Number of vertices
+
      vector<int> key;                   // Key values used to pick minimum weight edge in cut
      vector<bool> mstSet;               // To represent set of vertices not yet included in MST
 
@@ -342,6 +351,7 @@ void Graph:: calcMST()
      {
          key.push_back(INT_MAX);
          mstSet.push_back(false);
+         parent.push_back(0);
      }
 
 
@@ -366,16 +376,17 @@ void Graph:: calcMST()
             // matrix[u][v] is non zero only for adjacent vertices of m
             // mstSet[v] is false for vertices not yet included in MST
             // Update the key only if matrix[u][v] is smaller than key[v]
-           if ((adjacencyMatrix[u][v] && mstSet[v] == false) && (adjacencyMatrix[u][v] <  key[v]))
+           if ((mstMatrix[u][v] && mstSet[v] == false) && (mstMatrix[u][v] <  key[v]))
            {
              parent[v]  = u;
-             key[v] = adjacencyMatrix[u][v];
+             key[v] = mstMatrix[u][v];
            }
         }
      }
 
      // print the constructed MST
-     printMST(parent, V);
+     //printMST(parent, V);
+
 }
 
 QString Graph::customizeDikstras(int startVertex, vector<int> verticesList)
@@ -517,4 +528,3 @@ QString Graph::customizeDikstras(int startVertex, vector<int> verticesList)
     }
     return output;
 }
-

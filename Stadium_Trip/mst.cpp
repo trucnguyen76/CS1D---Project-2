@@ -82,112 +82,102 @@ QString str[25] = {"PETCO Park", "Dodger/Angel Stadium", "AT&T Park/Coliseum", "
  "Miller Park", "Marlins Park", "Tropicana Field", "Turner Field", "Great American Ballpark",
  "Progressive Field", "Comerica Park", "PNC Park", "Rogers Center", "Nationals Park/Camden Yards",
  "Citizens Bank Park", "Citi Field/Yankee Stadium", "Fenway Park"};
-//void Graph::initializeMatrix()
-//{
 
-//    adjacencyMatrix.reserve(25);
-//    stadiumNames.reserve(25);
-//    for(int i = 0; i < 25; i ++)
-//    {
-//        for(int j = 0; j < 25; j ++)
-//        {
-//            adjacencyMatrix[i][j] = 0;
+void Graph::initializeMatrix()
+{
+    vector<int> edgeList;
 
+    mstMatrix.reserve(25);
+    stadiumNames.reserve(25);
 
-//        }
-//        stadiumNames.push_back(str[i]);
-//    }
+    for(int index = 0; index < 25; index++)
+    {
+        edgeList.clear();
+        for(int j = 0; j < 25; j ++)
+        {
+            edgeList.push_back( 0);
 
+        }
+        mstMatrix.push_back(edgeList);
+        stadiumNames.push_back(str[index]);
 
-//   insertEdge(0, 4, 300);
-//   insertEdge(0, 5, 830);
-
-//   insertEdge(1, 0, 110);
-//   insertEdge(1, 1, 0);
-
-//   insertEdge(2, 1, 340);
-//   insertEdge(2, 4, 650);
-//   insertEdge(2, 2, 0);
-
-//   insertEdge(3, 2, 680);
-//   insertEdge(3, 20, 2070);
-//   insertEdge(3,10, 1390);
-
-//   insertEdge(4, 6, 1115);
-//   insertEdge(4, 5, 580);
-//   insertEdge(4, 7, 870);
-
-//   insertEdge(5, 8, 560);
-//   insertEdge(5, 7, 650);
-
-//   insertEdge(6, 13, 965);
-//   insertEdge(6, 14, 790);
-//   insertEdge(6, 9, 680);
-
-//   insertEdge(7, 6, 230);
-//   insertEdge(7, 8, 460);
-//   insertEdge(7, 15, 740);
-
-//   insertEdge(8, 9, 235);
-//   insertEdge(8, 11, 415);
-
-//   insertEdge(9, 16, 310);
-
-//   insertEdge(10, 12, 300);
-//   insertEdge(10, 9, 465);
-
-//   insertEdge(11, 12, 80);
-//   insertEdge(11, 18, 240);
-//   insertEdge(11, 16, 250);
-//   insertEdge(11, 11, 0);
-
-//   insertEdge(12, 20, 430);
+    }
 
 
-//   insertEdge(13, 14, 210);
-//   insertEdge(13, 15, 600);
 
-//   insertEdge(16, 15, 375);
-//   insertEdge(16, 14, 790);
-//   insertEdge(16, 17, 225);
-//   insertEdge(16, 19, 260);
+   insertMSTEdge(0, 4, 300);
+   insertMSTEdge(0, 5, 830);
 
-//   insertEdge(17, 19, 115);
+   insertMSTEdge(1, 0, 110);
+   insertMSTEdge(1, 1, 0);
 
-//   insertEdge(18, 17, 90);
-//   insertEdge(18, 20, 210);
+   insertMSTEdge(2, 1, 340);
+   insertMSTEdge(2, 4, 650);
+   insertMSTEdge(2, 2, 0);
 
-//   insertEdge(20, 19, 225);
-//   insertEdge(20, 24, 430);
+   insertMSTEdge(3, 2, 680);
+   insertMSTEdge(3, 20, 2070);
+   insertMSTEdge(3,10, 1390);
 
-//   insertEdge(21, 19, 195);
-//   insertEdge(21, 22, 90);
-//   insertEdge(21, 21, 0);
+   insertMSTEdge(4, 6, 1115);
+   insertMSTEdge(4, 5, 580);
+   insertMSTEdge(4, 7, 870);
 
-//   insertEdge(23, 19, 315);
-//   insertEdge(23, 22, 80);
-//   insertEdge(23, 23, 0);
+   insertMSTEdge(5, 8, 560);
+   insertMSTEdge(5, 7, 650);
 
-//   insertEdge(24, 23, 195);
-//   insertEdge(24, 13, 1255);
+   insertMSTEdge(6, 13, 965);
+   insertMSTEdge(6, 14, 790);
+   insertMSTEdge(6, 9, 680);
+
+   insertMSTEdge(7, 6, 230);
+   insertMSTEdge(7, 8, 460);
+   insertMSTEdge(7, 15, 740);
+
+   insertMSTEdge(8, 9, 235);
+   insertMSTEdge(8, 11, 415);
+
+   insertMSTEdge(9, 16, 310);
+
+   insertMSTEdge(10, 12, 300);
+   insertMSTEdge(10, 9, 465);
+
+   insertMSTEdge(11, 12, 80);
+   insertMSTEdge(11, 18, 240);
+   insertMSTEdge(11, 16, 250);
+   insertMSTEdge(11, 11, 0);
+
+   insertMSTEdge(12, 20, 430);
 
 
-//   for(int i = 0; i < 25; i ++)
-//   {
-//     if ((mstSet[v] == false) && (key[v] < min))
-//     {
-//         min = key[v];
-//         min_index = v;
-//     }
-//       for(int j =0; j < 25; j ++)
-//       {
-//           qDebug() << adjacencyMatrix[i][j] << " ";
-//       }
-//       qDebug() << '\n';
-//   }
+   insertMSTEdge(13, 14, 210);
+   insertMSTEdge(13, 15, 600);
 
-//   return min_index;
-//}
+   insertMSTEdge(16, 15, 375);
+   insertMSTEdge(16, 14, 790);
+   insertMSTEdge(16, 17, 225);
+   insertMSTEdge(16, 19, 260);
+
+   insertMSTEdge(17, 19, 115);
+
+   insertMSTEdge(18, 17, 90);
+   insertMSTEdge(18, 20, 210);
+
+   insertMSTEdge(20, 19, 225);
+   insertMSTEdge(20, 24, 430);
+
+   insertMSTEdge(21, 19, 195);
+   insertMSTEdge(21, 22, 90);
+   insertMSTEdge(21, 21, 0);
+
+   insertMSTEdge(23, 19, 315);
+   insertMSTEdge(23, 22, 80);
+   insertMSTEdge(23, 23, 0);
+
+   insertMSTEdge(24, 23, 195);
+   insertMSTEdge(24, 13, 1255);
+
+}
 
 //// A utility function to print the constructed MST stored in parent[]
 //void MST:: printMST(vector<int> &parent, int n)
@@ -280,10 +270,11 @@ QString str[25] = {"PETCO Park", "Dodger/Angel Stadium", "AT&T Park/Coliseum", "
 
 void MainWindow::on_MSTBtn_clicked()
 {
-
+    ui->mstTable->clear();
+    stadiumGraph.calcMST();
     vector<int> p = stadiumGraph.getParent();
     vector<QString> s = stadiumGraph.getStadiumNames();
-    vector<vector<double> > matrix = stadiumGraph.getMatrix();
+    vector<vector<int> > matrix = stadiumGraph.getMatrix();
 
     int total = 0;
     int index;
@@ -343,10 +334,11 @@ void MainWindow::on_MSTBtn_clicked()
         row++;
     }
     //When the table first shown, sort it by the order in column 0
-    ui->mstTable->sortByColumn(0, Qt::AscendingOrder);
+    //ui->mstTable->sortByColumn(0, Qt::AscendingOrder);
     ui->label_7->setText(QString::number(total) + " miles");
     ui->MSTPage->show();
     ui->planVacationPage->hide();
+
 
 
 }

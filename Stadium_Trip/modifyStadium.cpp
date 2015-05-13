@@ -70,6 +70,9 @@ void MainWindow::on_modifyButtton_clicked()
        hi.setLeague('N');
     }
 
+    hi.setDateOpened(ui->dateEdit_2->date());
+
+    qDebug() << hi.displayStadium();
     stadiumMap.insert(hi.getStadiumName(), hi);
 
     ui->changeStadiumPage->hide();
@@ -77,14 +80,14 @@ void MainWindow::on_modifyButtton_clicked()
     ui->StadiumComboBox->clear();
 }
 
-void MainWindow::on_StadiumComboBox_currentIndexChanged(const QString &arg1)
-{
-    Stadium stadium;
-    stadium = stadiumMap.find(arg1).value();
+//void MainWindow::on_StadiumComboBox_currentIndexChanged(const QString &arg1)
+//{
+//    Stadium stadium;
+//    stadium = stadiumMap.find(arg1).value();
 
-    ui->stadiumNameBox_2->setText(stadium.getStadiumName());
-    ui->teamNameBox_2->setText(stadium.getTeamName());
-    ui->addressBox_2->setText(stadium.getAddress());
-    ui->phoneBox_2->setText(stadium.getPhoneNumber());
+//    ui->stadiumNameBox_2->setText(stadium.getStadiumName());
+//    ui->teamNameBox_2->setText(stadium.getTeamName());
+//    ui->addressBox_2->setText(stadium.getAddress());
+//    ui->phoneBox_2->setText(stadium.getPhoneNumber());
 
-}
+//}

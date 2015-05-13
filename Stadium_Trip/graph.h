@@ -32,6 +32,7 @@ class Graph
 private:
     vector <Vertex>          vertexList;			//The Vertex list
     vector<vector<double> >	adjacencyMatrix;
+    vector<vector<int> >    mstMatrix;
     vector<QString> stadiumNames;
     int totalVertex;								//Total num of vertices
     vector<int> parent;								//Total num of vertices
@@ -114,6 +115,9 @@ public:
      ***********************************************************************/
     void    calcMST();
     void initializeMatrix();
+    void insertMSTEdge(int originNumber, 		//IN - The number of origin vertex
+                       int destinationNumber, 	//IN - The number of dest vertex
+                       int weight);
 
     QString customizeDikstras(int startVertex, vector<int> verticesList);
 
@@ -125,9 +129,9 @@ public:
     {
         return stadiumNames;
     }
-    vector<vector<double> > getMatrix()
+    vector<vector<int> > getMatrix()
     {
-        return adjacencyMatrix;
+        return mstMatrix;
     }
 
 protected:

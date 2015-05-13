@@ -996,7 +996,7 @@
       <property name="geometry">
        <rect>
         <x>260</x>
-        <y>330</y>
+        <y>350</y>
         <width>75</width>
         <height>23</height>
        </rect>
@@ -1039,6 +1039,49 @@
         <width>113</width>
         <height>20</height>
        </rect>
+      </property>
+     </widget>
+     <widget class="QDateEdit" name="dateEdit_2">
+      <property name="geometry">
+       <rect>
+        <x>267</x>
+        <y>307</y>
+        <width>110</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="maximumDateTime">
+       <datetime>
+        <hour>23</hour>
+        <minute>59</minute>
+        <second>59</second>
+        <year>2015</year>
+        <month>5</month>
+        <day>17</day>
+       </datetime>
+      </property>
+      <property name="minimumDateTime">
+       <datetime>
+        <hour>0</hour>
+        <minute>0</minute>
+        <second>0</second>
+        <year>1800</year>
+        <month>1</month>
+        <day>1</day>
+       </datetime>
+      </property>
+     </widget>
+     <widget class="QLabel" name="grassLabel_3">
+      <property name="geometry">
+       <rect>
+        <x>199</x>
+        <y>308</y>
+        <width>60</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Grass field:</string>
       </property>
      </widget>
     </widget>

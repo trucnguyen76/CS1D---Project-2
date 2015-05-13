@@ -88,7 +88,7 @@ void MainWindow::on_viewAmericanLeagueBtn_clicked()
         }
     }
 
-    ui->viewAmericanLeagueTable->sortByColumn(1, Qt::AscendingOrder);
+    //ui->viewAmericanLeagueTable->sortByColumn(1, Qt::AscendingOrder);
 
     ui->viewAMLeaguePage->show();
     ui->viewStadiumsPage->hide();

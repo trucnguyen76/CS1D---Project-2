@@ -24,7 +24,7 @@ void MainWindow::initializeGraph()
     stadiumGraph.insertEdge("Coors Field", "Globe Life Park in Arlington", 650);
     stadiumGraph.insertEdge("Globe Life Park in Arlington", "Minute Maid Park", 230);
     stadiumGraph.insertEdge("Globe Life Park in Arlington", "Kauffman Stadium", 460);
-    stadiumGraph.insertEdge("Globe Life Park in Arlington", "Turner Field", 230);
+    stadiumGraph.insertEdge("Globe Life Park in Arlington", "Turner Field", 740);
     stadiumGraph.insertEdge("Minute Maid Park", "Marlins Park", 965);
     stadiumGraph.insertEdge("Minute Maid Park", "Tropicana Field", 700);
     stadiumGraph.insertEdge("Minute Maid Park", "Busch Stadium", 680);

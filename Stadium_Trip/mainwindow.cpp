@@ -13,7 +13,6 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->mainPage->show();
     loadData();
     initializeGraph();
-    stadiumGraph.calcMST();
     cart.setList(stadiumMap);
 
     username = "admin";
